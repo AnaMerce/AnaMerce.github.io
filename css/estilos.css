@@ -4,8 +4,6 @@
    box-sizing: border-box;
 }
 
-
-
 body {
 	color:#333;
 	font-size: 1.2rem;
@@ -35,9 +33,13 @@ body {
    text-decoration: none;
    }
 
+.header div nav ul li a.activo {
+   border-bottom: 2px solid black; /* Solo una línea roja debajo */
+}
+
 .logo-nav-container {
    display:flex;
-   justify-content:space-between;
+   justify-content:space-between; 
    align-items: center;
    flex-wrap: wrap;
    }
@@ -71,7 +73,6 @@ body {
 .navigation ul li a:hover{
    background: rgba(255, 255, 255, 0.3);
    }
-
 
 .main{
     padding-top: 5rem;
@@ -111,6 +112,7 @@ body {
     text-align: center;
     }
 
+/* Distintas tipografias*/
  
  @font-face{
     font-family:"Euphorigenic";
@@ -135,6 +137,7 @@ body {
     src: url(../fonts/Cuprum-Regular.ttf);
     font-style: normal;
    }
+
 .content, .contenedor, .contener, .conten, .conte{
    display: flex;
    flex-direction: column;
@@ -143,7 +146,6 @@ body {
    width: 80%; 
    height: auto;
 }
-
 
 .georgi {
    line-height: 30px;
@@ -155,7 +157,7 @@ body {
    text-align: left;
    color: white;
 }
-.BIG{
+.big{
    line-height: 30px;
    text-align: right;
    color: white;
@@ -219,27 +221,27 @@ body {
    justify-content: flex-end; 
    flex-wrap: wrap;
 }
-.horarios, .Exposiciones, .redes {
+.horarios, .exposiciones, .redes {
    flex: 1; 
    margin: 0 2%; 
 }
 
-.horarios ul,.Exposiciones ul ,.redes ul {
+.horarios ul,.exposiciones ul ,.redes ul {
    list-style-type: none;
    padding: 0;
    margin: 0;
 }
 
-.horarios li,.Exposiciones li,.redes li {
+.horarios li,.exposiciones li,.redes li {
    margin-bottom: 10px; 
 }
 
-.Exposiciones li, .redes li {
+.exposiciones li, .redes li {
    display: flex;
    align-items: center;
 }
 
-.Exposiciones li img {
+.exposiciones li img {
    width: 50px; 
    height: auto;
    margin-right: 10px;
@@ -255,13 +257,28 @@ body {
    margin: 0 10px; 
 }
 
+.abierto {
+  font-weight: bold;
+}
+.cerrados{
+   font-weight: bold;
+}
+.exposiciones-actuales{
+   font-weight: bold;
+}
+.redes-sociales {
+   font-weight: bold;
+}
+
+/* esto seria como el responsive de la pagina, pero solo en este caso del footer */
+
 @media (max-width: 768px) {
    .footer {
        flex-direction: column; 
        align-items: center;
    }
 
-   .horarios, .Exposiciones, .redes {
+   .horarios, .exposiciones, .redes {
        margin: 2% 0; 
    }
 
@@ -307,11 +324,11 @@ body {
       margin-bottom: 150px;
       }  
 
-      /* casurrucel */
+ /* casurrucel */
 
 .contenerdor-carrusel{
    height: 450px;
-   overflow: hidden;
+   overflow: hidden; /* esconde cualquier contenido que sobresalga de la pagina */
    width: 100%;
    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
 }
@@ -400,12 +417,14 @@ a{
    padding-top: 50px;
 }
 
-
 .contenedor-coleccion1 img{
   height: auto;
   width: 450px;
 }
 
+.colecciones{
+   text-align: center;
+}
 
 /*formulario*/
 
@@ -492,7 +511,6 @@ textarea {
 
 a{
    color:#a74c4c;
-
 } 
 
 .visita-superior{
@@ -519,7 +537,7 @@ a{
    width: 100%;
    display: flex;
    gap: 10px;
-   justify-content:space-between;
+   justify-content:space-between; 
    max-width: 1200px;
    padding-left: 100px;
    line-height: 1.9;
@@ -559,7 +577,7 @@ a{
    margin-top: 180px;
   }
 
-  .linea-horizontal- {
+.linea-horizontal- {
    position: absolute;
    width: 400px; 
    height: 0.5px; 
@@ -568,7 +586,7 @@ a{
    margin-top: 180px;
   }
 
-  .visita-tabla{
+.visita-tabla{
    display: flex;
    justify-content: center;
    align-items: center;

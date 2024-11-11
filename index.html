@@ -1,149 +1,144 @@
-<html>
-<!DOCTYPE HTML>
-<HTML LANG="ES">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museo</title>
-    <meta name =" descripción " content= "Página de oficial del MUSEO ROSE"/>
+    <meta name =" descripcion " content= "Pagina  oficial del MUSEO ROSE">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="icon" href="./imagenes/rosa.png"  type="icono" >
-
+    <link rel="icon" href="imagenes/rosa.png"  type="imagen/x-icon" sizes="16x16">
 </head>
-
 <body>
-
     <header class="header">
         <div class="container logo-nav-container">
             <a href="index.html" class="logo">Museo Rose</a>
             <nav class="navigation">
                 <ul>
+                    <li><a href="index.html" class="activo">Inicio</a></li>
                     <li><a href="./views/portfolio.html">Colección</a></li>
                     <li><a href="./views/presupuesto.html">Visitas</a></li>
                     <li><a href="./views/presupuesto.html">Contactos</a></li>
                 </ul>
             </nav>
         </div>
-        
     </header>
-    
-    <div class="antro-de-fociles">
-        <div class="conten">
-            <div class="fociles">
-                <h5>Exposición</h5>
-                <h2>ANTRO DE FOCILES</h2>
-                <H4>Marruja Mallo</H4>
+
+    <!-- se visualizara a continuación las diferentes secciones que muestra el museo para su visita, tanto como muevas selecciones como antiguas -->
+
+    <main>
+        <div class="antro-de-fociles">
+            <div class="conten">
+                <div class="fociles">
+                    <h5>Exposición</h5>
+                    <h2>Antro de Fociles</h2>
+                    <h4>Marruja Mallo fue una pintora surrealista española...</h4>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="keane-eyes">
-        <div class="contenedor">
-            <div class="BIG">
-                <h5>Exposición</h5>
-                <h2>BIG EYES</h2>
-                <h4>Margaret Keane fue una artista estadounidense <br>
-                reconocida por los grandes ojos de sus personajes...​</h4>
+        <div class="keane-eyes">
+            <div class="contenedor">
+                <div class="big">
+                    <h5>Exposición</h5>
+                    <h2>BIG EYES</h2>
+                    <h4>Margaret Keane fue una artista estadounidense <br>
+                    reconocida por los grandes ojos de sus personajes..</h4>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="la-diva">
-        <div class="contener">
-            <div class="diva">
-                <h5>Exposición</h5>
-                <h2> Art Déco de <br>Tamara Lempicka </h2>
-                <h4>Tamara Lempicka fue una pintora <br>polaca que 
-                alcanzó la fama en Europa
-                con sus retratos..</h4>
+        <div class="la-diva">
+            <div class="contener">
+                <div class="diva">
+                    <h5>Exposición</h5>
+                    <h2> Art Déco de <br>Tamara Lempicka </h2>
+                    <h4>Tamara Lempicka fue una pintora <br>polaca que 
+                    alcanzó la fama en Europa
+                    con sus retratos..</h4>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="georgia">
-        <div class="conte">
-            <div class="georgi">
-                <h5>Exposición</h5>
-                <h2>Madre Del Modernismo Estadounidense</h2>
-                <h4>Georgia O'keeffe conocida especialmente 
-                <br>por sus pinturas de flores y rascacielos</h4>
+        <div class="georgia">
+            <div class="conte">
+                <div class="georgi">
+                    <h5>Exposición</h5>
+                    <h2>Madre Del Modernismo Estadounidense</h2>
+                    <h4>Georgia O'keeffe conocida especialmente 
+                    <br>por sus pinturas de flores y rascacielos</h4>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="pie-superior"></div>
 
-    <div class="mapa-footer">
-        <img src="../imagenes/mapa.png"  width="1921px" id="mapa-footer">
-    </div>
+        <!-- mapa en el cual se encuentra el museo -->
 
+        <div class="mapa-footer">
+            <img src="../imagenes/mapa.png" alt="mapa" width="1921"  height="335"  id="mapa-footer">
+        </div>
+    </main>
     <footer class="footer">
         <div class="contenedor-logo">
-            <img src="../imagenes/logo.png" alt="logo"  width="549px"  class="lopie">
-    
+            <img src="../imagenes/logo.png" alt="logo"  width="549" height="118" class="lopie">
         </div>
         <div class="contenedor-pie">
             <div class="linea-vertical"></div>
-
             <div class="horarios">
                 <ul>
-                    <li><b>Abierto</b></li>
+                    <li class="abierto">Abierto</li>
                     <li>De lunes a sabado de 9:00 / 21:00</li>
                 </ul>
                     <br>
                 <ul>
-                    <li><b>Cerrados</b></li>
+                    <li class="cerrado">Cerrados</li>
                     <li>1 de enero</li>
                     <li> 1 de mayo</li>   
                     <li>25 de diciembre</li>
                 </ul>
             </div>
-            
             <div class="linea-vertical"></div>
 
-            <ul class="Exposiciones">
-                <li><b>Exposiciones Actuales</b></li>
+            <!-- se muestra a continuacion las exposiciones actuales que se encuentran en el museo y el tiempo que estarán expuestas, las cuales se pondrán encontran a travez del nombre del autor  -->
+
+            <ul class="exposiciones">
+                <li class="exposiciones-actuales">Exposiciones Actuales</li>
                 <li>
-                    <img src="./imagenes/helen.jpg" alt="helen" width="828px" >
+                    <img src="./imagenes/helen.jpg" alt="helen" width="828" height="750">
                     <span>Helen Frankenthaler
                     <br>13/08/2024-26/11/2024
                     </span>
                 </li>
                 <li>
-                    <img src="./imagenes/lee.jpeg" alt="lee" width="209px">
+                    <img src="imagenes/lee.jpeg" alt="lee" width="209" height="241">
                     <span>Lee Krasner
                     <br>24/08/2024-12/02/2025
                     </span>
                 </li>
                 <li>
-                    <img src="./imagenes/Leonor.jpg" alt="leonor" width="213px">
+                    <img src="imagenes/Leonor.jpg" alt="leonor" width="213" height="188">
                     <span>Leonor Fini
                     <br>15/07/2024-21/10/2024
                     </span>
                 </li>
                 <li>
-                    <img src="./imagenes/leonora.jpg" alt="leonora" width="800px">
+                    <img src="imagenes/leonora.jpg" alt="leonora" width="800" height="721">
                     <span>Leonora Carrington
                     <br>01/01/2024-06/09/2025
                     </span>
                 </li>
             </ul>
-            
             <div class="linea-vertical"></div>
 
+            <!-- las redes con sus enlaces -->
+
             <ul class="redes">
-                <li><b>Redes Sociales</b></li>
+                <li class="redes-sociales">Redes Sociales</li>
                 <li>
-                    <img src="./imagenes/x.png" alt="x" width="410px">
+                    <a href="https://x.com/?lang=es"> <img src="imagenes/x.png" alt="x" width="410" height="359"> </a>
                     <span>Museo_Rose</span>
                 </li>
                 <li>
-                    <img src="./imagenes/face.png" alt="facebook" width="164px">
+                    <a href="https://www.facebook.com/login/?locale=es_LA"> <img src="./imagenes/face.png" alt="facebook" width="164" height="340"> </a>
                     <span>Museo_Rose</span>
                 </li>
                 <li>
-                    <img src="./imagenes/ins.png" alt="instagram" width="354px"  >
-                    <a href="https://www.instagram.com/adobe/"><span>MR_Museo_Rose</span></a>
+                    <a href="https://www.instagram.com/adobe/"> <img src="./imagenes/ins.png" alt="instagram" width="354" height="353"> </a>
+                    <span>MR_Museo_Rose</span>
                 </li>
             </ul>
         </div>
