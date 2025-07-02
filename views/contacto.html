@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../js/java.js" defer ></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Velar</title>
+    <link rel="icon" href="../img/icon.png"  type="imagen/x-icon" sizes="16x16">
+
+</head>
+<body>
+    <header class="header-contac">
+        <div class="logo-nav-container">
+        <nav class="navegation">
+            <ul>
+                <li><a href="../index.html" class="lis-en">Inicio</a></li>
+                <li><a href="galeria.html" class="lis-en">Galeria</a></li>
+                <li><a href="../index.html" class="logo"><img src="../img/iso.png" width="36" alt="icon"></a></li>
+                <li><a href="presupuesto.html" class="lis-en">Presupuesto</a></li>
+                <li><a href="contacto.html" class="lis-en activo">Contacto</a></li>
+
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <div class="fondo-conta">
+    <img src="../img/fondo-contac.jpg" width="3000" alt="fondo de iphone">
+    </div>
+    <h1 class="contactos">Contactos</h1>
+
+    <div class="button-subir" id="buttonSubir">
+        <button>
+            <i class="fa-solid fa-angle-up"></i>
+        </button>
+    </div>
+
+
+    <div class="contene-contac">
+        <div class="contac">
+            <h2> Velar Online Store</h2>
+            <p>Entra en el Velar Online Store para adquirir equipos y programas de Velar y accesorios.
+                 Antencion telefonica con el numero 443 56 43 29 de lunes a viernes 9:00 a 20:00 y de 9:00 a 18:00 los sabados.
+            </p>
+        </div>
+        <div class="contac">
+             <h2>Velar Store</h2>
+            <p>Descubre y prueba por ti mismo el mundo digital en cualquiera de nuestras tiendas Velar Store en España</p>
+        </div>
+        <div class="contac">
+            <h2>Contacta con el soporte ténico de Velar</h2>
+            <ul>
+                <li>Contacta con un operador de telefonia movil</li>
+                <li>Encuentra un proveedor de servicios autorizado</li>
+                <li>Soporte técnico: 443 56 43 29</li>
+            </ul>
+        </div>
+    </div>
+    <div class="contene-contac1">
+        <div class="contac">
+            <h2>Visitanos</h2>
+            <p>Direcciones en España: <br>
+            Prta del Sol, 1, Centro, 28013 Madrid desde 9:30 a 21:00</p>
+            </div>
+        <div class="contac">
+            <h2>Financiación para ti, para tu negocio o para tu centro educativo</h2>
+            <p>Velar Financial Services ofrece distintas opciones de financiación de los productos Velar a particulares, empresas e instituciones educativas.</p>
+        </div>
+    </div>
+    <div class="contac-imagen">
+        <img src="../img/contac-bocin.jpg" width="600" alt="bocina" >
+    </div>
+    
+
+    <form name="formulario-contac" class="formulario-contac"  target="_blank">
+        <h2>Contactanos</h2>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="nombre">Apellido</label>
+        <input type="text" id="apellido" name="apellido" required>
+
+        <label for="email">Correo electronico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="asunto">Asunto</label>
+        <textarea id="asunto" name="asunto" rows="5" cols="79" maxlength="500"></textarea>
+
+        <button type="reset">Reseteo</button>
+        <button type="submit">Enviar</button>
+         
+    </form>
+    <div class="h2-contac">
+        <h2>Mapa</h2>
+        <p>Aqui podeis ver la distancia desde su hogar hasta nuestra tienda. !!Te Esperamos </p>
+    </div>
+    <div id="map"></div>
+
+   <div class="footer">
+        <div class="footer-imagen">
+            <img src="../img/footer-logo.png" width="365" alt="isotipo">
+             <p>Antencion telefonica con el numero 443 56 43 29 <br>
+            Lunes a Viernes 9:00 a 20:00 y de 9:00 a 18:00 los Sabados.<br>
+             Direcciones en España: <br>
+            Prta del Sol, 1, Centro, 28013 Madrid desde 9:30 a 21:00</p>
+        </div>
+        <div class="filas">
+            <div class="filas-cont">
+                <h4>Ver &  comprar</h4>
+                <ul>
+                    <li>Tienda</li>
+                    <li>Ve</li>
+                    <li>Pad</li>
+                    <li>Phonelar</li>
+                    <li>Watch</li>
+                    <li>VelarSound</li>
+                    <li>Accesorios</li>
+                </ul>
+            </div>
+             <div class="columna"></div>
+
+            <div class="filas-cont">
+                <h4>Cuenta & Comunidad</h4>
+                <ul> 
+                    <li>Mi cuenta</li>
+                    <li>Mis productos</li>
+                    <li>Pedidos</li>
+                    <li>Lista de deseos</li>
+                    <li>Members</li>
+                    <li>Servicio</li> 
+                    <li>Registra tu producto</li>
+                </ul>
+            </div>
+             <div class="columna"></div>
+
+            <div class="filas-cont">
+                <h4>Empresa</h4>
+                <ul>
+                    <li>Quienes somos</li>
+                    <li>Trabaja con Nosotros</li>
+                    <li>Contactos</li>
+                </ul>
+            </div>
+             <div class="columna"></div>
+
+            <div class="filas-cont">
+                 <h4> Tiendas &  Compras</h4>
+                <ul> 
+                    <li>Store</li>
+                    <li>Envios y Devoluciones</li>
+                    <li>Metodos de Pago</li>
+                </ul>
+            </div>
+        
+        </div>
+
+        <ul class="lista-politicas">
+            <li>Política de Privacidad</li>
+            <li>Términos y Condiciones</li>
+            <li>Cookies</li>
+        </ul>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/?locale=es_ES"><i class="facebook"> <img src="../img/facebook.png" width="512"  alt="logo de facebook" > </i>Facebook</a>
+            <a href="https://x.com/?lang=es"><i class="twitter"> <img src="../img/twitter.png" width="512" alt="logo de instagram"></i>twitter</a>
+            <a href="https://www.instagram.com"><i class="instagram"> <img src="../img/instagram.png" width="512" alt="logo de twitter"> </i>instagram</a>
+            <a href="https://es.linkedin.com"><i class="linkedin"> <img src="../img/linkedin.png" width="512" alt="logo de linkedin"></i>linkedin</a>
+        </div>
+    </div>
+
+</body>
+</html>
