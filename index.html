@@ -1,157 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museo</title>
-    <meta name =" descripcion " content= "Pagina  oficial del MUSEO ROSE">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="icon" href="imagenes/rosa.png"  type="imagen/x-icon" sizes="16x16">
+    <title>Velar</title>
+    <script src="/js/java.js" defer ></script>
+    <link rel="icon" href="img/icon.png"  type="imagen/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/estilos.css">
+
+    
 </head>
 <body>
     <header class="header">
-        <div class="container logo-nav-container">
-            <a href="index.html" class="logo">Museo Rose</a>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="index.html" class="activo">Inicio</a></li>
-                    <li><a href="./views/portfolio.html">Colección</a></li>
-                    <li><a href="./views/presupuesto.html">Visitas</a></li>
-                    <li><a href="./views/presupuesto.html">Contactos</a></li>
-                </ul>
-            </nav>
+        <div class="logo-nav-container">
+        <nav class="navegation">
+            <ul>
+                <li><a href="index.html" class="lis-en activo">Inicio</a></li>
+                <li><a href="/views/galeria.html" class="lis-en" >Galeria</a></li>
+                <li><a href="index.html" class="logo"><img src="./img/iso.png" width="36" alt="icon"></a></li>
+                <li><a href="/views/presupuesto.html" class="lis-en">Presupuesto</a></li>
+                <li><a href="/views/contacto.html" class="lis-en">Contacto</a></li>
+
+            </ul>
+        </nav>
         </div>
     </header>
+   
 
-    <!-- se visualizara a continuación las diferentes secciones que muestra el museo para su visita, tanto como muevas selecciones como antiguas -->
-
-    <main>
-        <div class="antro-de-fociles">
-            <div class="conten">
-                <div class="fociles">
-                    <h5>Exposición</h5>
-                    <h2>Antro de Fociles</h2>
-                    <h4>Marruja Mallo fue una pintora surrealista española...</h4>
-                </div>
+    <div class="contenedor-carrusel">
+        <div class="carrusel-slider">
+            <div class="slide">
+                <button class="button"> Comprar</button>
+                <button class="button-info"> Más información</button>
+                <h2 class="h2-slider">Velar Sound</h2>
+                <p class="p-slider">Los Nuevos Audífonos con máxima aislación<br>
+                    Disponibles en una amplia variedad de colores.</p>
+                <img src="./img/cascos.jpg" width="2022"  alt="cascos inalambricos">
+            </div>
+            <div class="slide">
+                <button class="button1"> Comprar </button>
+                <h2 class="h2-slider-pad">Pad </h2>
+                <p class="p-slider-pad">Ahora con chips A14<br> ofrenciendo velocidad y eficacia </p>
+                <img src="./img/slider-crema.jpg" width="2024"  alt="ipad">
+            </div>
+            <div class="slide">
+                <button class="button2"> Comprar </button>
+                <h2 class="h2-slider-rojo">Phonelar</h2>
+                <p class="p-slider-rojo">Descubre la familia LAR</p>
+                <img src="./img/slider-rojo.jpg" width="2024"  alt="celular">
             </div>
         </div>
-        <div class="keane-eyes">
-            <div class="contenedor">
-                <div class="big">
-                    <h5>Exposición</h5>
-                    <h2>BIG EYES</h2>
-                    <h4>Margaret Keane fue una artista estadounidense <br>
-                    reconocida por los grandes ojos de sus personajes..</h4>
-                </div>
-            </div>
-        </div>
-        <div class="la-diva">
-            <div class="contener">
-                <div class="diva">
-                    <h5>Exposición</h5>
-                    <h2> Art Déco de <br>Tamara Lempicka </h2>
-                    <h4>Tamara Lempicka fue una pintora <br>polaca que 
-                    alcanzó la fama en Europa
-                    con sus retratos..</h4>
-                </div>
-            </div>
-        </div>
-        <div class="georgia">
-            <div class="conte">
-                <div class="georgi">
-                    <h5>Exposición</h5>
-                    <h2>Madre Del Modernismo Estadounidense</h2>
-                    <h4>Georgia O'keeffe conocida especialmente 
-                    <br>por sus pinturas de flores y rascacielos</h4>
-                </div>
-            </div>
-        </div>
-
-        <!-- mapa en el cual se encuentra el museo -->
-    </main>
-        <div class="mapa-footer">
-            <img src="./imagenes/mapa.png" alt="mapa" width="1921"  height="335"  id="mapa-footer">
-        </div>
+    </div>
     
-    <footer class="footer">
-        <div class="contenedor-logo">
-            <img src="./imagenes/logo.png" alt="logo"  width="549" height="118" class="lopie">
+     <div class="button-subir" id="buttonSubir">
+        <button>
+            <i class="fa-solid fa-angle-up"></i>
+        </button>
+    </div>
+    
+    <div class="contendor-imagenes" >
+        <div class="imagenes">
+            <h2 class="h2-img-cascos">VelarSound</h2>
+            <p class="p-img-cascos">Unico. iconicos</p>
+            <button class="button-img-cascosin">Más información</button>
+            <button class="button-img-cascos">Comprar</button>
+            <img src="./img/Airpod.jpg"  width="941"  alt="airpod">
         </div>
-        <div class="contenedor-pie">
-            <div class="linea-vertical"></div>
-            <div class="horarios">
+        <div class="imagenes">
+            <h2 class="h2-img-watch">Watch</h2>
+            <p class="p-img-watch">Cada segundo nos acerca a un futuro juntos.</p>
+            <button class="button-img-watchin">Más información</button>
+            <button class="button-img-watch">Comprar</button>
+            <img src="./img/watch.jpg" width="941"  alt="watch" >
+        </div>
+        <div class="imagenes">
+            <h2 class="h2-img-ve">Ve mini</h2>
+            <p class="p-img-ve">Con IA, el tiempo deja de ser una limitación</p>
+            <button class="button-img-vein">Más información</button>
+            <button class="button-img-ve">Comprar</button>
+            <img  class="ve-img" src="./img/laptop.jpg" width="300"  alt="laptop">
+        </div>
+        <div class="imagenes">
+            <h2 class="h2-img-trade">Trade In</h2>
+            <p class="p-img-trade">Consigue entre 140 y 800 €<br> al renovar tu Phonelar</p>
+            <button class="button-img-tradein">Más información</button>
+            <button class="button-img-trade">Comprar</button>
+            <img src="./img/trade.jpg" width="928" alt="trade" >
+        </div>
+    </div>
+    <video src="./mp4/iphone.webm" autoplay muted loop width="1920" height="948"></video>
+
+    <div class="contenedor-mp4-grande">
+        <h2>VelarSound</h2>
+        <p class="p-mp4">Descubre los diversos modelos y colores</p>
+        <button>Comprar </button>
+        <button class="mp4-info">Más Infromación</button>
+        <video src="./mp4/airpord-video.mp4" autoplay muted loop width="640" height="360"></video>
+        <div class="fondo"></div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-imagen">
+            <img src="./img/footer-logo.png" width="365" alt="isotipo">
+             <p>Antencion telefonica con el numero 443 56 43 29 <br>
+            Lunes a Viernes 9:00 a 20:00 y de 9:00 a 18:00 los Sabados.<br>
+             Direcciones en España: <br>
+            Prta del Sol, 1, Centro, 28013 Madrid desde 9:30 a 21:00</p>
+        </div>
+        <div class="filas">
+            <div class="filas-cont">
+                <h4>Ver &  comprar</h4>
                 <ul>
-                    <li class="abierto">Abierto</li>
-                    <li>De lunes a sabado de 9:00 / 21:00</li>
-                </ul>
-                    <br>
-                <ul>
-                    <li class="cerrado">Cerrados</li>
-                    <li>1 de enero</li>
-                    <li> 1 de mayo</li>   
-                    <li>25 de diciembre</li>
+                    <li>Tienda</li>
+                    <li>Ve</li>
+                    <li>Pad</li>
+                    <li>Phonelar</li>
+                    <li>Watch</li>
+                    <li>VelarSound</li>
+                    <li>Accesorios</li>
                 </ul>
             </div>
-            <div class="linea-vertical"></div>
+             <div class="columna"></div>
 
-            <!-- se muestra a continuacion las exposiciones actuales que se encuentran en el museo y el tiempo que estarán expuestas, las cuales se pondrán encontran a travez del nombre del autor  -->
+            <div class="filas-cont">
+                <h4>Cuenta & Comunidad</h4>
+                <ul> 
+                    <li>Mi cuenta</li>
+                    <li>Mis productos</li>
+                    <li>Pedidos</li>
+                    <li>Lista de deseos</li>
+                    <li>Members</li>
+                    <li>Servicio</li> 
+                    <li>Registra tu producto</li>
+                </ul>
+            </div>
+             <div class="columna"></div>
 
-            <ul class="exposiciones">
-                <li class="exposiciones-actuales">Exposiciones Actuales</li>
-                <li>
-                    <img src="./imagenes/helen.jpg" alt="helen" width="828" height="750">
-                    <span>Helen Frankenthaler
-                    <br>13/08/2024-26/11/2024
-                    </span>
-                </li>
-                <li>
-                    <img src="./imagenes/lee.jpeg" alt="lee" width="209" height="241">
-                    <span>Lee Krasner
-                    <br>24/08/2024-12/02/2025
-                    </span>
-                </li>
-                <li>
-                    <img src="./imagenes/Leonor.jpg" alt="leonor" width="213" height="188">
-                    <span>Leonor Fini
-                    <br>15/07/2024-21/10/2024
-                    </span>
-                </li>
-                <li>
-                    <img src="./imagenes/leonora.jpg" alt="leonora" width="800" height="721">
-                    <span>Leonora Carrington
-                    <br>01/01/2024-06/09/2025
-                    </span>
-                </li>
-            </ul>
-            <div class="linea-vertical"></div>
+            <div class="filas-cont">
+                <h4>Empresa</h4>
+                <ul>
+                    <li>Quienes somos</li>
+                    <li>Trabaja con Nosotros</li>
+                    <li>Contactos</li>
+                </ul>
+            </div>
+             <div class="columna"></div>
 
-            <!-- las redes con sus enlaces -->
-
-            <ul class="redes">
-                <li class="redes-sociales">Redes Sociales</li>
-                <li>
-                    <a href="https://x.com/?lang=es"> <img src="./imagenes/x.png" alt="x" width="410" height="359"> </a>
-                    <span>Museo_Rose</span>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/login/?locale=es_LA"> <img src="./imagenes/face.png" alt="facebook" width="164" height="340"> </a>
-                    <span>Museo_Rose</span>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/adobe/"> <img src="./imagenes/ins.png" alt="instagram" width="354" height="353"> </a>
-                    <span>MR_Museo_Rose</span>
-                </li>
-            </ul>
+            <div class="filas-cont">
+                 <h4> Tiendas &  Compras</h4>
+                <ul> 
+                    <li>Store</li>
+                    <li>Envios y Devoluciones</li>
+                    <li>Metodos de Pago</li>
+                </ul>
+            </div>
+        
         </div>
-        <div class="pie_avisos">
-            <a href="#">Aviso legal</a> |
-            <a href="#">Política de privacidad</a> |
-            <a href="#">Política de cookies</a> |
-            <a href="#">Accesibilidad</a> |
-            <a href="./views/contacto.html">Contacto</a>
+
+        <ul class="lista-politicas">
+            <li>Política de Privacidad</li>
+            <li>Términos y Condiciones</li>
+            <li>Cookies</li>
+        </ul>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/?locale=es_ES"><i class="facebook"> <img src="./img/facebook.png" width="512"  alt="logo de facebook" > </i>Facebook</a>
+            <a href="https://x.com/?lang=es"><i class="twitter"> <img src="./img/twitter.png" width="512" alt="logo de instagram"></i>twitter</a>
+            <a href="https://www.instagram.com"><i class="instagram"> <img src="./img/instagram.png" width="512" alt="logo de twitter"> </i>instagram</a>
+            <a href="https://es.linkedin.com"><i class="linkedin"> <img src="./img/linkedin.png" width="512" alt="logo de linkedin"></i>linkedin</a>
         </div>
-        <div class="pie_direccion">
-            <p>Copyright © 2024. Museo Rose. calle princesa s/n. Madrid. 28014. Tel +34 91 330 2800. Todos los derechos reservados</p>
-        </div>
-    </footer>
+    </div>
+
+
 </body>
 </html>
