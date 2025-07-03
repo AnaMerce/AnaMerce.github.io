@@ -156,18 +156,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // MAPA DE CONTACTO
 
-// Coordenadas de tu negocio (cambia esto)
-const negocio = [40.419969536386866, -3.7006920136167474];  // Ejemplo: Madrid (cambia por tu negocio)
+// Coordenadas del tla tienda
+const negocio = [40.419969536386866, -3.7006920136167474];  
 
-// Crear el mapa centrado en tu negocio
-const map = L.map('map').setView(negocio, 14); // El 14 es el nivel de zoom
+// Crear el mapa 
+const map = L.map('map').setView(negocio, 14); 
 
-// Agregar capa de OpenStreetMap
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Colocar un marcador en tu negocio
+// Colocar el marcador de la tienda
 L.marker(negocio).addTo(map)
   .bindPopup("Velar Store")
   .openPopup();
@@ -182,7 +182,7 @@ if (navigator.geolocation) {
       .bindPopup("Estás aquí")
       .openPopup();
 
-    // Dibujar la ruta (usamos polyline para unir los puntos)
+    
     const route = [userLocation, negocio];
     L.polyline(route, { color: 'blue' }).addTo(map);
   }, () => {
