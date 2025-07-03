@@ -286,8 +286,6 @@ body{
 
 
 
-
-
 .contendor-imagenes{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Se ajusta al espacio disponible */
@@ -296,6 +294,7 @@ body{
     margin: 0 auto;
     width: 100%;
     padding: 10px;
+    
 }
 
 .imagenes{
@@ -303,9 +302,11 @@ body{
     width: 100%;
     object-fit: cover;
     position: relative;
+   
 }
  .imagenes img {
     width: 100%;
+    
  }
 
 .ve-img{
@@ -413,7 +414,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.082); /* Color negro con transparencia */
+    
 }
 
 .contenedor-mp4-grande h2{
@@ -454,7 +455,7 @@ body{
 .footer {
     display: flex;
     padding: 40px;
-    background-color: #f6f5f5;
+    background-color: #e7dfdf;
     height: auto;
     flex-direction: column;
     justify-content: space-between;
