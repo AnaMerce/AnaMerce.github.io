@@ -457,7 +457,9 @@ body{
 .footer {
     display: flex;
     padding: 40px;
-    background-color: #D8E6E1;
+    background-color: #F5F5F4;
+    /* F5F1EC */
+    /* F5F5F4 */
     height: auto;
     flex-direction: column;
     justify-content: space-between;
