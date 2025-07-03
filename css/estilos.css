@@ -2,8 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
+
+@import '../css/colores.css';
+
 video{
     width: 100%;
     height: auto;
@@ -455,7 +457,7 @@ body{
 .footer {
     display: flex;
     padding: 40px;
-    background-color: #e7dfdf;
+    background-color: #EEE5D1;
     height: auto;
     flex-direction: column;
     justify-content: space-between;
