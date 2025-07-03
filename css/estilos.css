@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-@import '../css/colores.css';
+/* FFFAF2 */
 
 video{
     width: 100%;
@@ -452,12 +452,12 @@ body{
     letter-spacing: 2px;
 }
 
-/* footer */
+/* footer#D8E6E1 */
 
 .footer {
     display: flex;
     padding: 40px;
-    background-color: #EEE5D1;
+    background-color: #D8E6E1;
     height: auto;
     flex-direction: column;
     justify-content: space-between;
