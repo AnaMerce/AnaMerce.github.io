@@ -565,7 +565,7 @@ body{
 }
 
 .watch-gale,.acce-gale{
-    background-color: #f6f5f5;
+    background-color: #F5F1EC;
     border-radius: 60px;
     overflow: hidden;
     position: relative;
@@ -675,7 +675,7 @@ body{
 .acce-gale{
     margin-top:40px;
     margin-left: 30px;
-    width: 496px;
+    width: 489px;
     height: 300px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /* solo abajo */
 }
@@ -711,8 +711,8 @@ body{
       margin-top: -370px;
       margin-left: 640px;
       border-radius: 60px;
-      background-color: #f6f5f5;
-      width: 1200px;
+      background-color: #F5F1EC;
+      width: 1203px;
       height: 380px;
       overflow: hidden;
       box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
@@ -811,10 +811,10 @@ body{
 .phonelar-gale{
     margin-top: -497px; 
     margin-left: 940px;  
-    width: 900px;
+    width: 907px;
     height: 500px;
     overflow: hidden;
-    background-color: #f6f5f5;
+    background-color: #F5F1EC;
     border-radius: 60px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /* solo abajo */ 
     transition: transform 0.3s ease;
@@ -1178,7 +1178,7 @@ body{
     height: auto;
     left: 800px;
     margin-top: 41px;
-    background-color: #e9e4e4;
+    background-color: #F5F1EC;
     color: black;
     padding: 30px;
 }
@@ -1304,7 +1304,7 @@ body{
     margin-right: 770px;
     margin-top: 80px;
     position: relative;
-    background-color: #f6f5f5;
+    background-color: #F5F1EC;
     padding: 20px;
     display: inline-block;
     border-radius: 30px;
@@ -1316,7 +1316,7 @@ body{
     margin-top: -60px;
     margin-bottom: 80px;   
     border-radius: 30px;
-    background-color: #f6f5f5;
+    background-color: #F5F1EC;
     padding: 20px;
     width: fit-content;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
@@ -1326,7 +1326,7 @@ body{
     margin-left: 720px;
     margin-top: 90px;
     border-radius: 30px;
-    background-color: #f6f5f5;
+    background-color: #F5F1EC;
     padding: 20px;
     width: fit-content;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
@@ -1335,7 +1335,7 @@ body{
     margin-left: 140px;
     margin-top: -70px;
     border-radius: 30px;
-    background-color: #f6f5f5;
+    background-color: #F5F1EC;
     padding: 20px;
     width: fit-content;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
@@ -1344,21 +1344,11 @@ body{
     margin-left: 1360px;
     margin-top: -60px;   
     border-radius: 30px;
-    background-color: #f6f5f5;
+    background-color: #F5F1EC;
     padding: 20px;
     width: fit-content;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
     
-}
-@keyframes zoomIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 .presu-h2{
