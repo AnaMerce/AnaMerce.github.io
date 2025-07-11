@@ -308,7 +308,7 @@ body{
 }
  .imagenes img {
     width: 100%;
-    
+    background-color:  #F5F1EC;;
  }
 
 .ve-img{
@@ -451,7 +451,7 @@ body{
     letter-spacing: 2px;
 }
 
-/* footer#D8E6E1 */
+
 
 .footer {
     display: flex;
@@ -558,21 +558,29 @@ body{
 /* Imagenes GALERIA */
 
 .conten-gale{
-    display: flex;
-    flex-wrap: wrap; /* <-- ESTO AGREGA EL COMPORTAMIENTO DE LÍNEAS MÚLTIPLES */
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
     max-width: 100%;
-    overflow: visible;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    margin: 0 auto;
+    align-items: start;
+    padding-top: 90px;
+    gap: 20px 30px; /* 20px entre filas, 30px entre columnas */
 }
 
-.watch-gale,.acce-gale{
-    background-color: #F5F1EC;
+.card{
+    display: grid;
+    min-width: 200px;
     border-radius: 60px;
+    padding: 1rem;
     overflow: hidden;
-    position: relative;
-    width: 100%;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /*solo abajo */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
+
+
 .watch-gale:hover{
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25); 
@@ -580,104 +588,117 @@ body{
 }
 
 .watch-gale{
-    margin-top: 40px;   
-    width: 600px;
+    background-color: #F5F1EC;
     height: 700px;
+    grid-column: 1/ span 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:auto auto auto 1fr;
+    grid-template-areas: "titulo" "texto" "boton"  "imagen";
+    row-gap:1.2rem;
+    justify-items:center; 
     
 }
-.watch-gale img{
-    z-index: 2;
-    width: 700px;
-    margin-top: 360px;  
-    margin-left: 190px;
-    transform: translateX(-34%);
+.watch-gale h2      { 
+    grid-area: titulo; 
+    font:55px "nipo"; 
+    margin-top: 150px;
 }
 
-.watch-gale h2 {
-    position: relative;
-    top: 200px;
-    left: 220px;
-    font-size: 55px;
-    font-family:"nipo";
-    font-weight: normal;
-}
+.watch-gale p  {
+     grid-area: texto; 
+      font:32px "Futura"; 
 
-.watch-gale p{
-    position: relative;
-    font-size: 32px;
-    top: 240px;
-    left: 140px;
-    font-family:"Futura";
-}
-.watch-gale button{
-    position: relative;
-    font-size: 25px;
-    top: 270px;
-    left: 230px;
-    border: none;
-    padding: 10px;
-    border-radius: 9px;
-    background-color: #7e7b7b4d;
-    font-family:"Futura";
-}
+    }
 
+.watch-gale button  { 
+    grid-area: boton;  
+    font:25px "Futura"; 
+    padding:10px 24px;
+    border:none; 
+    border-radius:9px;
+    background:#7e7b7b4d; 
+    cursor:pointer; 
+    }
+
+.watch-gale img     { 
+    grid-area: imagen; 
+    width:100%;
+    max-width: 890px;
+    height: auto;
+    object-fit:cover; 
+    align-self:stretch;   
+     place-self: center;
+      align-self: end;
+     
+}
 .sound-gale{
-    margin-top:40px;
-    margin-left: 35px;
-    width: 700px;
-    height: 300px; background: linear-gradient(45deg, #7e7b7b, #fffdfd); /* poner el fondo en degradado */
+    height: 300px; 
+    background: linear-gradient(45deg, #7e7b7b, #fffdfd); /* poner el fondo en degradado */
     color: white;
     border-radius: 60px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /*solo abajo */
-    transition: transform 0.3s ease;
+    grid-column: 3/span 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:auto auto 1fr;
+    grid-template-areas: 
+    "titulo imagen" 
+    "texto imagen" 
+    "boton  imagen";
+    row-gap: 1rem;
 }
+
 .sound-gale:hover{
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25); 
     border-radius: 60px;
 }
 .sound-gale img{
-    z-index: 2;
-    width: 500px;
-    margin-top: -100px;  
-    margin-left:300px;   
+    grid-area:imagen;
+    width: 100%;
+    justify-self: end;
+    object-fit: cover;
+    margin-top: -10px;
 }
 
 .sound-gale h2{
-    position: relative;
+    grid-area:titulo;
     font-size: 50px;
-    top: 70px;
-    left: 20px;
     font-family:"nipo";
     font-weight: normal;
+    justify-self: start;
+    margin-top: 50px;
 }
 
 .sound-gale p{
-    position: relative;
-    top:100px ;
-    left: 20px;
+    grid-area:texto;
     font-size: 29px;
     letter-spacing: 1px;
     font-family:"Futura";
 }
+
 .sound-gale button{
-    position: relative;
-    font-size: 25px;
-    top: 130px;
-    left: 20px;
+    grid-area:boton;
+    font: 25px "Futura";
+    padding:10px 24px;
     border: none;
     border-radius: 9px;
-    padding: 10px;
-    font-family:"Futura";
+    justify-self: start;
+    align-self: start;
 }
+
 .acce-gale{
-    margin-top:40px;
-    margin-left: 30px;
-    width: 489px;
     height: 300px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /* solo abajo */
+    grid-column: 5/span 3;
+    grid-row: 1;
+    background-color: #F5F1EC;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "titulo" "texto" "imagen";
+    row-gap: 1rem;
 }
 .acce-gale:hover{
     transform: translateY(-10px) scale(1.03);
@@ -685,39 +706,44 @@ body{
     border-radius: 60px;
 }
 .acce-gale img{
-    z-index: 2;
-    width: 900px;
-    margin-top: 60px;  
-    margin-left:-170px;   
+    grid-area:imagen;
+    width: auto;
+    max-width: 99%;
+    justify-self: center;
+    object-fit: cover;
 }
 .acce-gale h2{
-    position: relative;
-    top: 30px;
-    left:160px;
+    grid-area:titulo;
     font-size: 45px;
     font-family:"nipo";
     font-weight: normal;
+    margin-top: 20px;
+    justify-self: center;
 }
 .acce-gale p{
-    position: relative;
-    top:60px;
-    left: 180px;
+    grid-area:texto;
     letter-spacing: 1px;
     font-size: 26px;
     font-family:"Futura" ;
+    justify-self: center;
 }
 
 .pad-gale{
-      margin-top: -370px;
-      margin-left: 640px;
-      border-radius: 60px;
-      background-color: #F5F1EC;
-      width: 1203px;
-      height: 380px;
-      overflow: hidden;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-      padding: 20px;
-      transition: transform 0.3s ease;
+    border-radius: 60px;
+    background-color: #F5F1EC;
+    height: 380px;
+    grid-column: 3/span 5;
+    grid-row: 1 ;
+    align-self: end; /* Lo coloca al fondo  */
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+    grid-template-rows:auto auto 1fr;
+    grid-template-areas:
+    "imagen titulo"
+    "imagen texto" 
+    "imagen boton"; 
+    row-gap: 2rem;
+     
 }
 .pad-gale:hover{
     transform: translateY(-10px) scale(1.03);
@@ -725,49 +751,55 @@ body{
     border-radius: 60px;
 }
 .pad-gale img{
-    width: 450px;
-    margin-top: -320px;  
-    margin-left:100px; 
- 
+    grid-area:imagen;
+    width: auto;
+    max-width: 65%;
+    object-fit: cover;
+    justify-self: center;
 }
 .pad-gale h2{
-    position: relative;
-    top: 90px;
-    left: 800px;
+    grid-area:titulo;
     font-size: 70px;
     font-family:"nipo";
     font-weight: normal;
+    justify-self: start;
+    margin-top: 50px;
 }
 .pad-gale p{
-    position: relative;
-    top: 130px;
-    left: 680px;
+    grid-area:texto;
     font-size: 27px;
     letter-spacing: 1px;
-    font-family:"Futura" ;
+    font-family:"Futura";
+    justify-self: start;
 }
 .pad-gale button{
-    position: relative;
+    grid-area:boton;
     font-size: 25px;
-    margin-top: 150px;
-    margin-left: 799px;
     border: none;
     border-radius: 9px;
     padding: 10px;
     font-family:"Futura" ;
     background-color: #7e7b7b4d;
+    justify-self: start;
+    align-self: start;
+    cursor: pointer;
 }
-.ve-gale{
-    margin-top: 30px;   
-    width: 900px;
+.ve-gale{  
     height: 500px;
     background: linear-gradient(45deg, #ffffff, #747373); /* poner el fondo en degradado */
     color: white;
     border-radius: 60px;
     background-color: #f6f5f5;
-    overflow: hidden;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /* solo abajo */ 
-    transition: transform 0.3s ease;
+    grid-column: 1/4;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 0.8fr 0.5fr;
+    grid-template-rows:auto auto 0.8fr;
+    grid-template-areas:
+    "imagen titulo"
+    "imagen texto" 
+    "imagen boton"; 
+    row-gap: 1rem;
 }
 .ve-gale:hover{
     transform: translateY(-10px) scale(1.03);
@@ -775,86 +807,95 @@ body{
     border-radius: 60px;
 }
 .ve-gale img{
-    width: 900px;
-    margin-top: -20px;  
-    margin-left:-250px;
-    position: relative;
-    z-index: 1;  
+    grid-area:imagen;
+    width: auto;
+    max-width: 130%;
+    justify-self: start;
+    align-self: start;
+    object-fit: contain;
+   
 }
 .ve-gale h2{
-    position: relative;
-    top: 100px;
-    left: 700px;
-    font-size: 50px;
-    font-family:"nipo";
-    font-weight: normal;
+   grid-area:titulo;
+   justify-self: center;
+   font-size: 50px;
+   font-family:"nipo";
+   font-weight: normal;
+   margin-top: 50px;
 }
 .ve-gale p{
-    position: relative;
-    top: 130px;
-    left: 630px;
+    grid-area:texto;
     font-size: 30px;
     letter-spacing: 1px;
     line-height: 1.2;
-    font-family:"Futura" ;
+    font-family:"Futura";
+    justify-self: center;
 }
 .ve-gale button{
-    position: relative;
+    grid-area:boton;
     font-size: 25px;
-    top: -390px;
-    left: 660px;
     border: none;
     border-radius: 9px;
     padding: 10px;
     font-family:"Futura";
+    justify-self: center;
+    align-self: start;
 }
 .phonelar-gale{
-    margin-top: -497px; 
-    margin-left: 940px;  
-    width: 907px;
     height: 500px;
-    overflow: hidden;
     background-color: #F5F1EC;
     border-radius: 60px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /* solo abajo */ 
-    transition: transform 0.3s ease;
+     grid-column: 4/8;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows:auto auto 1fr;
+    grid-template-areas: 
+    "titulo imagen" 
+    "texto imagen" 
+    "boton imagen";
+    row-gap: 1.6rem;
 }
+
 .phonelar-gale:hover{
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25); 
     border-radius: 60px;
 }
 .phonelar-gale img{
-    width: 700px;
-    margin-top: -4px;  
-    margin-left:330px;   
+    grid-area:imagen;
+    width: auto;
+    max-width:140%;
+    justify-self: center;
+    
 }
 .phonelar-gale h2{
-    position: relative;
-    top: 100px;
-    left: 190px;
-    font-size: 50px;
-    font-family:"nipo";
-    font-weight: normal;
+   grid-area:titulo;
+   font-size: 50px;
+   font-family:"nipo";
+   font-weight: normal;
+   justify-self: start;
+   margin-top: 50px;
+   
 }
 .phonelar-gale p{
-    position: relative;
-    top: 140px;
-    left: 150px;
-    font-size: 27px;
-    letter-spacing: 1px;
-    font-family:"Futura" ;
+   grid-area:texto;
+   font-size: 27px;
+   letter-spacing: 1px;
+   font-family:"Futura";
+   justify-self: start;
 }
 .phonelar-gale button{
-    position: relative;
+    grid-area:boton                                                                                                                                                                              ;
     font-size: 28px;
-    top: 170px;
-    left: 210px;
     border: none;
     border-radius: 9px;
     padding: 10px;
     font-family:"Futura";
     background-color: #7e7b7b4d;
+    justify-self: start;
+    align-self: start;
+    cursor: pointer;
 }
 
 
@@ -1146,111 +1187,103 @@ body{
 
 /* PRESUPUESTO */
 
-.h1-presu{
-    position: absolute;
+.presupuesto{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
     margin-top: 50px;
-    left: 1150px;
+    align-items: stretch;
+    
+}
+
+.h1-presu{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 50px;
     font-size: 50px;
-    z-index: 10;
     color: black;
     font-family:"nipo";
     font-weight: normal;
     
 }
 .video-contene{
-  width: 800px;
-  max-width: 800px;  /* opcional para evitar que se vea enorme en pantallas grandes */
-  height: 1081px;
-  background-color: #000;
-  top: 42px;  
-  position: absolute;
+    display: grid;
+    width:100%;
+    max-width: 100%;  /* opcional para evitar que se vea enorme en pantallas grandes */
+    height:100%;
+   
 }
 
 .video-presu video{
     width: 100%;
-    height: 1081px;  
+    height: 100%;
     object-fit: cover;  
     image-rendering: auto;
 }
 .formulario-presu{
-    position: relative;
-    width: 57%;
-    height: auto;
-    left: 800px;
-    margin-top: 41px;
+    display: grid;
+    height: 100%;
     background-color: #F5F1EC;
+    width: 100%;
     color: black;
-    padding: 30px;
+    padding: 10px 60px;   /* relleno interior RESPONSIVO */
+    row-gap: 1.5rem; 
+   
 }
    
-
-.formulario-presu label{
-    font-size: 20px;
-    bottom: 10px;
-    margin-left: 100px;
-    font-family:"Futura";
-    letter-spacing: 2px;
-}
-.columna-presu{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 10px;
-    margin-bottom: 20px;
-    margin-top: 100px;
-    width: 88%;
-    
-
-}
-.columna-presu input{
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    
-}
-
-.formulario-presu input, 
+.formulario-presu label,
+.formulario-presu input,
 .formulario-presu select,
 .formulario-presu textarea{
-    width: 80%;
-    display: flex;
-    max-width: 100%;
-    margin-left: 100px;
-    padding: 20px;
-    padding-left: 10px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    font-family:"Futura";
     border-radius: 10px;
     border: none;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
-    
+    font-size: 20px;
+    padding: 20px;
+    display: grid;
+}
+.user-info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto auto;
+    gap: 10px 90px;
+    margin-top: 20px;
+    width:100%;
+    justify-self: center;
+}
+.user-info input{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
 }
 
 .extra{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:0.3rem;
+    align-self: center;
+    width: 100%;
 }
 
 .extra input[type="radio"] {
-    transform: scale(0.7); /* Reduce el tamaño del radio */
-    margin-right: 5px;
+    transform: scale(1); /* Reduce el tamaño del radio */
   }
 
 .extra label {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.4px;
+    width: 100%;
   }
-.presupuesto{
-    padding-left: 100px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    
-}
+
  .formulario-presu p , 
- .presupuesto {
-    margin-bottom: 20px;
-    margin-top: 10px;
+ .resultado{
+    margin-top: 40px;
     font-size: 21px;
     font-family:"Futura" ;
  } 
@@ -1261,15 +1294,19 @@ body{
 }
 
 .botones{
-    padding: 40px 0px 0px 70px;
-    text-align: center;
+    display: flex;
+    justify-self: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 30px;
+   
 }
 
 .botones button {
     background-color: #393646;
     color: white;
-    padding: 17px;
-    border-radius: 16px;
+    padding: 20px 50px;
+    border-radius: 30px;
     font-size: 26px;
     cursor: pointer;
     border: none;
@@ -1283,142 +1320,194 @@ body{
     color: #000;
   }
 
+/* BENEFICIOS DE PRESUPUESTAR CON LA EMPRESA */
+
 .presu-beneficios{
-    margin-top: 100px;
-    text-align: center;
-    margin-bottom: 150px;
+    display: grid;
+    margin-top: 50px;
+    
 }
 .presu-beneficios h2{
     font-size: 40px;
-    margin-bottom: 20px;
     font-family: "nipo";
-}
-.presu-beneficios p{
-    font-size: 29px;
-    list-style: none;
-    font-family: "futura";
-
+    justify-self: center;
 }
  
+.presu-li{
+    display: grid;
+    grid-template-columns: repeat(5,0.8fr);
+    font-family: "futura";
+    font-size: 32px;
+    list-style: none;
+    margin-top:100px
+    
+}
+
 .li-1{
-    margin-right: 770px;
-    margin-top: 80px;
-    position: relative;
+    display: grid;
+    grid-row: 1;
+    grid-column: 1/span 1;
     background-color: #F5F1EC;
     padding: 20px;
-    display: inline-block;
     border-radius: 30px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    justify-self: center;
+    align-self: center;
 
 }
 .li-2{
-    margin-left: 1100px;
-    margin-top: -60px;
-    margin-bottom: 80px;   
+    display: grid;
+    grid-row: 1;
+    grid-column: 3/span 1;
     border-radius: 30px;
     background-color: #F5F1EC;
-    padding: 20px;
-    width: fit-content;
+    padding: 30px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    justify-self: center;
     
 }
 .li-3{
-    margin-left: 720px;
-    margin-top: 90px;
+    display: grid;
+    grid-column: 5/span 5;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
     border-radius: 30px;
     background-color: #F5F1EC;
     padding: 20px;
-    width: fit-content;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
 }
 .li-4{
-    margin-left: 140px;
-    margin-top: -70px;
+    display: grid;
+    justify-self: center;
+    grid-column: 1/span 3;
     border-radius: 30px;
     background-color: #F5F1EC;
     padding: 20px;
-    width: fit-content;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
 }
 .li-5{
-    margin-left: 1360px;
-    margin-top: -60px;   
+    display: grid;
+    grid-column: 4/span 1;
     border-radius: 30px;
     background-color: #F5F1EC;
     padding: 20px;
-    width: fit-content;
+    justify-self: center;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-    
 }
 
+/* PRODUCTOS POPULARES */
 .presu-h2{
-    margin-top: 250px;
-    margin-bottom: 50px;
-    margin-left: 30px;
+    margin-top: 15rem;
+    justify-content: start;
     font-size: 40px;
     font-family: "nipo";
 }
 
 .presu-productos{
-    display: flex;
-    flex-wrap: wrap; /* ESTO AGREGA EL COMPORTAMIENTO DE LÍNEAS MÚLTIPLES */
-    width: 100%;
-    overflow: visible;
-    margin-bottom: 150px;
-    
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: start;
+    grid-auto-rows: auto;
+    overflow: hidden;
+    margin: 5rem auto;
+    max-width: 100%;
+    padding: 2rem;
+    gap: 1rem; 
 }
 
-.presu-sound{
-    margin-top:40px;
-    margin-left: 15px;
-    width: 700px;
+.presu-productos > div {
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+.presu-productos > div:hover {
+    transform: translateY(-5px);
+}
+
+.presu-sound { 
+    grid-column: 1 / span 2;
+    grid-row: 1; 
+    height: 430px;
+}
+.presu-sound img{
+    width: 600px;
+    height: auto;
+}
+.presu-phonelar { 
+    grid-column: 3 / span 2; 
+    grid-row: 1 / span 2; 
+}
+.presu-ve { 
+    grid-column: 5 / span 4; 
+    grid-row: 1; 
+}
+.presu-bocin {
+     grid-column: 1 / span 2;
+     grid-row: 2;
+     height: 200px;
+     }
+/* .presu-sound{
+    display: grid;
+    grid-column: 1/span 3;
+    grid-row: 1;
+    justify-self: end;
     height: 300px;
     color: white;
     border-radius: 60px;
     overflow: hidden;
-    position: relative;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /*solo abajo */
-    transition: transform 0.3s ease;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /*solo abajo 
 }
 .presu-phonelar{
+    grid-column: 4/span 2;
+    grid-row: 1/span 2;
+    justify-self: center;
     border-radius: 60px;
     overflow: hidden;
-    position: relative;
-    width: 600px;
     height: 700px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.3s ease;
-    margin-left: 30px;
-    margin-top: 35px;
+    margin-bottom: 1rem;
+}
+.presu-phonelar img{
+  width: 125%;
+  max-width: 200%; 
+  object-fit: cover; /* recorta sin deformar
 }
 .presu-ve{
-    margin-top:40px;
-    margin-left: 30px;
-    width: 478px;
+    display: grid;
+    grid-column:6/ span 1;
+    grid-row: 1;
+    justify-self: end;
     height: 300px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); 
     border-radius: 60px;
     overflow: hidden;
+
 }
 .presu-ve img{
     width: 478px;
     height: auto;
 }
 .presu-bocin{
-    margin-top:-365px;
-    margin-left: 240px;
-    width: 478px;
+    display: grid;
+    grid-column: 1/span 2;
+    grid-row: 2;
     height: 300px;
+    justify-self: end;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); 
     border-radius: 60px;
     overflow: hidden;
 }
 .presu-bocin img{
-    width: 410px;
+    width: 420px;
     height: auto;
-    margin-left: 20px;
-    margin-top: 10px;
-}
+   
+} */
 
 .reseñas{
     display: flex;
@@ -1432,8 +1521,9 @@ body{
     margin-bottom: 50px;
     font-size: 32px;
     font-family: "nipo";
+    margin-top: 10rem;
 }
-.presu-reseñas blockquote{
+.presu-reseñas p{
     font-family: "futura";
     letter-spacing: 2px;
     font-size: 21px;
