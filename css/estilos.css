@@ -121,7 +121,7 @@ body{
 }
 
 .slider img{
-    width: 2;
+    width: 100%;
     height: auto;
     display: block;
     object-fit: cover;/* Ajusta la imagen sin distorsionarla */
