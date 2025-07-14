@@ -12,13 +12,76 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })
 
+// SECCION DE NOTICIAS
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("../noticias.json")
+    .then(response => response.json())
+    .then(data => {
+      const contenedor = document.getElementById("contenedor-noticias");
+       if (!contenedor) return; // Si no existe, no seguimos
+      data.forEach(noticia => {
+        const div = document.createElement("div");
+        div.classList.add("noticia");
+        div.innerHTML = `
+          <h3>${noticia.titulo}</h3>
+          <p>${noticia.descripcion}</p>
+        `;
+        contenedor.appendChild(div);
+      });
+    })
+    .catch(error => console.error("Error al cargar las noticias:", error));
+});
+
+
+// MAPA DE CONTACTO
+
+// Coordenadas del la tienda
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof L === "undefined") {
+    // Leaflet no está cargado, salir para evitar error
+    return;
+  }
+  const negocio = [40.419969536386866, -3.7006920136167474];  
+  const map = L.map('map').setView(negocio, 14); 
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  L.marker(negocio).addTo(map)
+    .bindPopup("Velar Store")
+    .openPopup();
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const userLocation = [position.coords.latitude, position.coords.longitude];
+
+      L.marker(userLocation).addTo(map)
+        .bindPopup("Estás aquí")
+        .openPopup();
+
+      const route = [userLocation, negocio];
+      L.polyline(route, { color: 'blue' }).addTo(map);
+    }, () => {
+      alert('No se pudo obtener tu ubicación.');
+    });
+  } else {
+    alert('Tu navegador no soporta geolocalización.');
+  }
+});
  // SLIDER DE INICIO
 
 document.addEventListener("DOMContentLoaded", function() {
     const carrusel = document.querySelector('.carrusel-slider');
-    const slides = document.querySelectorAll('.slide');
+    if (!carrusel) return; // <- Detiene el bloque si el carrusel no existe
+
+    const slides = carrusel.querySelectorAll('.slide');
     const totalSlides = slides.length;
 
+    if (totalSlides === 0) return;
+
+    // Clonar slides para efecto continuo
     slides.forEach(slide => {
         let clone = slide.cloneNode(true);
         carrusel.appendChild(clone);
@@ -41,20 +104,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    setInterval(moverCarrusel, 4000); // Mueve el carrusel cada 4 segundos
+    setInterval(moverCarrusel, 4000);
 });
 
  // SLIDER 1 DE GALERIA 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const carruseles = document.querySelectorAll(".slider-conte, .slider-conte1");
-  
+    const carruseles = document.querySelectorAll(".slider-conte");
+    
     carruseles.forEach(carrusel => {
       const slideManual = carrusel.querySelector('.slider-manual');
       const nextButton = carrusel.querySelector('.button-next-slider');
       const prevButton = carrusel.querySelector('.button-prev-slider');
       const slides = slideManual.querySelectorAll('.slider');
-      
+      if (!slideManual) return; // Evita el error si no existe
   
       if (slides.length === 0) return;
   
@@ -112,8 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
   
       if (slides1.length === 0) return;
-  
-      const slide1Width = slides1[0]. offsetWidth;
+      const slide1Width = slides1[0].offsetWidth;
       const totalSlides1 = slides1.length;
       const visibleSlides1 = 3; // Cuántas slides se ven al mismo tiempo
       let index = 0; // Empieza en 0 (se ven las primeras 3)
@@ -154,48 +216,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-// MAPA DE CONTACTO
-
-// Coordenadas del tla tienda
-const negocio = [40.419969536386866, -3.7006920136167474];  
-
-// Crear el mapa 
-const map = L.map('map').setView(negocio, 14); 
-
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-// Colocar el marcador de la tienda
-L.marker(negocio).addTo(map)
-  .bindPopup("Velar Store")
-  .openPopup();
-
-// Obtener la ubicación del usuario
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition((position) => {
-    const userLocation = [position.coords.latitude, position.coords.longitude];
-
-    // Colocar un marcador en la ubicación del usuario
-    L.marker(userLocation).addTo(map)
-      .bindPopup("Estás aquí")
-      .openPopup();
-
-    
-    const route = [userLocation, negocio];
-    L.polyline(route, { color: 'blue' }).addTo(map);
-  }, () => {
-    alert('No se pudo obtener tu ubicación.');
-  });
-} else {
-  alert('Tu navegador no soporta geolocalización.');
-}
 
 // FORMULARIO DE PRESUPUESTO
 
 document.addEventListener("DOMContentLoaded" , () => {
   const formulario =document.getElementById("formulario-presu");
+   if (!formulario) return; // Si no existe, no se detiene
   
   formulario.addEventListener("submit", (e) => {
     e.preventDefault(); // previene el envio por defecto
@@ -290,9 +316,7 @@ document.addEventListener("DOMContentLoaded" , () => {
    });
   }
 
-  
-
-
+   
 
 
 
