@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = buttonSubir.querySelector('button');
   button.addEventListener('click', () => {
         console.log('Botón pulsado');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'smooth' }); //desplaza la pagina hacia arriba
 
   });
 })
@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
        if (!contenedor) return; // Si no existe, no seguimos
       data.forEach(noticia => {
         const div = document.createElement("div");
-        div.classList.add("noticia");
-        div.innerHTML = `
+        div.classList.add("noticia");// Rellena el contenido HTML del div con los datos de la noticia
+        div.innerHTML = ` 
           <h3>${noticia.titulo}</h3>
           <p>${noticia.descripcion}</p>
         `;
@@ -49,15 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  L.marker(negocio).addTo(map)
-    .bindPopup("Velar Store")
+  L.marker(negocio).addTo(map) // Crea un marcador en la ubicación "negocio"
+    .bindPopup("Velar Store") // muestra un popup con el texto "Velar Store"
     .openPopup();
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       const userLocation = [position.coords.latitude, position.coords.longitude];
 
-      L.marker(userLocation).addTo(map)
+      L.marker(userLocation).addTo(map) // Crea un marcador en la ubicación "cliente"
         .bindPopup("Estás aquí")
         .openPopup();
 
@@ -285,7 +285,6 @@ document.addEventListener("DOMContentLoaded" , () => {
       resultado.textContent=`total:0€ mensual`;
     }
   
-
     let totalExtras =0;
     checkbox.forEach(checkbox => {
       switch (checkbox.value) {
@@ -302,7 +301,7 @@ document.addEventListener("DOMContentLoaded" , () => {
     
   });
   //calcular el ressultado de los meses mas los extras //
-      const totalConExtras =total + totalExtras;
+      const totalConExtras =total + totalExtras; // Muestra el total mensual en euros y los extras con el total final
       resultado.textContent = `Total: ${total.toLocaleString('es-ES')}€ mensual`;
       resultadoExtra.textContent = `+ Extras: ${totalExtras.toLocaleString('es-ES')}€ → Total final: ${totalConExtras.toLocaleString('es-ES')}€`;
         
