@@ -35,27 +35,27 @@
         <!-- formulario del presupuesto -->
         <div class="formulario-presu">
             <h1 class="h1-presu">PRESUPUESTO</h1>
-            <form id="formulario-presu" name="info">
+            <form id="formulario-presu" name="info" novalidate>
             <div class="user-info">
                 <div>
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" maxlength="15" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo letras, ni número ni símbolo" required>
+                    <input type="text" id="nombre" name="nombre"  title="Solo letras, ni número ni símbolo" >
                 </div>
                 <div>
                     <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido"  maxlength="40" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo letras, ni número ni símbolo" required>
+                    <input type="text" id="apellido" name="apellido"  title="Solo letras, ni número ni símbolo" >
                 </div>
                 <div>
                     <label for="telefono">Telefono</label>
-                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" maxlength="9" title="Introduce exactamente 9 números sin espacios ni símbolos" required>
+                    <input type="tel" id="telefono" name="telefono" title="Introduce exactamente 9 números sin espacios ni símbolos" >
                 </div>
                 <div>
                     <label for="email">Correo electronico</label>
-                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Introduce un correo electrónico válido" required>
+                    <input type="email" id="email" name="email"  title="Introduce un correo electrónico válido" >
                 </div>
             </div>
             <label for="asunto">Asunto</label>
-            <textarea id="asunto" name="asunto" rows="5"  cols="100"  maxlength="500"> </textarea>
+            <textarea id="asunto" name="asunto" rows="5"  cols="100" > </textarea>
 
             <label for="opciones">Seleccione un producto</label>
             <select id="opciones" name="producto" onchange="mostrarPrecio()">
@@ -70,7 +70,7 @@
             </select>
 
             <label for="duracion">¿Por cuantos meses deseas financiarlo?</label>
-            <input type="number" id="duracion" name="duracion" min="1" max="24" oninput="mostrarPrecio()"  placeholder="Eje:3 meses" required>
+            <input type="number" id="duracion" name="duracion" oninput="mostrarPrecio()" placeholder="Eje:3 meses" >
             <p id="resultado" class="resultado">Total: $0 mensual</p>
 
             <label>Elige los extras para el producto</label>
@@ -83,7 +83,7 @@
             <div class="resultado" id="resultadoExtra" >Total: $0.00</div>
             <label class="checkbox-presu">
                 Acepto las condiciones de privacidad.
-                <input type="checkbox" id="condiciones" required>
+                <input type="checkbox" id="condiciones">
                 
             </label>
                 

@@ -60,16 +60,46 @@ document.addEventListener("DOMContentLoaded", () => {
       L.marker(userLocation).addTo(map) // Crea un marcador en la ubicación "cliente"
         .bindPopup("Estás aquí")
         .openPopup();
+         // API Key de OpenRouteService
+        const apiKey = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjMwYTU2MjdhOWJlMDRkODA5OWY4YzhjNTQ0NzRkMDkxIiwiaCI6Im11cm11cjY0In0=";
 
-      const route = [userLocation, negocio];
-      L.polyline(route, { color: 'blue' }).addTo(map);
-    }, () => {
+        // solicitar ruta 
+       fetch("https://api.openrouteservice.org/v2/directions/driving-car/geojson", {
+          method: "POST",
+          headers:{
+            "content-Type":"application/json",
+             Authorization:apiKey,
+          },
+          body:JSON.stringify({
+            coordinates: [userLocation.reverse(), negocio.reverse()],
+          }),
+        })
+         .then((response) => response.json())
+          .then((data) => {
+            // Dibujar la ruta
+            const ruta = L.geoJSON(data, {
+              style: {
+                color: "blue",
+                weight: 5,
+              },
+            }).addTo(map);
+
+            map.fitBounds(ruta.getBounds());
+          })
+          .catch((error) => {
+            console.error("Error al obtener la ruta:", error);
+            alert("No se pudo calcular la ruta.");
+          });
+      },
+      
+     () => {
       alert('No se pudo obtener tu ubicación.');
     });
   } else {
     alert('Tu navegador no soporta geolocalización.');
   }
 });
+
  // SLIDER DE INICIO
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -235,7 +265,7 @@ document.addEventListener("DOMContentLoaded" , () => {
     const condiciones = document.getElementById("condiciones").checked;
 
     //validacion de los campos
-
+    
     if(nombre === "")errores.push("El nombre es obligatorio");
     if(apellido ==="") errores.push("El apellido es obligatorio");
 
