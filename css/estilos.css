@@ -14,6 +14,7 @@ body{
     font-size: 1.2rem;
     line-height: 1.3em;
     margin: 0; 
+    overflow-x:hidden;
    
 }
 .header{
@@ -114,95 +115,81 @@ body{
     transition: transform 0.5s ease-in-out; /* Desliza suavemente */
 }
 
-.slider{
-    position: relative;
-    z-index: 1;
+.slide{
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "p"
+    "boton"
+    "contenido";
+    grid-template-rows: auto auto auto auto 1fr;
     flex: 0 0 33.33%;/* Cada slide ocupa 1/3 del total */
+    position: relative;
 }
 
-.slider img{
+.slide img{
+    max-width: 100%;
     height: auto;
-    display: block;
+    grid-area: contenido;
     object-fit: cover;/* Ajusta la imagen sin distorsionarla */
 }
 
+.contenido-slider{
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+    grid-area: contenido;
+}
 
-.button{
-    z-index: 2;
-    position: absolute;
-    margin-left: 1100px;
-    margin-top: 450px;
-    border-radius: 20px;
-    font-size:29px;
-    letter-spacing: 2px;
-    color: white;
-    background: linear-gradient(45deg, #6E997A, #000000); /* poner el fondo en degradado */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-    transition: all 0.3s ease-in-out;   /* Suaviza los cambios */
-    cursor: pointer;
-    padding: 15px 25px;
-    border: none;
-    font-family: "futura";
-}
-.button-info{
-    z-index: 2;
-    position: absolute;
-    margin-left: 855px;
-    margin-top: 450px;
-    border-radius: 20px;
-    font-size:29px;
-    letter-spacing: 2px;
-    color: black;
-    border: none;
-    padding: 15px 15px;
-    font-family: "futura";
-    background: linear-gradient(45deg, #ffffff, #6E997A); /* poner el fondo en degradado */
-}
-.button1{
-    z-index: 2;
-    position: absolute;
-    margin-left: 955px;
-    margin-top: 450px;
-    border-radius: 20px;
-    font-size:29px;
-    font-family: "futura";
-    color: white;
-    background: linear-gradient(45deg, #000000, #1a1a1a); /* poner el fondo en degradado */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); 
-    transition: all 0.3s ease-in-out;   
-    cursor: pointer;
-    padding: 15px 25px;
-    border: none;
-
-}
+.button,
+.button-info,
+.button1,
 .button2{
-    z-index: 2;
-    position: absolute;
-    margin-left: 90px;
-    margin-top: 465px;
-    border-radius: 20px;
-    font-size:29px;
-    font-family: "futura";
-    color: white;
-    background: linear-gradient(45deg, #6e0000, #931818); /* poner el fondo en degradado */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); 
-    transition: all 0.3s ease-in-out; 
-    cursor: pointer;
+    position: relative;
+    color: white; /* o el color que contraste con la imagen */
+    text-align: center;
+    margin: 0.5rem;
     padding: 15px 25px;
+    border-radius: 20px;
+    font-size: 29px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    font-family: "futura";
+    letter-spacing: 2px;
     border: none;
+    grid-area: boton;
+    margin-left: 25px;
+    transition: all 0.3s ease-in-out;   
 
+}
+.button{
+    background: linear-gradient(45deg, #6E997A, #000000); /* poner el fondo en degradado */
 }
 .button:hover{
-    background: linear-gradient(45deg, #ffffff, #6E997A); /* poner el fondo en degradado */
+    background: linear-gradient(45deg, #ffffff, #6E997A); /*poner el fondo en degradado */
     color: black;
-    transform: scale(1.1); /*agranda el boton*/
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Sombra más intensa al agrandar  */
+    transform: scale(1.1); /* agranda el boton*/
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);/* Sombra más intensa al agrandar  */
+}
+.button-info{
+    background: linear-gradient(45deg, #ffffff, #6E997A); /*poner el fondo en degradado */
+    color: black;
+}
+.button1{
+    margin-left: 85px;
+    background: linear-gradient(45deg, #000000, #1a1a1a);/* poner el fondo en degradado */
 }
 .button1:hover{
     background: linear-gradient(45deg, #ffffff, #4b4b4b); 
     color: black;
     transform: scale(1.1); 
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);   
+}
+.button2{
+    grid-area:boton2;
+    margin-right: 1600px;
+    z-index: 2;
+    background: linear-gradient(45deg, #6e0000, #931818); /*poner el fondo en degradado */
 }
 .button2:hover{
     background: linear-gradient(45deg, #ffffff, #ff2b2b);
@@ -210,62 +197,38 @@ body{
     transform: scale(1.1); 
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
 }
-.h2-slider{
-    margin-left: 899px;
-    margin-top: 290px;
-    position: absolute;
-    font-size: 56px;
-    letter-spacing: 3px;
-    color: rgb(32, 32, 32);
-    font-family:"nipo";
-    font-weight: normal;
-}
+.h2-slider,
 .h2-slider-pad{
-    margin-left: 965px;
-    margin-top: 290px;
-    position: absolute;
+    text-align: center;
     font-size: 56px;
     letter-spacing: 3px;
     font-family:"nipo";
     font-weight: normal;
 }
-.h2-slider-rojo{
-    margin-left: 90px;
-    margin-top: 340px;
-    position: absolute;
-    font-size: 56px;
-    letter-spacing: 3px;
-    color: rgb(32, 32, 32);
-    font-family:"nipo";
-    font-weight: normal;
-}
-.p-slider{
-    position: absolute;
-    margin-top: 355px;
-    margin-left: 840px;
+.p-slider,
+.p-slider-pad{
+    text-align: center;
     font-size: 27px;
     letter-spacing: 2px;
-    text-align:center;
     font-family: "Futura";
     line-height: 1;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
-.p-slider-pad{
-    position: absolute;
-    margin-top: 350px;
-    margin-left: 877px;
-    font-size: 33px;
-    text-align: center;
-    font-family: "Futura";
-    line-height: 1;
-
+.h2-slider-rojo{
+    font-size: 56px;
+    letter-spacing: 3px;
+    font-family:"nipo";
+    font-weight: normal;
 }
 .p-slider-rojo{
-    position: absolute;
-    margin-left: 90px;
-    margin-top: 410px;
     font-size: 33px;
     font-family: "Futura";
+    margin-top: 25px;
+    margin-bottom: 15px;
+
 }
+
 
 /* BUTTON DE SUBIR */
 
@@ -310,7 +273,6 @@ body{
     width: 100%;
     background-color:  #F5F1EC;;
  }
-
 .ve-img{
     max-width: 100%;
 }
@@ -428,13 +390,7 @@ body{
     margin: 5px;
     z-index: 1;
 }  
-.fondo{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+
 
 .contenedor-mp4-grande h2{
     margin-left: 150px;
@@ -979,24 +935,23 @@ body{
 
 .slider-gale{
     align-items: center;
-    max-width: 100vw; /* Ajuste de ancho */
     height: 700px;
-    overflow: hidden;
+    overflow: visible;
     
 }
 
 .slider-manual{
     display: flex;
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
     padding: 40px;
 
 }
 
 .slider{
-    width: 300px;
+    width: 535px;
     height: 700px;
     display: flex;
-    margin-right: 10px; /* Espaciado entre los slides */
+    margin-right: 20px; /* Espaciado entre los slides */
     padding-bottom: 90px;    
 }
 
@@ -1021,12 +976,11 @@ body{
     max-width: 100vw; 
     height: 100%;
     overflow: hidden;
-
 }
 
 .slider-manual1{
     display: flex;
-    transition: .5s ease-in-out;
+    transition: 0.5s ease-in-out;
     padding: 40px;
 }
 
