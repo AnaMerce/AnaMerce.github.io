@@ -3,191 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velar</title>
-    <script src="js/java.js" defer ></script>
-    <link rel="icon" href="img/icon.png"  type="imagen/x-icon" sizes="16x16">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/css/estilos.css">
-
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Inicio</title>
+    <link rel="icon" type="imagen/png" href="./img/logotipo.png">
 </head>
-<body>
-    <header class="header">
-        <div class="logo-nav-container">
-        <nav class="navegation">
-            <ul>
-                <li><a href="index.html" class="lis-en activo">Inicio</a></li>
-                <li><a href="/views/galeria.html" class="lis-en" >Galeria</a></li>
-                <li><a href="index.html" class="logo"><img src="./img/iso.png" width="36" alt="icon"></a></li>
-                <li><a href="/views/presupuesto.html" class="lis-en">Presupuesto</a></li>
-                <li><a href="/views/contacto.html" class="lis-en">Contacto</a></li>
+<body class="bg-fondo">
+    <div class="encabezado">
+        <!-- el encabezado -->
+        <nav class="navbar">
+            <div class="container-fluid d-flex align-items-center">
+                
+                    <a href="#" class="navbar-brand">
+                        <img class="logotipo ms-lg-5 ms-sm-2 mt-0" src="./img/logotipo.png" alt="logotipo" width="1875" height="1827">
+                    </a>
+                
+                    <ul class="navbar-nav ms-auto me-4 d-none d-lg-flex flex-row">
+                        <li class="nav-item mx-3 my-lg-0"><a href="./index.html" class="nav-link active text-white">Inicio</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="./views/galeria.html" class="nav-link  text-white">Carta</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="./views/presupuesto.html" class="nav-link text-white">Reserva</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="./views/contacto.html" class="nav-link text-white ">Contacto</a></li>
+                    </ul>
+                
 
-            </ul>
+                    <button
+                    class="navbar-toggler d-lg-none"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMenu"
+                    aria-controls="offcanvasMenu"
+                    aria-expanded="false"
+                    aria-label="Mostrar / Ocultar Menu">
+
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+            </div>
+            
+            <!-- el menú offcanvas en hamburguesa -->
+
+            <div class=" offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+                <div class="offcanvas-header">
+                    <div class="offcanvas-title" id="offcanvasMenuLabel">
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav me-5 d-lg-none ms-auto">
+                        <li class="nav-item mx-3 my-lg-0"><a href="./views/galeria.html" class="nav-link">Carta</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="./views/presupuesto.html" class="nav-link">Reserva</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="./views/contacto.html" class="nav-link ">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        </div>
-    </header>
+
+        <!-- el carrusel -->
+
+        <section class="hero">
+            <div class="carousel slide carousel-fade" id="heroCarousel" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner container-fluid g-0">
+                    <div class="carousel-item active"> 
+                        <div class="row align-items-center">
+                            <div class=" col-12 col-md-6 image-wrapper">
+                                <img class=" img-fluid paella" src="./img/Paella.2.png" alt="paella" width="2324" height="1821">
+                            </div>
+                            <div class=" col-12 col-md-6 ms-md-auto mt-5 text-wrapper">
+                                <h2>Paella Mixto</h2>
+                                <p class="fs-4 d-none d-lg-block">Una paella mixta hecha con arroz, marisco, pimiento y cebolla. Perfecto para compartir</p>
+                                <p class="fs-4  texto-paella-tablet d-none d-md-block d-lg-none ">Una paella mixta hecha con arroz, marisco, pimiento y cebolla...</p>
+                                <button type="button" class="btn">Ver Más</button>
+                            </div>  
+                        </div>  
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class=" col-12 col-md-6 image-wrapper">
+                                <img class=" img-fluid parilla" src="./img/parillla2.png" alt="parilla" width="2322" height="1822">
+                            </div>
+                            <div class=" col-12 col-md-6  ms-md-auto mt-5 text-wrapper">
+                                <h2>Parrillada Mixta</h2>
+                                <p class="fs-4 d-none d-lg-block">Una parrillada mixta con alitas de pollo, solomillo, entrecot, chicharrón, chorizo Es un plato contundente y perfecto para compartir entre varios.</p>
+                                <p class="fs-4  d-none d-md-block d-lg-none">Una parrillada mixta con alitas de pollo, solomillo, entrecot, chicharrón, chorizo</p>
+                                <button type="button" class="btn">Ver Más</button>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class=" col-12 col-md-6 image-wrapper">
+                                <img class="parilla img-fluid" src="./img/Pizzaa.png" alt="pizza" width="2322" height="1822">
+                            </div>
+                            <div class=" col-12 col-md-6  ms-md-auto mt-5 text-wrapper">
+                                <h2>Pizzas</h2>
+                                <p class="fs-4 d-none d-lg-block">Pizzas caseras con masa recién hecha, ingredientes frescos y mucho sabor, ideales para compartir y disfrutar sin prisas.</p>
+                                <p class="fs-4 d-none d-md-block d-lg-none">Pizzas caseras con masa recién hecha, ingredientes frescos y mucho sabor</p>
+                                <button type="button" class="btn">Ver Más</button>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class=" col-12 col-md-6 image-wrapper">
+                                <img class="parilla  img-fluid" src="./img/Exotico.png" alt="exotico" width="2323" height="1821">
+                            </div>
+                            <div class=" col-12 col-md-6 ms-md-auto  mt-5 text-wrapper ">
+                                <h2>Platos Exóticos</h2>
+                                <p class="fs-4  d-none d-lg-block">Un plato vibrante con yuca frita, chicharrón crujiente, patacones y salsas frescas que realzan sabores auténticos y tradicionales</p>
+                                <p class="fs-4  d-none d-md-block d-lg-none">Un plato vibrante con yuca frita, chicharrón crujiente, patacones y salsas frescas</p>
+                                <button type="button" class="btn">Ver Más</button>
+                            </div> 
+                        </div>
+                    </div>
     
-    <!-- muestra un carrusel de con varios producto de la marca-->
-
-    <div class="contenedor-carrusel">
-        <div class="carrusel-slider">
-            <div class="slide">
-                <div class="contenido-slider">
-                    <h2 class="h2-slider">Velar Sound</h2>
-                    <p class="p-slider">Los Nuevos Audífonos con máxima aislación<br>
-                        Disponibles en una amplia variedad de colores.</p>
-                    <button class="button"> Comprar</button>
-                    <button class="button-info"> Más información</button>
+                    <div class="carousel-item arepa">
+                        <div class="row">
+                            <div class=" col-12 col-md-6 image-wrapper">
+                                <img class="img-fluid" src="./img/arepa.png" alt="arepa" width="1943" height="1540">
+                            </div>
+                            <div class=" col-12 col-md-6 ms-md-auto  mt-5 text-wrapper ">
+                                <h2>Arepas</h2>
+                                <p class="fs-4  d-none d-lg-block ">Ahora puedes disfrutar de nuestras deliciosas arepas recién hechas, rellenas con combinaciones irresistibles que satisfacen todos los gustos.</p>
+                                <p class="fs-4 d-none d-md-block d-lg-none">Ahora puedes disfrutar de nuestras deliciosas arepas recién hechas</p>
+                                <button type="button" class="btn">Ver Más</button>
+                            </div> 
+                        </div>
+                    </div>
                 </div>
-                <img src="./img/slider-cascos.jpg" width="2022"  alt="cascos inalambricos">
             </div>
-            <div class="slide">
-                <div class="contenido-slider">
-                    <h2 class="h2-slider-pad">Pad </h2>
-                    <p class="p-slider-pad">Ahora con chips A14<br> ofrenciendo velocidad y eficacia </p>
-                    <button class="button1"> Comprar </button>
-                </div>
-                <img src="./img/slider-crema.jpg" width="2024"  alt="ipad">
+            
+        </section>
+    </div>
+    <!-- los eventos que tiene el restaurante -->
+    <div class="container-fluid  container-eventos px-0">
+        <div class="row eventos align-content-end  g-0">
+            <div class="col-12 col-md-6  navidad position-relative">
+                <div class="overlay"></div>
+                <h1 class="titulo mt-5">Eventos</h1>
+                <img src="./img/navidad1.jpg" alt="navidad" width="2479" height="2257">
+                <h2 class="fs-md-4 fs-sm-3">Navidad</h2>
+                <button type="button" class="btn">Más Infomación</button>
             </div>
-            <div class="slide">
-                <div class="contenido-slider">
-                    <h2 class="h2-slider-rojo">Phonelar</h2>
-                    <p class="p-slider-rojo">Descubre la familia LAR</p>
-                    <button class="button2"> Comprar </button>
-                </div>
-                <img src="./img/slider-rojo.jpg" width="2024"  alt="celular">
+            <div class="col-12 col-md-6 año-nuevo position-relative" >
+                <div class="overlay"></div>
+                <img src="./img/año-nuevo1.jpg" alt="año-nuevo1" width="2479" height="2109">
+                <h2>Noche Vieja</h2>
+                <button type="button" class="btn">Más Infomación</button>
             </div>
         </div>
     </div>
 
-    <!-- Se muestra el boton la subir al principio de la página  -->
-    
-     <div class="button-subir" id="buttonSubir">
-        <button>
-            <i class="fa-solid fa-angle-up"></i>
-        </button>
-    </div>
-    <!-- se muestra los diversos productos de la marca  -->
-    <div class="contendor-imagenes" >
-        <div class="imagenes">
-            <h2 class="h2-img-cascos">VelarSound</h2>
-            <p class="p-img-cascos">Unico. iconicos</p>
-            <button class="button-img-cascosin">Más información</button>
-            <button class="button-img-cascos">Comprar</button>
-            <img src="./img/Airpod.jpg.png"  width="941"  alt="airpod">
-        </div>
-        <div class="imagenes">
-            <h2 class="h2-img-watch">Watch</h2>
-            <p class="p-img-watch">Cada segundo nos acerca a un futuro juntos.</p>
-            <button class="button-img-watchin">Más información</button>
-            <button class="button-img-watch">Comprar</button>
-            <img src="./img/watch.jpg"  width="941"  alt="watch" >
-        </div>
-        <div class="imagenes">
-            <h2 class="h2-img-ve">Ve mini</h2>
-            <p class="p-img-ve">Con IA, el tiempo deja de ser una limitación</p>
-            <button class="button-img-vein">Más información</button>
-            <button class="button-img-ve">Comprar</button>
-            <img  class="ve-img" src="./img/laptop.jpg" width="300"  alt="laptop">
-        </div>
-        <div class="imagenes">
-            <h2 class="h2-img-trade">Trade In</h2>
-            <p class="p-img-trade">Consigue entre 140 y 800 €<br> al renovar tu Phonelar</p>
-            <button class="button-img-tradein">Más información</button>
-            <button class="button-img-trade">Comprar</button>
-            <img src="./img/trade.jpg" width="928" alt="trade" >
+
+<!-- las novedades -->
+    <div class="container-fluid novedades">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mt-lg-5 mb-lg-5 mt-md-3 mb-md-3">
+                <h2>Novedades</h2>
+                <p class="texto-novedad">
+                    Queremos compartir contigo tres platos que llegan para quedarse:<br>
+                    Nuestro Rabo de Toro, El Sancocho Y la Ensalada Trifásica,<br>
+                    Ven a probarlos… ¡te esperamos con el sabor de siempre y la ilusión de lo nuevo!
+                </p>
+                <button type="button" class="btn">Ver Más</button>
+            </div>
+            
+            <div class="col-lg-2 col-md-4 sancocho d-none d-lg-block mt-lg-5"> <img src="./img/sancocho.jpg" alt="sancocho" width="595" height="842"></div>
+            <div class="col-lg-2 col-md-4 sancocho d-lg-none "> <img src="./img/sancocho-mobile.png" alt="sancocho" width="2391" height="2120"></div>
+            <div class="col-lg-2 col-md-4 rabo d-none d-lg-block mt-lg-5 "> <img src="./img/rabo.jpg" alt="rabo" width="595" height="842"></div>
+            <div class="col-lg-2 col-md-4 rabo d-lg-none"> <img src="./img/rabo-mobile.png" alt="rabo" width="2391" height="2120"></div>
+            <div class="col-lg-2 col-md-4 gambas  d-none d-lg-block mt-lg-5 mb-md-3"> <img src="./img/gambas.jpg" alt="gambas" width="595" height="842"></div>
+            <div class="col-lg-2 col-md-4 gambas d-lg-none mt-lg-5 mb-md-3"> <img src="./img/gambas-mobile.png" alt="gambas" width="2391" height="2120"></div>
         </div>
     </div>
 
-    <!-- dos videos promocionado los productos  -->
-    <video src="./mp4/iphone.webm" autoplay muted loop width="1920" height="948"></video>
+    <!-- los servicios que ofrese  -->
 
-    <div class="contenedor-mp4-grande">
-        <h2>VelarSound</h2>
-        <p class="p-mp4">Descubre los diversos modelos y colores</p>
-        <button>Comprar </button>
-        <button class="mp4-info">Más Infromación</button>
-        <video src="./mp4/airpord-video.mp4" autoplay muted loop width="640" height="360"></video>
-        <div class="fondo"></div>
-    </div>
-
-    <!-- Seccion de noticias -->
-     <h2 class="noticias-h2">Últimas Noticias</h2>
-     <div id="noticias" class="noticias">
-        <div id="contenedor-noticias"></div> <!--las noticias se cargan a travez de javascript-->
-     </div>
-
-     <!-- FOOTER -->
-
-    <div class="footer">
-        <div class="footer-imagen">
-            <img src="./img/footer-logo.png" width="365" alt="isotipo">
-             <p>Antencion telefonica con el numero 443 56 43 29 <br>
-            Lunes a Viernes 9:00 a 20:00 y de 9:00 a 18:00 los Sabados.<br>
-             Direcciones en España: <br>
-            Prta del Sol, 1, Centro, 28013 Madrid desde 9:30 a 21:00</p>
+    <div class="container-fluid px-0">
+        <div class="row servicios g-0">
+            <div class="conte-fondo">
+                <img src="./img/logoF.png" class="logoF  d-none d-md-block" alt="logof" width="812" height="791"> 
+            </div>
+            <div class="col-12 col-md-6 ser-reserva">
+                <img src="./img/reserva-8.png" alt="reserva-8" width="383" height="381">
+                <h2>¡Tu mesa te espera!</h2>
+                <p>Asegura tu lugar y disfruta nuestros sabores<br> 
+                Reserva ahora al número : <a>689953789</a> </p>
+                <button type="button" class="btn">Reserva</button>
+            </div>
+            <div class="col-12 col-md-6 ser-menu">
+                <img  src="./img/menu-8.png" alt="menu-8" width="340" height="369">
+                <h2>Explora nuestro menú</h2>
+                <p>Descubre nuestros platos estrella <br>
+                y deléitate con cada bocado.</p>
+                <button type="button" class="btn">Menú</button>
+            </div>
         </div>
-        <div class="filas">
-            <div class="filas-cont">
-                <h4>Ver &  comprar</h4>
-                <ul>
-                    <li>Tienda</li>
-                    <li>Ve</li>
-                    <li>Pad</li>
-                    <li>Phonelar</li>
-                    <li>Watch</li>
-                    <li>VelarSound</li>
-                    <li>Accesorios</li>
-                </ul>
-            </div>
-             <div class="columna"></div>
 
-            <div class="filas-cont">
-                <h4>Cuenta & Comunidad</h4>
-                <ul> 
-                    <li>Mi cuenta</li>
-                    <li>Mis productos</li>
-                    <li>Pedidos</li>
-                    <li>Lista de deseos</li>
-                    <li>Members</li>
-                    <li>Servicio</li> 
-                    <li>Registra tu producto</li>
-                </ul>
-            </div>
-             <div class="columna"></div>
+        <!-- el plato estrella del lugar -->
 
-            <div class="filas-cont">
-                <h4>Empresa</h4>
-                <ul>
-                    <li>Quienes somos</li>
-                    <li>Trabaja con Nosotros</li>
-                    <li>Contactos</li>
-                </ul>
+        <div class="row plato-estrella g-0">
+            <img src="./img/fondo-plato.png" alt="fondo-plato" width="1572" height="1048">
+            <div class="col-12 col-md-4 col-sm-2 plato-text">
+                <h2 class="fs-1">Paella Mixta</h2>
+                <p>Arroz bomba cocinado al punto perfecto,<br>combinado con pollo, mariscos,</p>
+                <button type="button" class="btn ">Ver</button>
             </div>
-             <div class="columna"></div>
-
-            <div class="filas-cont">
-                 <h4> Tiendas &  Compras</h4>
-                <ul> 
-                    <li>Store</li>
-                    <li>Envios y Devoluciones</li>
-                    <li>Metodos de Pago</li>
-                </ul>
+            <div class="col-12 col-md-4 col-sm-8 plato-png img-fluid"><img src="./img/plato-estrella.png" alt="plato estrella" width="2324" height="2114"></div>
+            <div class="col-12 col-md-4 col-sm-2 plato-text2">
+                <h3>Especialidad de la casa</h3>
+                <p>Verduras seleccionadas y nuestro caldo casero.<br> Un plato lleno de mucho sabor mediterráneo</p>
             </div>
+        </div>
+    </div>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Opiniones de nuestros clientes</h2>
         
-        </div>
+        <div class="row">
+            
+            <div class="col-md-3 ">
+            <div class="card h-100 reseñas">
+                <div class="card-body">
+                <h5 class="card-title">Juan Pérez</h5>
+                <p class="card-text">"La comida espectacular, repetiré sin duda."</p>
+                </div>
+            </div>
+            </div>
 
-        <ul class="lista-politicas">
-            <li>Política de Privacidad</li>
-            <li>Términos y Condiciones</li>
-            <li>Cookies</li>
-        </ul>
-        <div class="redes-sociales">
-            <a href="https://www.facebook.com/?locale=es_ES"><i class="facebook"> <img src="./img/facebook.png" width="512"  alt="logo de facebook" > </i>Facebook</a>
-            <a href="https://x.com/?lang=es"><i class="twitter"> <img src="./img/twitter.png" width="512" alt="logo de instagram"></i>twitter</a>
-            <a href="https://www.instagram.com"><i class="instagram"> <img src="./img/instagram.png" width="512" alt="logo de twitter"> </i>instagram</a>
-            <a href="https://es.linkedin.com"><i class="linkedin"> <img src="./img/linkedin.png" width="512" alt="logo de linkedin"></i>linkedin</a>
+            <div class="col-md-3">
+            <div class="card h-100 reseñas">
+                <div class="card-body">
+                <h5 class="card-title">María López</h5>
+                <p class="card-text">"Muy buen ambiente y atención excelente."</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-md-3">
+            <div class="card h-100 reseñas">
+                <div class="card-body">
+                <h5 class="card-title">Carlos Ruiz</h5>
+                <p class="card-text">"Las arepas están increíbles."</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-md-3">
+            <div class="card h-100 reseñas">
+                <div class="card-body">
+                <h5 class="card-title">Ana Torres</h5>
+                <p class="card-text">"Servicio rápido y comida deliciosa."</p>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- el pie de página -->
+    <div class="footer">
+    <div class="row conte-footer">
+        <div class="col-12 col-md-6 col-lg-4">
+            <img src="./img/logo-footer.png" class="logo-footer img-fluid" alt="logo-footer" width="2931" height="883">
+        </div>
+        <div class=" col-12 col-md-6 col-lg-2 lis-navbar">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="./views/galeria.html">Carta</a></li>
+                <li><a href="./views/presupuesto.html">Reserva</a></li>
+                <li><a href="./views/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 lis-info">
+            <ul>
+                <li><a href="https://www.google.com/maps/place/El+Fogón+de+More/@39.0850762,-0.217427,17z/data=!4m6!3m5!1s0xd61c51b023b02f9:0x99e43f12dabd81ea!8m2!3d39.0850762!4d-0.2148521!16s%2Fg%2F11mdkyxj01?entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                📍<b>Dirección:</b> Carrer de Jaume ll, 21,46760 Tavernes de la Valldigna</a> </li>
+                <li><b>🕒Horarios:</b>  8a.m - 11p.m</li>
+                <li><b>📞Teléfono:</b> 689 953 789</li>
+            </ul>
+        </div>
+        <div class=" col-12 col-md-6 col-lg-3 lis-redes">
+            <ul>
+                <li class="face"><a href="https://www.facebook.com/?locale=es_ES"><img src="./img/log-face.png" alt="facebook" width="50" height="50">Facebook</a> </li>
+                <li class="img-fluid"><a href="https://www.instagram.com"><img src="./img/log-ins.png" alt="instagram" width="50" height="50"> Instagram</a></li>
+            </ul>
         </div>
     </div>
+    <div class="row">
+        <div class="col politicas text-center">
+            <p>
+                <a href="#">Aviso legal</a> | 
+                <a href="#">Política de privacidad</a> | 
+                <a href="#">Política de cookies</a>
+            </p>
+        </div>
+    </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

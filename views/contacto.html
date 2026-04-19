@@ -3,173 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <title>Contacto</title>
+     <link rel="icon" type="imagen/png" href="../img/logotipo.png">
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="../js/java.js" defer></script>
-    <title>Velar</title>
-    <link rel="icon" href="../img/icon.png"  type="imagen/x-icon" sizes="16x16">
-
+   
 </head>
-<body>
-    <header class="header-contac">
-        <div class="logo-nav-container">
-        <nav class="navegation">
-            <ul>
-                <li><a href="../index.html" class="lis-en">Inicio</a></li>
-                <li><a href="galeria.html" class="lis-en">Galeria</a></li>
-                <li><a href="../index.html" class="logo"><img src="../img/iso.png" width="36" alt="icon"></a></li>
-                <li><a href="presupuesto.html" class="lis-en">Presupuesto</a></li>
-                <li><a href="contacto.html" class="lis-en activo">Contacto</a></li>
-            </ul>
-        </nav>
-        </div>
-    </header>
-    <div class="fondo-conta">
-    <img src="../img/fondo-contac.jpg" width="3000" alt="fondo de iphone">
-    </div>
-    <h1 class="contactos">Contactos</h1>
-<!-- boton para subir  -->
-    <div class="button-subir" id="buttonSubir">
-        <button>
-            <i class="fa-solid fa-angle-up"></i>
-        </button>
-    </div>
+<body class="bg-fondo contacto-page">
+    <!-- el encabezado -->
+    <div class="encabezado-contac">
+        <nav class="navbar">
+            <div class="container-fluid d-flex align-items-center">
+                
+                    <a href="#" class="navbar-brand">
+                        <img class="logotipo ms-lg-5 ms-sm-2 mt-3" src="../img/logotipo.png" alt="logotipo" width="2322" height="1822">
+                    </a>
+                
+                    <ul class="navbar-nav ms-auto me-4 d-none d-lg-flex flex-row">
+                        <li class="nav-item mx-3 my-lg-0"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="galeria.html" class="nav-link text-white">Carta</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="presupuesto.html" class="nav-link text-white">Reserva</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="contacto.html" class="nav-link active text-white ">Contacto</a></li>
+                    </ul>
+                
 
-<!-- informacion de la empresa -->
-    <div class="contene-contac">
-        <div class="contac">
-            <h2> Velar Online Store</h2>
-            <p>Entra en el Velar Online Store para adquirir equipos y programas de Velar y accesorios.
-                Antencion telefonica con el numero 443 56 43 29 de lunes a viernes 9:00 a 20:00 y de 9:00 a 18:00 los sabados.
+                    <button
+                    class="navbar-toggler d-lg-none"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMenu"
+                    aria-controls="offcanvasMenu"
+                    aria-expanded="false"
+                    aria-label="Mostrar / Ocultar Menu">
+
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+            </div>
+                
+            <!-- el menú offcanvas -->
+            <div class=" offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+                <div class="offcanvas-header">
+                    <div class="offcanvas-title" id="offcanvasMenuLabel">
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav me-5 d-lg-none ms-auto">
+                        <li class="nav-item mx-3 my-lg-0"><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="galeria.html" class="nav-link">Carta</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="presupuesto.html" class="nav-link">Reserva</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="contacto.html" class="nav-link ">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- el video de la portada -->
+     <div class="video">
+        <div class="contec-texto">
+            <h2>CONTACTO</h2> 
+        </div>
+        <video  autoplay muted loop playsinline>
+            <source src="../mp4/video-contac-final.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!-- el formulario de contacto -->
+    <div class="container formulario-contac">
+        <form>
+            <div class="row formulario-inputs-contac mb-3">
+                <div class="col">
+                    <label for="inputName" class="form-label">Nombre</label>
+                    <input type="text"  id="inputName" class="form-control" placeholder="Nombre" aria-label="Nombre" minlength="3" maxlength="40" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo letras, ni número ni símbolo" required>
+                
+                </div>
+                <div class="col">
+                    <label for="inputapellido" class="form-label">Apellido</label>
+                    <input type="text"  id="inputapellido" class="form-control" placeholder="Apellido" aria-label="Apellido" minlength="4" maxlength="60" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo letras, ni número ni símbolo" required>
+                </div>
+            </div>
+            <div class="row formulario-inputs-contac mb-3">
+                <div class=" col">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" title="Introduce un correo electrónico válido" required>
+                </div>
+                <div class="col">
+                    <label for="inputtelefono" class="form-label">Telefono</label>
+                    <input type="tel"  id="inputtelefono" class="form-control"  placeholder="600123456" pattern="^[0-9]{9}$" maxlength="9" title="Debe tener exactamente 9 números"
+                    required  aria-label="Telefono">
+                </div>
+            </div>
+            <div class="row formulario-inputs-contac">
+                <div class=" col-12 mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="500"></textarea>
+                </div>
+                <button type="submit" class=" col btn ">Enviar</button>
+                <button type="reset" class=" col btn ">Reset</button>
+            </div>   
+        </form>
+    </div>
+    
+    <!-- el mapa -->
+    <div class="container-fluid conte-map">
+        <div class="row g-0">
+            <div class="col-12">
+               <div id="map"></div> 
+            </div>
+        </div>
+    </div>
+    <!-- el pie de página -->
+    <div class="footer">
+    <div class="row conte-footer">
+        <div class="col-12 col-md-6 col-lg-4">
+            <img src="../img/logo-footer.png" class="logo-footer img-fluid" alt="logo-footer" width="2322" height="1822">
+        </div>
+        <div class=" col-12 col-md-6 col-lg-2 lis-navbar">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="./views/galeria.html">Carta</a></li>
+                <li><a href="./views/presupuesto.html">Reserva</a></li>
+                <li><a href="./views/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 lis-info">
+            <ul>
+                <li><a href="https://www.google.com/maps/place/El+Fogón+de+More/@39.0850762,-0.217427,17z/data=!4m6!3m5!1s0xd61c51b023b02f9:0x99e43f12dabd81ea!8m2!3d39.0850762!4d-0.2148521!16s%2Fg%2F11mdkyxj01?entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                📍<b>Dirección:</b> Carrer de Jaume ll, 21,46760 Tavernes de la Valldigna</a> </li>
+                <li><b>🕒Horarios:</b>  8a.m - 11p.m</li>
+                <li><b>📞Teléfono:</b> 689 953 789</li>
+            </ul>
+        </div>
+        <div class=" col-12 col-md-6 col-lg-3 lis-redes">
+            <ul>
+                <li class="face"><a href="https://www.facebook.com/?locale=es_ES"><img src="../img/log-face.png" alt="facebook" width="50" height="50">Facebook</a> </li>
+                <li class="img-fluid"><a href="https://www.instagram.com"><img src="../img/log-ins.png" alt="instagram" width="50" height="50"> Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col politicas text-center">
+            <p>
+                <a href="#">Aviso legal</a> | 
+                <a href="#">Política de privacidad</a> | 
+                <a href="#">Política de cookies</a>
             </p>
         </div>
-        <div class="contac">
-             <h2>Velar Store</h2>
-            <p>Descubre y prueba por ti mismo el mundo digital en cualquiera de nuestras tiendas Velar Store en España</p>
-        </div>
-        <div class="contac">
-            <h2>Contacta con el soporte ténico de Velar</h2>
-            <ul>
-                <li>Contacta con un operador de telefonia movil</li>
-                <li>Encuentra un proveedor de servicios autorizado</li>
-                <li>Soporte técnico: 443 56 43 29</li>
-            </ul>
-        </div>
     </div>
-    <div class="contene-contac1">
-        <div class="contac">
-            <h2>Visitanos</h2>
-            <p>Direcciones en España: <br>
-            Prta del Sol, 1, Centro, 28013 Madrid desde 9:30 a 21:00</p>
-            </div>
-        <div class="contac">
-            <h2>Financiación para ti, para tu negocio o para tu centro educativo</h2>
-            <p>Velar Financial Services ofrece distintas opciones de financiación de los productos Velar a particulares, empresas e instituciones educativas.</p>
-        </div>
     </div>
 
-    <div class="contac-imagen">
-        <img src="../img/contac-bocin.jpg" width="600" alt="bocina" >
-    </div>
-    <!-- formulario de contacto -->
-    <form name="formulario-contac" class="formulario-contac"  target="_blank">
-        <h2>Contactanos</h2>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" maxlength="15" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo letras, ni número ni símbolo" required>
-
-        <label for="nombre">Apellido</label>
-        <input type="text" id="apellido" name="apellido"  maxlength="40" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo letras, ni número ni símbolo" required>
-
-        <label for="email">Correo electronico</label>
-        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Introduce un correo electrónico válido" required>
-
-        <label for="asunto">Asunto</label>
-        <textarea id="asunto" name="asunto" rows="5" cols="79" maxlength="500"></textarea>
-
-        <button type="reset">Reseteo</button>
-        <button type="submit">Enviar</button>
-    </form>
-
-    <!-- mapa  que marca la ubicacion -->
-    <div class="h2-contac">
-        <h2>Mapa</h2>
-        <p>Aqui podeis ver la distancia desde su hogar hasta nuestra tienda. !!Te Esperamos </p>
-    </div>
-    <div id="map"></div>
-
-    <!-- footer -->
-    <div class="footer">
-        <div class="footer-imagen">
-            <img src="../img/footer-logo.png" width="365" alt="isotipo">
-            <p>Antencion telefonica con el numero 443 56 43 29 <br>
-            Lunes a Viernes 9:00 a 20:00 y de 9:00 a 18:00 los Sabados.<br>
-            Direcciones en España: <br>
-            Prta del Sol, 1, Centro, 28013 Madrid desde 9:30 a 21:00</p>
-        </div>
-        <div class="filas">
-            <div class="filas-cont">
-                <h4>Ver &  comprar</h4>
-                <ul>
-                    <li>Tienda</li>
-                    <li>Ve</li>
-                    <li>Pad</li>
-                    <li>Phonelar</li>
-                    <li>Watch</li>
-                    <li>VelarSound</li>
-                    <li>Accesorios</li>
-                </ul>
-            </div>
-            <div class="columna"></div>
-
-            <div class="filas-cont">
-                <h4>Cuenta & Comunidad</h4>
-                <ul> 
-                    <li>Mi cuenta</li>
-                    <li>Mis productos</li>
-                    <li>Pedidos</li>
-                    <li>Lista de deseos</li>
-                    <li>Members</li>
-                    <li>Servicio</li> 
-                    <li>Registra tu producto</li>
-                </ul>
-            </div>
-            <div class="columna"></div>
-
-            <div class="filas-cont">
-                <h4>Empresa</h4>
-                <ul>
-                    <li>Quienes somos</li>
-                    <li>Trabaja con Nosotros</li>
-                    <li>Contactos</li>
-                </ul>
-            </div>
-            <div class="columna"></div>
-
-            <div class="filas-cont">
-                 <h4> Tiendas &  Compras</h4>
-                <ul> 
-                    <li>Store</li>
-                    <li>Envios y Devoluciones</li>
-                    <li>Metodos de Pago</li>
-                </ul>
-            </div>
-        
-        </div>
-
-        <ul class="lista-politicas">
-            <li>Política de Privacidad</li>
-            <li>Términos y Condiciones</li>
-            <li>Cookies</li>
-        </ul>
-        <div class="redes-sociales">
-            <a href="https://www.facebook.com/?locale=es_ES"><i class="facebook"> <img src="../img/facebook.png" width="512"  alt="logo de facebook" > </i>Facebook</a>
-            <a href="https://x.com/?lang=es"><i class="twitter"> <img src="../img/twitter.png" width="512" alt="logo de instagram"></i>twitter</a>
-            <a href="https://www.instagram.com"><i class="instagram"> <img src="../img/instagram.png" width="512" alt="logo de twitter"> </i>instagram</a>
-            <a href="https://es.linkedin.com"><i class="linkedin"> <img src="../img/linkedin.png" width="512" alt="logo de linkedin"></i>linkedin</a>
-        </div>
-    </div>
-
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/JS.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
 </body>
 </html>

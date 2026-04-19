@@ -3,238 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velar</title>
+    <title>Carta</title>
+    <link rel="icon" type="imagen/png" href="../img/logotipo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="icon" href="../img/icon.png"  type="imagen/x-icon" sizes="16x16">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="../js/java.js" defer ></script>
-</head>
-<body class="paginas-galeria">
-    <header class="header">
-        <div class="logo-nav-container">
-        <nav class="navegation">
-            <ul>
-                <li><a href="../index.html" class="lis-en">Inicio</a></li>
-                <li><a href="galeria.html" class="lis-en activo">Galeria</a></li>
-                <li><a href="../index.html" class="logo"><img src="../img/iso.png" width="36" alt="icon"></a></li>
-                <li><a href="presupuesto.html" class="lis-en">Presupuesto</a></li>
-                <li><a href="contacto.html" class="lis-en">Contacto</a></li>
-
-            </ul>
-        </nav>
-        </div>
-    </header>
    
-    <!-- catálogo de los productos -->
-    
-    <div class="conten-gale">
-        <div class=" card watch-gale">
-            <h2>Watch</h2>
-            <p>Watch más inteligente del mundo</p>
-            <button> Más infomación</button>
-            <img src="../img/watch-gale.png" width="592"  alt="reloj">
+</head>
+<body class="bg-fondo">
+    <!-- el encabezado -->
+    <div class="encabezado-gale">
+        <nav class="navbar">
+                <div class="container-fluid d-flex align-items-center">
+                    
+                        <a href="#" class="navbar-brand">
+                            <img class="logotipo ms-lg-5 ms-sm-2 mt-3" src="../img/logotipo.png" alt="logotipo" width="1875" height="1827">
+                        </a>
+                    
+                        <ul class="navbar-nav ms-auto me-4 d-none d-lg-flex flex-row">
+                            <li class="nav-item mx-3 my-lg-0"><a href="../index.html" class="nav-link">Inicio</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="./galeria.html" class="nav-link active text-white">Carta</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="./presupuesto.html" class="nav-link">Reserva</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="./contacto.html" class="nav-link">Contacto</a></li>
+                        </ul>
+                    
+
+                        <button
+                        class="navbar-toggler d-lg-none navbar-dark"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasMenu"
+                        aria-controls="offcanvasMenu"
+                        aria-expanded="false"
+                        aria-label="Mostrar / Ocultar Menu"
+                        >
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                </div>
+                    
+                <!-- el menú offcanvas -->
+                <div class=" offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+                    <div class="offcanvas-header">
+                        <div class="offcanvas-title" id="offcanvasMenuLabel">
+                        <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-5 d-lg-none ms-auto">
+                            <li class="nav-item mx-3 my-lg-0"><a href="../index.html" class="nav-link">Inicio</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="galeria.html" class="nav-link">Carta</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="presupuesto.html" class="nav-link">Reserva</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="contacto.html" class="nav-link ">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+    </div>
+    <!-- la portada de la carta -->
+    <div class="container-fluid carta ">
+        <div class=" g-0 conten-portada">
+            <div class="titulo-gale">
+                <img class="carta-img mt-5 img-fluid" src="../img/carta.png" alt="carta" width="2322" height="1822">
+            </div>
         </div>
-        <div class=" card sound-gale">
-            <h2>VelarSound</h2>
-            <p>Maxima aislación de ruido</p>
-            <button> Más infomación</button>
-            <img src="../img/cascos.png" width="918" alt="cascos">
+        <div class="row fondo-azul-gale">
+            <div class="col-12 plato-gale">
+                <img class="plato-estrella-gale img-fluid" src="../img/plato-estrella.png" alt="plato-estrella" width="2322" height="1822">
+            </div>
+            <!-- sección de entrantes -->
+            <div class="col-12 text-gale g-0">
+                <h2>ENTRANTES</h2>
+                <div class="linea-blanca"></div>
+            </div>
+            <div class="col-12  entrante1">
+                <ul class="lista1-gale">
+                    <li>Croquetas de Jamón</li>
+                    <li>Mejillones al vino</li>
+                    <li>Huevos rotos de (Jamón, Gulas, Atún ó Chistorra)</li>
+                    <li>Pulpo a la gallega</li>
+                    <li>Tabla de embutidos</li>
+                    <li>Figastel FOGÓN</li>
+                </ul> 
+                <img  class="mejillones img-fluid" src="../img/mejillones.png" alt="mejillones" width="2322" height="1822">
+            </div>
+            
+            <div class="col-12 entrante2 ">
+                <img  class="escalivada img-fluid" src="../img/escalivada.png" alt="escalivada" width="2322" height="1822">
+                <ul class="lista2-gale">
+                    <li>Huevas de sepia</li>
+                    <li>Orejas a la plancha</li>
+                    <li>Escalivada de verduras</li> 
+                    <li>Patatas Bravas</li>
+                    <li>Patatas con mojo</li>
+                    <li>Revuelto de gambas</li>
+                </ul>  
+            </div>
+           
         </div>
-        <div class=" card acce-gale">
-            <h2>Acesorios</h2>
-            <p>Diversos acesorios</p>
-            <img src="../img/acsor-gale.png" width="300" alt="acesorios">
+    </div>
+    <!-- sección de ensaladas -->
+    <div class="container-fluid conte-ensalada">
+        <div class="row">
+            <div class="col-12 ensaladas g-0">
+                <h2>ENSALADAS</h2>
+                <div class="linea-naranjad"></div>
+            </div>
+            <div class="col-12 lis-ensalada">
+                <ul>
+                    <li>Ensalada verde</li>
+                    <li>Ensalada FOGÓN</li>
+                    <li>Ensalada mediterránea</li>
+                </ul>
+                <ul>
+                    <li>Ensalada Cesar</li>
+                    <li>Ensalada Trifásica</li>
+                    <li>Ensalada de Tomate</li>
+                    <li>Proventa con verduras</li>
+                </ul>
+                <div class="espinaca-img">
+                  <img src="../img/espinaca2.png" class="espinaca2 img-fluid" alt="espinaca2" width="2322" height="1822">   
+                </div>
+                
+            </div>
+                
+            <div class="col-12 ensalada-img">
+                <img src="../img/espinaca1.png" class="espinaca1 img-fluid" alt="espinaca1" width="2322" height="1822">
+                <img src="../img/ensaladas.png" class="ensalada1 img-fluid" alt="ensalada de gambas" width="2322" height="1822"> 
+            </div>
         </div>
-        <div class="card pad-gale">
-            <h2>Pad</h2>
-            <p>Un Pad de ultima generacion, con chips A14</p>
-            <button> Más infomación</button>
-            <img src="../img/ipad-gale.png" width="1849" alt="paid">
+
+       <!-- sección de carnes -->
+        <div class="row">
+            <div class="col-5  text-end p-0 carne-img ">
+                <div class="espinaca-img">
+                   <img src="../img/espinaca2.png" class="espinaca2-1 img-fluid" alt="espinaca2" width="2322" height="1822">  
+                </div>
+                <img src="../img/carnes4.png" class="carnes4 img-fluid" alt="carne" width="2322" height="1822">
+            </div>
+            <div class="col-7 lis-carne g-0">
+                <h2 class=" pe-2">CARNES</h2>
+                <div class="linea-naranjai"></div>
+                <ul class="p-3">
+                    <li>Pollo a la brasa en Guasacaca</li>
+                    <li>Villagodio</li>
+                    <li>Entrecot</li>
+                    <li>Solomillo a la pimienta</li>
+                    <li>Escalope de pollo</li>
+                    <li>Picapollo (4 piezas)</li>
+                    <li>Entraña</li>
+                    <li>Fogón</li>
+                    <li>Parrillada mixta</li>
+                    <li>Rabo de Vaca</li>
+                </ul>
+                <div class="col espinaca-img">
+                   <img src="../img/espinaca3.png" class="espinaca3 img-fluid"  alt="espinaca3" width="2322" height="1822">  
+                </div>
+            </div> 
+        </div>
+    </div>
+    <!-- seccion de los arroces -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 arroces">
+                <h2>ARROCES</h2>
+                <div class="linea-naranjac"></div>
+            </div>
+            <div class="col-12 lis-arroces">
+                <ul>
+                    <li>Paella valenciana</li>
+                    <li>Paella mixta</li>
+                    <li>Arroz negro</li>
+                    <li>Arroz bogavante</li>
+                    <li>Arroz mar y tierra</li>
+                </ul>
+                <ul>
+                    <li>Senyoret</li>
+                    <li>Risoto de guandule</li>
+                    <li>Risoto de marisco</li>
+                    <li>Risoto de boletus</li>
+                    <li>Risoto de maní</li>
+                </ul>
+            </div>
+            <div class="col-12 p-0 text-center fondogale">
+                    <img src="../img/marea.png"  class="marea-arroces img-fluid" alt="marea" width="2322" height="1822">
+            </div>
+            <!-- los platos de mar -->
+            <div class="cont-pescado p-0">
+                <div class="col-12 pescados">
+                    <h2>PLATOS DE MAR </h2>
+                    <div class="linea-blancac"></div>
+                </div>
+                <div class="col-12 lis-pescados">
+                    <img src="../img/gambas-mar.png"  class="gambas-pesca img-fluid" alt="gambas" width="2322" height="1822">
+                    <ul>
+                        <li>Tilapia al Coco</li>
+                        <li>Dorada a la bilbaína</li>
+                        <li>Tilapia FOGÓN</li>
+                    </ul>
+                </div>
+                <div class="col-12 lis-pescados1">
+                    <ul>
+                        <li>Fritura FOGÓN</li>
+                        <li>Gambas al ajillo</li>
+                        <li>Sepia a la plancha</li>
+                    </ul>
+                     <img src="../img/chipirones-mar.png" class="chipi-pesca img-fluid"  alt="chipirones-mar" width="2322" height="1822">
+                </div>
+                <div class="col-12 lis-pescados">
+                     <img src="../img/sepia-mar.png"  class="sepia-pesca img-fluid" alt="sepia-mar" width="2322" height="1822">
+                    <ul>
+                        <li>Chipirones a la plancha</li>
+                        <li>Pulpo FOGÓN</li>
+                        <li>Ceviche</li>
+                    </ul>
+                </div>
+                <div class="col-12 transicion-pizza">
+                    <img src="../img/transicion-pizza.png" alt="transicion-pizza img-fluid" width="2322" height="1822">
+                </div>
+            </div>
+        </div>
+        <!-- la sección de pizzas -->
+        <div class="row">
+            <div class="col-12 pizza g-0">
+                <h2>PIZZA</h2>
+                <div class="linea-naranjad"></div>
+            </div>
+            <div class="col-12 lis-pizza g-0">
+                <img src="../img/pepe.png" class="pepe-pizza img-fluid" alt="pepe-pizza" width="2322" height="1822">
+                <ul>
+                    <li>Margherita</li>
+                    <li>Prosciuto e Funghi</li>
+                    <li>Prosciuto</li>
+                    <li>Diavola</li>
+                    <li>Marinara</li>
+                    <li>4 Formaggi</li>
+                    <li>4 Stagioni</li>
+                </ul>
+                <img src="../img/hoja3.png" class="hoja3 img-fluid" alt="hoja3" width="2322" height="1822">
+                <img src="../img/pizza1.png" class="pizza1 img-fluid" alt="pizza1" width="2322" height="1822">
+            </div>
+            <div class="lis-pizza2 g-0">
+                <img src="../img/pepe.png" class="pepe-pizza2 img-fluid" alt="pepe-pizza2" width="2322" height="1822">
+                <img src="../img/porta-pizza.png" class="pizza2 img-fluid" alt="pizza2" width="2322" height="1822">
+                <img src="../img/hoja2.png" class="hoja2 img-fluid" alt="hoja2" width="2322" height="1822">
+                <ul>
+                    <li>Napoletana</li>
+                    <li>Seciliana</li>
+                    <li>Frutti di Mare</li>
+                    <li>Ortolana</li>
+                    <li>Parmeggiana</li>
+                    <li>Zucchine</li>
+                    <li>Tono e Cipolla</li>
+                    <li>Fogón (Barbacoa)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- el fondo del rincon platos extranjeros -->
+    <div class="container-fluid ">
+        <div class="row fondo-rincon">
+            <div class="col-12 titulo-rincon g-0">
+                <img src="../img/titulo-rincon.png" class="titulo-rincon img-fluid" alt="titulo-rincon" width="2322" height="1822">
+            </div>
+            <div class="row rincon-sonador g-0">
+                <div class=" col-12 col-md-6 lis-rincon">
+                    <div class="conte-lis">
+                        <h2>EUROPA</h2>
+                        <ul>
+                            <li>Hamburguesa Agus</li>
+                            <li>Hamburguesa Smash</li>
+                            <li>Hamburguesa Figastel</li>
+                            <li>Hamburguesa FOGÓN</li>
+                            <li>Hamburguesa Tradicional</li>
+                            <li>Tortilla de Patatas</li>
+                            <li>T.Patatas</li>
+                            <li>Tagliatelle con boletus</li>
+                            <li>Röstti con ternera y huevo</li>
+                        </ul> 
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 lis-rincon2">
+                    <div class="conte-lis2">
+                        <h2>LATINOAMERICA</h2>
+                        <ul>
+                            <li>Bruschetta</li>
+                            <li>Fajita de pollo / ternera</li>
+                            <li>Fajita mixta</li>
+                            <li>Encebollado</li>
+                            <li>Ceviche</li>
+                            <li>Sancocho</li>
+                            <li>Camarones al Coco</li>
+                            <li>Salchipapa</li>
+                            <li>Tequeños</li> 
+                            <li>Combo Tentación</li>
+                            <li>Nachos al Pastor</li>
+                        </ul>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-12 titulo-restaurante g-0">
+                <h2>Nuestro Restaurante por dentro</h2>
+            </div>
+            <div class="col-12 col-sm-6  img1-restaurante">
+                <img src="../img/restaurante-convertido-de-webp.jpeg" alt="restaurante">
+            </div>
+            <div class="col-12 col-sm-6 img2-restaurante">
+                <img src="../img/barra-restaurate-convertido-de-webp.jpeg" alt="barra">
+            </div>
         </div> 
-        <div class="card ve-gale">
-            <h2>Ve</h2>
-            <p>Si puedes imaginarlo,<br>
-            el Ve puede hacerlo.</p>
-            <button> Más infomación</button>
-            <img src="../img/ve-gale.png" width="300" alt="portatil">
+    </div>
+
+    <!-- el pie de página -->
+    <div class="footer">
+    <div class="row conte-footer">
+        <div class="col-12 col-md-6 col-lg-4">
+            <img src="../img/logo-footer.png" class="logo-footer img-fluid" alt="logo-footer" width="2322" height="1822">
         </div>
-        <div class="card phonelar-gale">
-            <h2>Phonelar</h2>
-            <p>Todos los modelos. Elige el tuyo.</p>
-            <button> Más infomación</button>
-            <img src="../img/phone-gale.png" width="300" alt="iphone">
+        <div class=" col-12 col-md-6 col-lg-2 lis-navbar">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="./views/galeria.html">Carta</a></li>
+                <li><a href="./views/presupuesto.html">Reserva</a></li>
+                <li><a href="./views/contacto.html">Contacto</a></li>
+            </ul>
         </div>
+        <div class="col-12 col-md-6 col-lg-3 lis-info">
+            <ul>
+                <li><a href="https://www.google.com/maps/place/El+Fogón+de+More/@39.0850762,-0.217427,17z/data=!4m6!3m5!1s0xd61c51b023b02f9:0x99e43f12dabd81ea!8m2!3d39.0850762!4d-0.2148521!16s%2Fg%2F11mdkyxj01?entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                📍<b>Dirección:</b> Carrer de Jaume ll, 21,46760 Tavernes de la Valldigna</a> </li>
+                <li><b>🕒Horarios:</b>  8a.m - 11p.m</li>
+                <li><b>📞Teléfono:</b> 689 953 789</li>
+            </ul>
+        </div>
+        <div class=" col-12 col-md-6 col-lg-3 lis-redes">
+            <ul>
+                <li class="face"><a href="https://www.facebook.com/?locale=es_ES"><img src="../img/log-face.png" alt="facebook" width="50" height="50">Facebook</a> </li>
+                <li class="img-fluid"><a href="https://www.instagram.com"><img src="../img/log-ins.png" alt="instagram" width="50" height="50"> Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col politicas text-center ">
+            <p>
+                <a href="#">Aviso legal</a> | 
+                <a href="#">Política de privacidad</a> | 
+                <a href="#">Política de cookies</a>
+            </p>
+        </div>
+    </div>
     </div> 
-    <!-- boton para subir -->
 
-    <div class="button-subir" id="buttonSubir">
-        <button>
-            <i class="fa-solid fa-angle-up"></i>
-        </button>
-    </div>
-
-    <!-- slider de las novedades y los servicios -->
-
-    <h2 class="h2-slider-gale "> Echa un vistazo a las novedades</h2>
-    <div class="slider-conte">
-        <button class="button-prev-slider">
-            <i class="fa-solid fa-circle-chevron-left"></i>
-        </button>
-        <div class="slider-gale" id="slider-gale">
-            <div class="slider-manual" id="slider-manual">
-                <div class="slider">
-                    <picture>
-                        <img src="../img/vemini-slider.jpg" width="566" alt="portatil mini">
-                    </picture>
-                </div>
-                <div class="slider">
-                    <picture>
-                        <img src="../img/watch-slider.jpg" width="567" alt="watch">
-                    </picture>
-                </div>     
-                <div class="slider" >
-                    <picture>
-                        <img src="../img/iphone-slider.jpg"  width="567" alt="iphone">
-                    </picture>
-                </div>
-                <div class="slider" >
-                    <picture>
-                        <img src="../img/boci-slider.jpg" width="566" alt="bocina">
-                    </picture>
-                </div>
-                <div class="slider" >
-                    <picture>
-                        <img src="../img/pad-slider.jpg" width="567" alt="ipad">
-                    </picture>
-                </div>
-                <div class="slider" >
-                    <picture>
-                        <img src="../img/Ive-slider.jpg" width="567" alt="ordenador">
-                    </picture>
-                </div>
-            </div>
-        </div>
-      
-         <!-- Botones de navegación> --> 
-        <button class="button-next-slider">
-            <i class="fa-solid fa-circle-chevron-right"></i>
-        </button>
-    </div>
-
-    <h2 class="h2-entre-slider">Aún más razones para comprar con nosotros.</h2>
-    <div class="slider-conte1">
-        <button class="button-prev-slider1">
-            <i class="fa-solid fa-circle-chevron-left"></i>
-        </button>
-        <div class="slider-gale1" id="slider-gale1">
-            <div class="slider-manual1" id="slider-manual1">
-                <div class="slider1" id="slider1">
-                    <picture>
-                        <img src="../img/tarjeta-slider.png" width="531" alt="tarjeta">
-                    </picture>
-                </div>
-                <div class="slider1">
-                    <picture>
-                        <img src="../img/camion-slider.png" width="531" alt="camion">
-                    </picture>
-                </div>
-                <div class="slider1">
-                    <picture>
-                        <img src="../img/renueva-slider.png" width="531" alt="renueve">
-                    </picture>
-                </div>
-                <div class="slider1">
-                    <picture>
-                        <img src="../img/personaliza-slider.png" width="531" alt="personaliza">
-                    </picture>
-                </div>
-                <div class="slider1">
-                    <picture>
-                        <img src="../img/casa-slider.png" width="531" alt="casa">
-                    </picture>
-                </div>
-                <div class="slider1">
-                    <picture>
-                        <img src="../img/hazlos-slider.png" width="531" alt="hazlo">
-                    </picture>
-                </div>
-            </div>
-        </div>
-         <!-- Botones de navegación> --> 
-        <button class="button-next-slider1">
-            <i class="fa-solid fa-circle-chevron-right"></i>
-        </button>
-    </div>
-    
-    <!-- footer -->
-   <div class="footer">
-        <div class="footer-imagen">
-            <img src="../img/footer-logo.png" width="365" alt="isotipo">
-             <p>Antencion telefonica con el numero 443 56 43 29 <br>
-            Lunes a Viernes 9:00 a 20:00 y de 9:00 a 18:00 los Sabados.<br>
-            Direcciones en España: <br>
-            Prta del Sol, 1, Centro, 28013 Madrid desde 9:30 a 21:00</p>
-        </div>
-        <div class="filas">
-            <div class="filas-cont">
-                <h4>Ver &  comprar</h4>
-                <ul>
-                    <li>Tienda</li>
-                    <li>Ve</li>
-                    <li>Pad</li>
-                    <li>Phonelar</li>
-                    <li>Watch</li>
-                    <li>VelarSound</li>
-                    <li>Accesorios</li>
-                </ul>
-            </div>
-            <div class="columna"></div>
-
-            <div class="filas-cont">
-                <h4>Cuenta & Comunidad</h4>
-                <ul> 
-                    <li>Mi cuenta</li>
-                    <li>Mis productos</li>
-                    <li>Pedidos</li>
-                    <li>Lista de deseos</li>
-                    <li>Members</li>
-                    <li>Servicio</li> 
-                    <li>Registra tu producto</li>
-                </ul>
-            </div>
-            <div class="columna"></div>
-
-            <div class="filas-cont">
-                <h4>Empresa</h4>
-                <ul>
-                    <li>Quienes somos</li>
-                    <li>Trabaja con Nosotros</li>
-                    <li>Contactos</li>
-                </ul>
-            </div>
-             <div class="columna"></div>
-
-            <div class="filas-cont">
-                 <h4> Tiendas &  Compras</h4>
-                <ul> 
-                    <li>Store</li>
-                    <li>Envios y Devoluciones</li>
-                    <li>Metodos de Pago</li>
-                </ul>
-            </div>
-        </div>
-
-        <ul class="lista-politicas">
-            <li>Política de Privacidad</li>
-            <li>Términos y Condiciones</li>
-            <li>Cookies</li>
-        </ul>
-        <div class="redes-sociales">
-            <a href="https://www.facebook.com/?locale=es_ES"><i class="facebook"> <img src="../img/facebook.png" width="512"  alt="logo de facebook" > </i>Facebook</a>
-            <a href="https://x.com/?lang=es"><i class="twitter"> <img src="../img/twitter.png" width="512" alt="logo de instagram"></i>twitter</a>
-            <a href="https://www.instagram.com"><i class="instagram"> <img src="../img/instagram.png" width="512" alt="logo de twitter"> </i>instagram</a>
-            <a href="https://es.linkedin.com"><i class="linkedin"> <img src="../img/linkedin.png" width="512" alt="logo de linkedin"></i>linkedin</a>
-        </div>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
 </body>
 </html>

@@ -3,262 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velar</title>
-    <link rel="stylesheet" href="/css/estilos.css">
-    <link rel="icon" href="../img/icon.png"  type="imagen/x-icon" sizes="16x16" class="icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="/js/java.js" defer></script>
+    <title>Reservas</title>
+    <link rel="icon" type="imagen/png" href="../img/logotipo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css">
+    
 </head>
 <body>
-    <header class="header">
-        <div class="logo-nav-container">
-        <nav class="navegation">
-            <ul>
-                <li><a href="../index.html" class="lis-en">Inicio</a></li>
-                <li><a href="galeria.html" class="lis-en">Galeria</a></li>
-               <li><a href="../index.html" class="logo"><img src="../img/iso.png" width="36" alt="icon"></a></li>
-                <li><a href="presupuesto.html" class="lis-en activo">Presupuesto</a></li>
-                <li><a href="contacto.html" class="lis-en">Contacto</a></li>
+    <!-- el encabezado -->
+    <div class="encabezado-presu container-fluid">
+     <nav class="navbar">
+            <div class="container-fluid d-flex align-items-center">
+                
+                    <a href="#" class="navbar-brand">
+                        <img class="logotipo ms-lg-5 ms-sm-2 mt-3 img-fluid" src="../img/logotipo.png" alt="logotipo" width="1875" height="1827">
+                    </a>
+                
+                    <ul class="navbar-nav ms-auto me-4 d-none d-lg-flex flex-row">
+                        <li class="nav-item mx-3 my-lg-0"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="./galeria.html" class="nav-link text-white">Carta</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="./presupuesto.html" class="nav-link  active text-white">Reserva</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="./contacto.html" class="nav-link text-white ">Contacto</a></li>
+                    </ul>
+                
 
-            </ul>
+                    <button
+                    class="navbar-toggler d-lg-none"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMenu" 
+                    aria-controls="offcanvasMenu"
+                    aria-expanded="false"
+                    aria-label="Mostrar / Ocultar Menu"
+                    >
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+            </div>
+                <!-- el menú offcanvas -->
+            <div class=" offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+                <div class="offcanvas-header">
+                    <div class="offcanvas-title" id="offcanvasMenuLabel">
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav me-5 d-lg-none ms-auto">
+                        <li class="nav-item mx-3 my-lg-0"><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="galeria.html" class="nav-link">Carta</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="presupuesto.html" class="nav-link">Reserva</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="contacto.html" class="nav-link ">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        </div>
-    </header>
-    <!-- video promocional-->
-    <div class="presupuesto">
-        <div class="video-contene"> 
-            <div class="video-presu">
-                <video src="../mp4/vid-presu.mp4" autoplay muted loop width="640" height="360"></video>
-            </div>
-        </div>
-
-        <!-- formulario del presupuesto -->
-        <div class="formulario-presu">
-            <h1 class="h1-presu">PRESUPUESTO</h1>
-            <form id="formulario-presu" name="info" novalidate>
-            <div class="user-info">
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre"  title="Solo letras, ni número ni símbolo" >
-                </div>
-                <div>
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido"  title="Solo letras, ni número ni símbolo" >
-                </div>
-                <div>
-                    <label for="telefono">Telefono</label>
-                    <input type="tel" id="telefono" name="telefono" title="Introduce exactamente 9 números sin espacios ni símbolos" >
-                </div>
-                <div>
-                    <label for="email">Correo electronico</label>
-                    <input type="email" id="email" name="email"  title="Introduce un correo electrónico válido" >
+        <!-- el contenido principal y las animaciones -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 presupuesto">
+                    <h1 class="start-15 display-1 d-none d-lg-block">RESERVAS</h1>
+                    <h1 class="  start-2 display-3 d-lg-none">RESERVAS</h1>
+                    <img  class="croqueta img-fluid" src="../img/croquetas.png" alt="croqueta" width="2322" height="1822">
+                    <img class="croqueta3 d-md-block d-none img-fluid" src="../img/croquetas3..png" alt="croqueta1" width="2322" height="1822">
+                    <img class="croqueta1 d-md-block d-none img-fluid" src="../img/croqueta1.png" alt="croqueta2 " width="2322" height="1822">
+                    <img class="croqueta2 d-md-block d-none img-fluid" src="../img/croquetas2.png" alt="croqueta3" width="2322" height="1822">
+                    <img class="croqueta4 d-md-block d-none img-fluid" src="../img/croquetas2.png" alt="croqueta4" width="2322" height="1822">
                 </div>
             </div>
-            <label for="asunto">Asunto</label>
-            <textarea id="asunto" name="asunto" rows="5"  cols="100" > </textarea>
-
-            <label for="opciones">Seleccione un producto</label>
-            <select id="opciones" name="producto" onchange="mostrarPrecio()">
-                <option value="" disabled selected>Elige un producto</option>
-                <option value="Ve-mini" data-precio="1199">Ve mini - 1.199€</option>
-                <option value="Phonelar" data-precio="859">Phonelar - 859€</option>
-                <option value="iVe" data-precio="1469">iVe - 1.469€</option>
-                <option value="Wacth" data-precio="669">Wacth - 669€</option>
-                <option value="Pad" data-precio="1009">Pad - 1.009€</option>
-                <option value="Velar-Sound" data-precio="178">Velar Sound - 178€</option>
-                <option value="Bocin" data-precio="269">Bocin - 269€</option>
-            </select>
-
-            <label for="duracion">¿Por cuantos meses deseas financiarlo?</label>
-            <input type="number" id="duracion" name="duracion" oninput="mostrarPrecio()" placeholder="Eje:3 meses" >
-            <p id="resultado" class="resultado">Total: $0 mensual</p>
-
-            <label>Elige los extras para el producto</label>
-            <div class="extra">
-                <label><input type="checkbox" name="extra" value="envio-rapido" onchange="mostrarPrecio()"> Envío Rápido (+20€)</label>
-                <label><input type="checkbox" name="extra" value="grabado-personalizado" onchange="mostrarPrecio()"> Grabado Personalizado (+15€)</label>
-                <label><input type="checkbox" name="extra" value="regalo" onchange="mostrarPrecio()"> Envoltura de Regalo (+10€)</label>
-            </div>
-
-            <div class="resultado" id="resultadoExtra" >Total: $0.00</div>
-            <label class="checkbox-presu">
-                Acepto las condiciones de privacidad.
-                <input type="checkbox" id="condiciones">
-                
-            </label>
-                
-                <!-- Botones -->
-            <div class="botones">
-                <button type="submit">Enviar</button>
-                <button type="reset" onclick="reiniciarPresupuesto()" id="resetear">Resetear</button>
-            </div>   
-            </form>
         </div>
-    <!-- boton para subir  -->
-        <div class="button-subir" id="buttonSubir">
-            <button>
-                <i class="fa-solid fa-angle-up"></i>
-            </button>
-        </div>
+       
+
     </div>
-<!-- beneficios de cotizar con la empresa -->
-    <div class="presu-beneficios">
-        <h2>¿Por qué cotizar con nosotros?</h2>
-        <div class="presu-li">
-            <div class="li-1">
-                <p> Envíos rápidos a todo el país</p>
+    <!-- el formulario de reserva -->
+    <div class="container-fluid formulario">
+        <div class="row formulario-inputs g-0 ">
+            <div class="col">
+                <label for="inputNombre" class="form-label">Nombre</label>
+                    <input type="text"  id="inputNombre" class="form-control" placeholder="Nombre" aria-label="Nombre" minlength="3" maxlength="40" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo letras, ni número ni símbolo" required>
             </div>
-            <div class="li-2">
-                <p>Financiamiento sin intereses (0% APR)</p>
+            <div class="col">
+                <label for="inputPersonas" class="form-label">Personas</label>
+                <input type="number" id="inputPersonas" class="form-control" placeholder="Personas" aria-label="Personas">
             </div>
-            <div class="li-3">
-                <p> Opciones de regalo personalizadas</p>
-            </div>
-            <div class="li-4">
-                <p>Opción de Rembolso</p>
-            </div>
-            <div class="li-5">
-                <p>Pagos seguros y flexibles</p>
+            <div class="col">
+                <label for="inputFecha" class="form-label">Fecha</label>
+                <input type="date" id="inputFecha" class="form-control" aria-label="Fecha">
             </div>
         </div>
-    </div>
 
-<!-- productos populares -->
-    <h2 class="presu-h2">Productos populares</h2>
-    <div class="presu-productos">
-        <div class="presu-sound">
-            <img src="../img/presu-sound.png" width="785" alt="audifonos">
-        </div>
-        <div class="presu-phonelar">
-            <img src="../img/presu-phonelar.png" width="567" alt="iphone">
-        </div>
-        <div class="presu-ve">
-            <img src="../img/presu-ive.png" width="614" alt="ordenador">
-        </div>
-         <div class="presu-bocin">
-            <img src="../img/presu-bocin.png" width="614" alt="bocina">
-        </div>
-    </div>
-<!-- reseñas de los clientes -->
-    <div class="presu-reseñas">
-        <h3>Lo que dicen nuestros clientes</h3>
-        <div class="reseñas">
-            <p>
-                “Recibí mi presupuesto al instante y el producto llegó en 2 días. Excelente servicio.” – María G.
-            </p>
-            <p>
-                “Muy fácil de usar, y pude personalizar mis auriculares.” – Jorge V.
-            </p>
-        </div>
-    </div>
-    <!-- preguntas frecuentes -->
-    <div class="presu-preguh3">
-         <h3>Preguntas Frecuentes</h3>
-        <div class="presu-preguntas">
-            <div class="pregunta-col">
-                <div class="pregunta-item">
-                    <h4>¿Cuánto tarda en llegar el presupuesto?</h4>
-                    <p>Lo recibirás por correo en menos de 1 hora.</p>
+        <div class="row">
+            <div class="col horario text-center " role="group" aria-label="Horario">
+                <div class="text-formulario mb-5">
+                   <h3>Elije un Horario displonible</h3> 
                 </div>
-                <div class="pregunta-item">
-                    <h4>¿Puedo cambiar productos después de enviar?</h4>
-                    <p>Sí, puedes responder al correo para solicitar ajustes.</p>
-                </div>
-            </div>
-            <div class="pregunta-col">
-                <div class="pregunta-item">
-                    <h4>¿Puedo recibir el presupuesto por correo o WhatsApp?</h4>
-                    <p>Sí, podemos enviarte el presupuesto en formato PDF a través de correo electrónico</p>
-                </div>
-                <div class="pregunta-item">
-                    <h4>¿Puedo modificar un presupuesto después de recibirlo?</h4>
-                    <p>Sí, puedes solicitar cambios si decides añadir, quitar o sustituir algún producto.</p>
-                </div>
-            </div>
-            <div class="pregunta-col">
-                <div class="pregunta-item">
-                    <h4>¿Cuánto tiempo es válido un presupuesto?</h4>
-                    <p>Normalmente es válido por 7 a 15 días, dependiendo del producto. Esto se debe a posibles cambios en el stock o los precios del proveedor.</p>
-                </div>
-                <div class="pregunta-item">
-                    <h4>¿Puedo solicitar un presupuesto para varios productos?</h4>
-                    <p>Sí, puedes pedir presupuestos de uno o varios productos a la vez, y también te podemos hacer combos personalizados.</p>
-                </div>
+                <div class="form-horario d-flex flex-wrap justify-content-center gap-3 ">
+                    <input type="radio" class="btn-check" name="hora" id="hora-11" value="11:00" required>
+                    <label for="hora-11" class="btn">11:00 AM</label>
+
+                    <input type="radio" class="btn-check"  name="hora" id="hora-11-30" value="11:30">
+                    <label for="hora-11-30" class="btn">11:30 AM</label>
+
+                    <input type="radio" class="btn-check" name="hora" id="hora-12" value="12:00">
+                    <label for="hora-12" class="btn">12:00 PM</label>
+
+                    <input type="radio" class="btn-check"  name="hora" id="hora-12-30" value="12:30">
+                    <label for="hora-12-30" class="btn">12:30 PM</label>
+
+                    <input type="radio" class="btn-check" name="hora" id="hora-13" value="13:00">
+                    <label for="hora-13" class="btn">13:00 PM</label>
+                    
+                    <input type="radio" class="btn-check" name="hora" id="hora-13-30" value="13:30">
+                    <label for="hora-13-30" class="btn">13:30 PM</label>
+
+                    <input type="radio" class="btn-check" name="hora" id="hora-14" value="14:00">
+                    <label for="hora-14" class="btn">14:00 PM</label>
+
+                    <input type="radio" class="btn-check" name="hora" id="hora-14-30" value="14:30">
+                    <label for="hora-14-30" class="btn">14:30 PM</label>
+
+                    <input type="radio" class="btn-check"  name="hora" id="hora-15" value="15:00">
+                    <label for="hora-15" class="btn">15:00 PM</label>
+                </div> 
             </div>
         </div>
+
+        <div class="row">
+            <div class="col horario" role="group">
+                <div class="form-horario d-flex flex-wrap justify-content-center gap-3 mt-3 ">
+                   <input type="radio" class="btn-check" name="hora" id="hora-16" value="16:00" required>
+                    <label for="hora-16" class="btn ">16:00 AM</label>
+
+                    <input type="radio" class="btn-check"  name="hora" id="hora-16-30" value="16:30" >
+                    <label for="hora-16-30" class="btn ">16:30 AM</label>
+
+                    <input type="radio" class="btn-check" name="hora" id="hora-17" value="17:00" >
+                    <label for="hora-17" class="btn ">17:00 PM</label>
+
+                    <input type="radio" class="btn-check"  name="hora" id="hora-17-30" value="17:30" >
+                    <label for="hora-17-30" class="btn ">17:30 PM</label>
+
+                    <input type="radio" class="btn-check" name="hora" id="hora-18" value="18:00" >
+                    <label for="hora-18" class="btn ">18:00 PM</label>
+                    
+                    <input type="radio" class="btn-check" name="hora" id="hora-18-30" value="18:30">
+                    <label for="hora-18-30" class="btn ">18:30 PM</label>
+
+                    <input type="radio" class="btn-check" name="hora" id="hora-19" value="19:00">
+                    <label for="hora-19" class="btn ">19:00 PM</label>
+
+                    <input type="radio" class="btn-check" name="hora" id="hora-19-30" value="19:30" >
+                    <label for="hora-19-30" class="btn ">19:30 PM</label>
+
+                    <input type="radio" class="btn-check"  name="hora" id="hora-20" value="20:00" >
+                    <label for="hora-20" class="btn ">20:00 PM</label> 
+                </div>
+            </div> 
+        </div>
+        <div class="boto-reserva d-flex justify-content-center mt-5 ">
+           <button type="button" class="btn px-3 py-3  flex-shrink-0 rounded-4 fs-4 ">Reservar</button>
+        </div>
+        <h2 class="text-formu text-center mb-5 mt-5">Si tienes cualquier duda aquí tenéis nuestro numero : <a class="text-decoration-none" href="">689953789</a></h2>
     </div>
-     
-    <!-- footer -->
+    <!-- el pie de página -->
     <div class="footer">
-        <div class="footer-imagen">
-            <img src="../img/footer-logo.png" width="365" alt="isotipo">
-             <p>Antencion telefonica con el numero 443 56 43 29 <br>
-            Lunes a Viernes 9:00 a 20:00 y de 9:00 a 18:00 los Sabados.<br>
-             Direcciones en España: <br>
-            Prta del Sol, 1, Centro, 28013 Madrid desde 9:30 a 21:00</p>
+    <div class="row conte-footer">
+        <div class="col-12 col-md-6 col-lg-4">
+            <img src="../img/logo-footer.png" class="logo-footer img-fluid" alt="logo-footer" width="812" height="791">
         </div>
-        <div class="filas">
-            <div class="filas-cont">
-                <h4>Ver &  comprar</h4>
-                <ul>
-                    <li>Tienda</li>
-                    <li>Ve</li>
-                    <li>Pad</li>
-                    <li>Phonelar</li>
-                    <li>Watch</li>
-                    <li>VelarSound</li>
-                    <li>Accesorios</li>
-                </ul>
-            </div>
-             <div class="columna"></div>
-
-            <div class="filas-cont">
-                <h4>Cuenta & Comunidad</h4>
-                <ul> 
-                    <li>Mi cuenta</li>
-                    <li>Mis productos</li>
-                    <li>Pedidos</li>
-                    <li>Lista de deseos</li>
-                    <li>Members</li>
-                    <li>Servicio</li> 
-                    <li>Registra tu producto</li>
-                </ul>
-            </div>
-             <div class="columna"></div>
-
-            <div class="filas-cont">
-                <h4>Empresa</h4>
-                <ul>
-                    <li>Quienes somos</li>
-                    <li>Trabaja con Nosotros</li>
-                    <li>Contactos</li>
-                </ul>
-            </div>
-             <div class="columna"></div>
-
-            <div class="filas-cont">
-                 <h4> Tiendas &  Compras</h4>
-                <ul> 
-                    <li>Store</li>
-                    <li>Envios y Devoluciones</li>
-                    <li>Metodos de Pago</li>
-                </ul>
-            </div>
-        
+        <div class="col-12 col-md-6 col-lg-2 lis-navbar">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="./views/galeria.html">Carta</a></li>
+                <li><a href="./views/presupuesto.html">Reserva</a></li>
+                <li><a href="./views/contacto.html">Contacto</a></li>
+            </ul>
         </div>
-
-        <ul class="lista-politicas">
-            <li>Política de Privacidad</li>
-            <li>Términos y Condiciones</li>
-            <li>Cookies</li>
-        </ul>
-        <div class="redes-sociales">
-            <a href="https://www.facebook.com/?locale=es_ES"><i class="facebook"> <img src="../img/facebook.png" width="512"  alt="logo de facebook" > </i>Facebook</a>
-            <a href="https://x.com/?lang=es"><i class="twitter"> <img src="../img/twitter.png" width="512" alt="logo de instagram"></i>twitter</a>
-            <a href="https://www.instagram.com"><i class="instagram"> <img src="../img/instagram.png" width="512" alt="logo de twitter"> </i>instagram</a>
-            <a href="https://es.linkedin.com"><i class="linkedin"> <img src="../img/linkedin.png" width="512" alt="logo de linkedin"></i>linkedin</a>
+        <div class="col-12 col-md-6 col-lg-3 lis-info">
+            <ul>
+                <li><a href="https://www.google.com/maps/place/El+Fogón+de+More/@39.0850762,-0.217427,17z/data=!4m6!3m5!1s0xd61c51b023b02f9:0x99e43f12dabd81ea!8m2!3d39.0850762!4d-0.2148521!16s%2Fg%2F11mdkyxj01?entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                📍<b>Dirección:</b> Carrer de Jaume ll, 21,46760 Tavernes de la Valldigna</a> </li>
+                <li><b>🕒Horarios:</b>  8a.m - 11p.m</li>
+                <li><b>📞Teléfono:</b> 689 953 789</li>
+            </ul>
+        </div>
+        <div class=" col-12 col-md-6 col-lg-3 lis-redes">
+            <ul>
+                <li class="face"><a href="https://www.facebook.com/?locale=es_ES"><img src="../img/log-face.png" alt="facebook" width="50" height="50">Facebook</a> </li>
+                <li class="img-fluid"><a href="https://www.instagram.com"><img src="../img/log-ins.png" alt="instagram" width="50" height="50"> Instagram</a></li>
+            </ul>
         </div>
     </div>
-    
+    <div class="row">
+        <div class="col politicas text-center ">
+            <p>
+                <a href="#">Aviso legal</a> | 
+                <a href="#">Política de privacidad</a> | 
+                <a href="#">Política de cookies</a>
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <script src="../js/JS.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
