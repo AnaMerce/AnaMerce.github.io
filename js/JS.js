@@ -44,7 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
              Authorization:apiKey,
           },
           body:JSON.stringify({
-            coordinates: [userLocation.reverse(), negocio.reverse()],
+            coordinates: [
+            [...userLocation].reverse(),
+            [...negocio].reverse()
+        ]
           }),
         })
          .then((response) => response.json())
