@@ -834,7 +834,7 @@ img.logoF{
     
     .presupuesto h1{
         position: relative;
-        font-size: 20vw;
+        font-size: 19vw;
         word-wrap: break-word;
         line-height:1;
         left: 0;
@@ -929,34 +929,6 @@ img.logoF{
     }
 }
 
-/* FIX MOVIL PRESUPUESTO (Nothing Phone 1) */
-@media (max-width: 991.98px) {
-  .presupuesto {
-    min-height: 70vh !important;
-    overflow: hidden !important;
-  }
-
-  .presupuesto img.croqueta1,
-  .presupuesto img.croqueta2,
-  .presupuesto img.croqueta3,
-  .presupuesto img.croqueta4 {
-    display: none !important;
-    animation: none !important;
-  }
-
-  .presupuesto img.croqueta {
-    position: absolute !important;
-    top: 0.5rem !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 78% !important;
-    max-width: 360px !important;
-  }
-
-  .presupuesto h1 {
-    top: 11rem !important;
-  }
-}
 
 
 /* FORMULARIO */
