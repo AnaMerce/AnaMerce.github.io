@@ -831,6 +831,13 @@ img.logoF{
         width: 100%;
         overflow:hidden ;
     }
+    
+    .presupuesto img.croqueta1,
+    .presupuesto img.croqueta2,
+    .presupuesto img.croqueta3,
+    .presupuesto img.croqueta4{
+        display: none !important; /* por si Bootstrap falla en ese móvil */
+  }
     .presupuesto h1{
         position: relative;
         font-size: 20vw;
@@ -843,9 +850,10 @@ img.logoF{
         max-width: 100%;
     }
     .presupuesto img.croqueta{
-        top: 4%;
+        top: 0.5rem;
         left: 7rem;
         width: 100%;
+        max-width: 360px;
     }
 }
 @media (min-width: 768px) and (max-width: 1000px){
