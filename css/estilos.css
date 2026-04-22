@@ -844,7 +844,7 @@ img.logoF{
         max-width: 100%;
     }
     .presupuesto img.croqueta{
-        top: 6%;
+        top: 7%;
         left: 7rem;
         width: 90%;
     }
@@ -866,7 +866,7 @@ img.logoF{
         max-width: 80%;
     }
     .presupuesto img.croqueta{
-        top: 6%; 
+        top: 7%; 
         right: 0%;
         width: 50%;
     }
@@ -1916,11 +1916,11 @@ img.logoF{
     .titulo-rincon img {
         width: 78%;
         left: 2.5rem;
-        top: 0.8rem;
+        top: 1rem;
         z-index: 3;
     }
     .lis-rincon{
-        padding: 11rem 0 1rem 0;
+        padding: 13rem 0 1rem 0;
    }
    .conte-lis,.conte-lis2{
         width: 60%;
@@ -2171,6 +2171,9 @@ body.contacto-page .navbar{
     }
     .lis-redes img, .face img{
         width: 4%;
+    }
+    .lis-info ul{
+        padding-left: 1rem;
     }
     .politicas{
         margin-top: 2rem;
