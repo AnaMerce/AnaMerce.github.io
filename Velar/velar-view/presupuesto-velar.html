@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velar</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="icon" href="/Velar/velar-view/img-velar/icon-velar.png"  type="imagen/x-icon" sizes="16x16" class="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="/js/java.js" defer></script>
+</head>
+<body class="body-velar">
+
+    <header class="header-velar">
+        <div class="logo-nav-container-velar">
+        <nav class="navegation-velar">
+            <ul>
+                <li><a href="/Velar/velar-view/index-velar.html" class="lis-en">Inicio</a></li>
+                <li><a href="/Velar/velar-view/galeria-velar.html" class="lis-en">Galeria</a></li>
+               <li><a href="/Velar/velar-view/index-velar.html" class="logo-velar"><img src="/Velar/velar-view/img-velar/iso.png" width="36" alt="icon"></a></li>
+                <li><a href="/Velar/velar-view/presupuesto-velar.html" class="lis-en activo">Presupuesto</a></li>
+                <li><a href="/Velar/velar-view/contacto-velar.html" class="lis-en">Contacto</a></li>
+
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <div class="video-contene-velar"> 
+        <div class="video-presu-velar">
+            <video src="/Velar/velar-view/mp4-velar/vid-presu.mp4" autoplay muted loop width="640" height="360"></video>
+        </div>
+    </div>
+    <h1 class="h1-presu-velar">PRESUPUESTO</h1>
+    <div class="formulario-presu-velar">
+        <form id="formulario-presu" name="prueba">
+        <div class="columna-presu-velar">
+             <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" maxlength="15" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo letras, ni número ni símbolo" required>
+            </div>
+            <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido"  maxlength="40" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo letras, ni número ni símbolo" required>
+            </div>
+            <div>
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" maxlength="9" title="Introduce exactamente 9 números sin espacios ni símbolos" required>
+            </div>
+            <div>
+                <label for="email">Correo electronico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Introduce un correo electrónico válido" required>
+            </div>
+        </div>
+            <label for="asunto">Asunto</label>
+            <textarea id="asunto" name="asunto" rows="5"  cols="100"  maxlength="500"> </textarea>
+
+            <label for="opciones">Seleccione un producto</label>
+            <select id="opciones" name="producto" onchange="mostrarPrecio()">
+                <option value="" disabled selected>Elige un producto</option>
+                <option value="Ve-mini" data-precio="1199">Ve mini - 1.199€</option>
+                <option value="Phonelar" data-precio="859">Phonelar - 859€</option>
+                <option value="iVe" data-precio="1469">iVe - 1.469€</option>
+                <option value="Wacth" data-precio="669">Wacth - 669€</option>
+                <option value="Pad" data-precio="1009">Pad - 1.009€</option>
+                <option value="Velar-Sound" data-precio="178">Velar Sound - 178€</option>
+                <option value="Bocin" data-precio="269">Bocin - 269€</option>
+            </select>
+
+            <label for="duracion">¿Por cuantos meses deseas financiarlo?</label>
+            <input type="number" id="duracion" name="duracion" min="1" max="24" oninput="mostrarPrecio()"  placeholder="Eje:3 meses" required>
+            <p id="resultado" class="presupuesto-velar">Total: $0 mensual</p>
+
+            <label>Elige los extras para el producto</label>
+            <div class="extra-velar">
+            <label><input type="checkbox" name="extra" value="envio-rapido" onchange="mostrarPrecio()"> Envío Rápido (+20€)</label>
+            <label><input type="checkbox" name="extra" value="grabado-personalizado" onchange="mostrarPrecio()"> Grabado Personalizado (+15€)</label>
+            <label><input type="checkbox" name="extra" value="regalo" onchange="mostrarPrecio()"> Envoltura de Regalo (+10€)</label>
+            </div>
+
+            <div class="presupuesto-velar" id="resultadoExtra" >Total: $0.00</div>
+
+            <label class="checkbox-presu-velar">
+                Acepto las condiciones de privacidad.
+                <input type="checkbox" id="condiciones" required>
+            
+            </label>
+            
+            <!-- Botones -->
+            <div class="botones-velar">
+                <button type="submit">Enviar</button>
+                <button type="reset" onclick="reiniciarPresupuesto()" id="resetear">Resetear</button>
+            </div>   
+        </form>
+    </div>
+   
+    <div class="button-subir-velar" id="buttonSubir">
+        <button>
+            <i class="fa-solid fa-angle-up"></i>
+        </button>
+    </div>
+
+    <div class="presu-beneficios-velar">
+        <h2>¿Por qué cotizar con nosotros?</h2>
+        <div class="zoom-animado">
+            <div class="li-1-velar">
+                <p> Envíos rápidos a todo el país</p>
+            </div>
+            <div class="li-2-velar">
+                <p> Financiamiento sin intereses (0% APR) </p>
+            </div>
+            <div class="li-3-velar">
+                <p> Opciones de regalo personalizadas</p>
+            </div>
+            <div class="li-4-velar">
+                <p>Opción de Rembolso</p>
+            </div>
+            <div class="li-5-velar">
+                <p>Pagos seguros y flexibles</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <h2 class="presu-h2-velar">Productos populares</h2>
+
+    <div class="presu-productos-velar">
+        <div class="presu-sound-velar">
+            <img src="/Velar/velar-view/img-velar/presu-sound.png" width="785" alt="audifonos">
+        </div>
+        <div class="presu-phonelar-velar">
+            <img src="/Velar/velar-view/img-velar/presu-phonelar.png" width="567" alt="iphone">
+        </div>
+        <div class="presu-ve-velar">
+            <img src="/Velar/velar-view/img-velar/presu-ive.png" width="614" alt="ordenador">
+        </div>
+        <div class="presu-bocin-velar">
+            <img src="/Velar/velar-view/img-velar/presu-bocin.png" width="614" alt="bocina">
+        </div>
+    </div>
+
+    <div class="presu-reseñas-velar">
+        <h3>Lo que dicen nuestros clientes</h3>
+        <div class="reseñas-velar">
+            <blockquote>
+                “Recibí mi presupuesto al instante y el producto llegó en 2 días. Excelente servicio.” – María G.
+                </blockquote>
+                <blockquote>
+                “Muy fácil de usar, y pude personalizar mis auriculares.” – Jorge V.
+                </blockquote>
+        </div>
+    </div>
+    
+    <div class="presu-preguh3-velar">
+         <h3>Preguntas Frecuentes</h3>
+        <div class="presu-preguntas-velar">
+            <div class="pregunta-col-velar">
+                <div class="pregunta-item-velar">
+                    <h4>¿Cuánto tarda en llegar el presupuesto?</h4>
+                    <p>Lo recibirás por correo en menos de 1 hora.</p>
+                </div>
+                <div class="pregunta-item-velar">
+                    <h4>¿Puedo cambiar productos después de enviar?</h4>
+                    <p>Sí, puedes responder al correo para solicitar ajustes.</p>
+                </div>
+            </div>
+            <div class="pregunta-col-velar">
+                <div class="pregunta-item-velar">
+                    <h4>¿Puedo recibir el presupuesto por correo o WhatsApp?</h4>
+                    <p>Sí, podemos enviarte el presupuesto en formato PDF a través de correo electrónico</p>
+                </div>
+                <div class="pregunta-item-velar">
+                    <h4>¿Puedo modificar un presupuesto después de recibirlo?</h4>
+                    <p>Sí, puedes solicitar cambios si decides añadir, quitar o sustituir algún producto.</p>
+                </div>
+            </div>
+            <div class="pregunta-col-velar">
+                <div class="pregunta-item-velar">
+                    <h4>¿Cuánto tiempo es válido un presupuesto?</h4>
+                    <p>Normalmente es válido por 7 a 15 días, dependiendo del producto. Esto se debe a posibles cambios en el stock o los precios del proveedor.</p>
+                </div>
+                <div class="pregunta-item-velar">
+                    <h4>¿Puedo solicitar un presupuesto para varios productos?</h4>
+                    <p>Sí, puedes pedir presupuestos de uno o varios productos a la vez, y también te podemos hacer combos personalizados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+     <div class="footer-velar">
+        <div class="footer-imagen-velar">
+            <img src="/Velar/velar-view/img-velar/footer-logo-velar.png" width="365" alt="isotipo">
+             <p>Antencion telefonica con el numero 443 56 43 29 <br>
+            Lunes a Viernes 9:00 a 20:00 y de 9:00 a 18:00 los Sabados.<br>
+             Direcciones en España: <br>
+            Prta del Sol, 1, Centro, 28013 Madrid desde 9:30 a 21:00</p>
+        </div>
+        <div class="filas-velar">
+            <div class="filas-cont-velar">
+                <h4>Ver &  comprar</h4>
+                <ul>
+                    <li>Tienda</li>
+                    <li>Ve</li>
+                    <li>Pad</li>
+                    <li>Phonelar</li>
+                    <li>Watch</li>
+                    <li>VelarSound</li>
+                    <li>Accesorios</li>
+                </ul>
+            </div>
+             <div class="columna-velar"></div>
+
+            <div class="filas-cont-velar">
+                <h4>Cuenta & Comunidad</h4>
+                <ul> 
+                    <li>Mi cuenta</li>
+                    <li>Mis productos</li>
+                    <li>Pedidos</li>
+                    <li>Lista de deseos</li>
+                    <li>Members</li>
+                    <li>Servicio</li> 
+                    <li>Registra tu producto</li>
+                </ul>
+            </div>
+             <div class="columna-velar"></div>
+
+            <div class="filas-cont-velar">
+                <h4>Empresa</h4>
+                <ul>
+                    <li>Quienes somos</li>
+                    <li>Trabaja con Nosotros</li>
+                    <li>Contactos</li>
+                </ul>
+            </div>
+             <div class="columna-velar"></div>
+
+            <div class="filas-cont-velar">
+                 <h4> Tiendas &  Compras</h4>
+                <ul> 
+                    <li>Store</li>
+                    <li>Envios y Devoluciones</li>
+                    <li>Metodos de Pago</li>
+                </ul>
+            </div>
+        
+        </div>
+
+        <ul class="lista-politicas-velar">
+            <li>Política de Privacidad</li>
+            <li>Términos y Condiciones</li>
+            <li>Cookies</li>
+        </ul>
+        <div class="redes-sociales-velar">
+            <a href="https://www.facebook.com/?locale=es_ES"><i class="facebook-velar"> <img src="/Velar/velar-view/img-velar/facebook-velar.png" width="512"  alt="logo de facebook" > </i>Facebook</a>
+            <a href="https://x.com/?lang=es"><i class="twitter-velar"> <img src="/Velar/velar-view/img-velar/twitter-velar.png" width="512" alt="logo de instagram"></i>twitter</a>
+            <a href="https://www.instagram.com"><i class="instagram-velar"> <img src="/Velar/velar-view/img-velar/instagram-velar.png" width="512" alt="logo de twitter"> </i>instagram</a>
+            <a href="https://es.linkedin.com"><i class="linkedin-velar"> <img src="/Velar/velar-view/img-velar/linkedin-velar.png" width="512" alt="logo de linkedin"></i>linkedin</a>
+        </div>
+    </div>
+    
+</body>
+</html>
