@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="icon" type="imagen/png" href="./img-fogon/logotipo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilos.css">
+    
+</head>
+<body>
+    <!-- el encabezado -->
+    <div class="encabezado-presu-fogon container-fluid">
+     <nav class="navbar">
+            <div class="container-fluid d-flex align-items-center">
+                
+                    <a href="#" class="navbar-brand">
+                        <img class="logotipo-fogon ms-lg-5 ms-sm-2 mt-3 img-fluid" src="./img-fogon/logotipo.png" alt="logotipo" width="1875" height="1827">
+                    </a>
+                
+                    <ul class="navbar-nav ms-auto me-4 d-none d-lg-flex flex-row">
+                        <li class="nav-item mx-3 my-lg-0"><a href="index-fogon.html" class="nav-link text-white">Inicio</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="galeria-fogon.html" class="nav-link text-white">Carta</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="presupuesto-fogon.html" class="nav-link  active text-white">Reserva</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="contacto-fogon.html" class="nav-link text-white ">Contacto</a></li>
+                    </ul>
+                
+
+                    <button
+                    class="navbar-toggler d-lg-none"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMenu" 
+                    aria-controls="offcanvasMenu"
+                    aria-expanded="false"
+                    aria-label="Mostrar / Ocultar Menu"
+                    >
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+            </div>
+                <!-- el menú offcanvas -->
+            <div class=" offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+                <div class="offcanvas-header">
+                    <div class="offcanvas-title" id="offcanvasMenuLabel">
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav me-5 d-lg-none ms-auto">
+                        <li class="nav-item mx-3 my-lg-0"><a href="index-fogon.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="galeria-fogon.html" class="nav-link">Carta</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="presupuesto-fogon.html" class="nav-link">Reserva</a></li>
+                        <li class="nav-item mx-3 my-lg-0"><a href="contacto-fogon.html" class="nav-link ">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- el contenido principal y las animaciones -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 presupuesto-fogon">
+                    <h1 class="start-15 display-1 d-none d-lg-block">RESERVAS</h1>
+                    <h1 class="  start-2 display-3 d-lg-none">RESERVAS</h1>
+                    <img  class="croqueta img-fluid" src="./img-fogon/croquetas.png" alt="croqueta" width="2322" height="1822">
+                    <img class="croqueta3 d-md-block d-none img-fluid" src="./img-fogon/croquetas3..png" alt="croqueta1" width="2322" height="1822">
+                    <img class="croqueta1 d-md-block d-none img-fluid" src="./img-fogon/croqueta1.png" alt="croqueta2 " width="2322" height="1822">
+                    <img class="croqueta2 d-md-block d-none img-fluid" src="./img-fogon/croquetas2.png" alt="croqueta3" width="2322" height="1822">
+                    <img class="croqueta4 d-md-block d-none img-fluid" src="./img-fogon/croquetas2.png" alt="croqueta4" width="2322" height="1822">
+                </div>
+            </div>
+        </div>
+       
+
+    </div>
+    <!-- el formulario de reserva -->
+    <form id="formulario-reserva-fogon">
+        <div class="container-fluid formulario">
+            <div class="row formulario-input-fogon g-0 ">
+                <div class="col">
+                    <label for="inputNombre" class="form-label">Nombre</label>
+                        <input type="text"  id="inputNombre" class="form-control" placeholder="Nombre" aria-label="Nombre" minlength="3" maxlength="40" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo letras, ni número ni símbolo" required>
+                </div>
+                <div class="col">
+                    <label for="correo" class="form-label">Correo </label>
+                    <input type="email" id="correo" name="correo" class="form-control" placeholder="tu@email.com" required>
+                </div>
+                <div class="col">
+                    <label for="inputPersonas" class="form-label">Personas</label>
+                    <input type="number" id="inputPersonas" class="form-control" placeholder="Personas" aria-label="Personas" required >
+                </div>
+                <div class="col">
+                    <label for="inputFecha" class="form-label">Fecha</label>
+                    <input type="date" id="inputFecha" class="form-control" aria-label="Fecha" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col horario text-center " role="group" aria-label="Horario">
+                    <div class="text-formu-fogon mb-5">
+                    <h3>Elije un Horario displonible</h3> 
+                    </div>
+                    <div class="form-horario-fogon d-flex flex-wrap justify-content-center gap-3 ">
+                        <input type="radio" class="btn-check" name="hora" id="hora-11" value="11:00" required>
+                        <label for="hora-11" class="btn">11:00 AM</label>
+
+                        <input type="radio" class="btn-check"  name="hora" id="hora-11-30" value="11:30">
+                        <label for="hora-11-30" class="btn">11:30 AM</label>
+
+                        <input type="radio" class="btn-check" name="hora" id="hora-12" value="12:00">
+                        <label for="hora-12" class="btn">12:00 PM</label>
+
+                        <input type="radio" class="btn-check"  name="hora" id="hora-12-30" value="12:30">
+                        <label for="hora-12-30" class="btn">12:30 PM</label>
+
+                        <input type="radio" class="btn-check" name="hora" id="hora-13" value="13:00">
+                        <label for="hora-13" class="btn">13:00 PM</label>
+                        
+                        <input type="radio" class="btn-check" name="hora" id="hora-13-30" value="13:30">
+                        <label for="hora-13-30" class="btn">13:30 PM</label>
+
+                        <input type="radio" class="btn-check" name="hora" id="hora-14" value="14:00">
+                        <label for="hora-14" class="btn">14:00 PM</label>
+
+                        <input type="radio" class="btn-check" name="hora" id="hora-14-30" value="14:30">
+                        <label for="hora-14-30" class="btn">14:30 PM</label>
+
+                        <input type="radio" class="btn-check"  name="hora" id="hora-15" value="15:00">
+                        <label for="hora-15" class="btn">15:00 PM</label>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col horario" role="group">
+                    <div class="form-horario-fogon d-flex flex-wrap justify-content-center gap-3 mt-3 ">
+                    <input type="radio" class="btn-check" name="hora" id="hora-16" value="16:00" required>
+                        <label for="hora-16" class="btn ">16:00 AM</label>
+
+                        <input type="radio" class="btn-check"  name="hora" id="hora-16-30" value="16:30" >
+                        <label for="hora-16-30" class="btn ">16:30 AM</label>
+
+                        <input type="radio" class="btn-check" name="hora" id="hora-17" value="17:00" >
+                        <label for="hora-17" class="btn ">17:00 PM</label>
+
+                        <input type="radio" class="btn-check"  name="hora" id="hora-17-30" value="17:30" >
+                        <label for="hora-17-30" class="btn ">17:30 PM</label>
+
+                        <input type="radio" class="btn-check" name="hora" id="hora-18" value="18:00" >
+                        <label for="hora-18" class="btn ">18:00 PM</label>
+                        
+                        <input type="radio" class="btn-check" name="hora" id="hora-18-30" value="18:30">
+                        <label for="hora-18-30" class="btn ">18:30 PM</label>
+
+                        <input type="radio" class="btn-check" name="hora" id="hora-19" value="19:00">
+                        <label for="hora-19" class="btn ">19:00 PM</label>
+
+                        <input type="radio" class="btn-check" name="hora" id="hora-19-30" value="19:30" >
+                        <label for="hora-19-30" class="btn ">19:30 PM</label>
+
+                        <input type="radio" class="btn-check"  name="hora" id="hora-20" value="20:00" >
+                        <label for="hora-20" class="btn ">20:00 PM</label> 
+                    </div>
+                </div> 
+            </div>
+            <div class="boto-reserva-fogon d-flex justify-content-center mt-5 ">
+            <button type="submit" class="btn px-3 py-3  flex-shrink-0 rounded-4 fs-4 ">Reservar</button>
+            </div>
+            <h2 class="text-formu text-center mb-5 mt-5">Si tienes cualquier duda aquí tenéis nuestro numero : <a class="text-decoration-none" href="">689953789</a></h2>
+        </div>
+    </form>
+    <!-- el pie de página -->
+   <div class="footer-fogon">
+    <div class="row conte-footer-fogon">
+        <div class="col-12 col-md-6 col-lg-4">
+            <img src="./img-fogon/logo-footer.png" class="logo-footer-fogon img-fluid" alt="logo-footer" width="2931" height="883">
+        </div>
+        <div class=" col-12 col-md-6 col-lg-2 lis-navbar-fogon">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="./views/galeria.html">Carta</a></li>
+                <li><a href="./views/presupuesto.html">Reserva</a></li>
+                <li><a href="./views/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 lis-info-fogon">
+            <ul>
+                <li><a href="https://www.google.com/maps/place/El+Fogón+de+More/@39.0850762,-0.217427,17z/data=!4m6!3m5!1s0xd61c51b023b02f9:0x99e43f12dabd81ea!8m2!3d39.0850762!4d-0.2148521!16s%2Fg%2F11mdkyxj01?entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                📍<b>Dirección:</b> Carrer de Jaume ll, 21,46760 Tavernes de la Valldigna</a> </li>
+                <li><b>🕒Horarios:</b>  8a.m - 11p.m</li>
+                <li><b>📞Teléfono:</b> 689 953 789</li>
+            </ul>
+        </div>
+        <div class=" col-12 col-md-6 col-lg-3 lis-redes-fogon">
+            <ul>
+                <li class="face-fogon"><a href="https://www.facebook.com/?locale=es_ES"><img src="./img-fogon/log-face.png" alt="facebook" width="50" height="50">Facebook</a> </li>
+                <li class="img-fluid"><a href="https://www.instagram.com"><img src="./img-fogon/log-ins.png" alt="instagram" width="50" height="50"> Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col politicas-fogon text-center">
+            <p>
+                <a href="#">Aviso legal</a> | 
+                <a href="#">Política de privacidad</a> | 
+                <a href="#">Política de cookies</a>
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <script src="/js/js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

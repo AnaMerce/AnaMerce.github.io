@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta</title>
+    <link rel="icon" type="imagen/png" href="./img-fogon/logotipo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilos.css">
+   
+</head>
+<body class="bg-fondo">
+    <!-- el encabezado -->
+    <div class="encabezado-gale">
+        <nav class="navbar">
+                <div class="container-fluid d-flex align-items-center">
+                    
+                        <a href="#" class="navbar-brand">
+                            <img class="logotipo-fogon ms-lg-5 ms-sm-2 mt-3" src="./img-fogon/logotipo.png" alt="logotipo" width="1875" height="1827">
+                        </a>
+                    
+                        <ul class="navbar-nav ms-auto me-4 d-none d-lg-flex flex-row">
+                            <li class="nav-item mx-3 my-lg-0"><a href="index-fogon.html" class="nav-link">Inicio</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="galeria-fogon.html" class="nav-link active text-white">Carta</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="presupuesto-fogon.html" class="nav-link">Reserva</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="contacto-fogon.html" class="nav-link">Contacto</a></li>
+                        </ul>
+                    
+
+                        <button
+                        class="navbar-toggler d-lg-none navbar-dark"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasMenu"
+                        aria-controls="offcanvasMenu"
+                        aria-expanded="false"
+                        aria-label="Mostrar / Ocultar Menu"
+                        >
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                </div>
+                    
+                <!-- el menú offcanvas -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+                    <div class="offcanvas-header">
+                        <div class="offcanvas-title" id="offcanvasMenuLabel">
+                        <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-5 d-lg-none ms-auto">
+                            <li class="nav-item mx-3 my-lg-0"><a href="index-fogon.html" class="nav-link">Inicio</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="galeria-fogon.html" class="nav-link">Carta</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="presupuesto-fogon.html" class="nav-link">Reserva</a></li>
+                            <li class="nav-item mx-3 my-lg-0"><a href="contacto-fogon.html" class="nav-link">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+    </div>
+    <!-- la portada de la carta -->
+    <div class="container-fluid carta-fogon">
+        <div class="g-0 conten-portada-fogon">
+            <div class="titulo-gale-fogon">
+                <img class="carta-img-fogon mt-5 img-fluid" src="./img-fogon/carta.png" alt="carta" width="2322" height="1822">
+            </div>
+        </div>
+        <div class="row fondo-azul-gale-fogon">
+            <div class="col-12 plato-gale-fogon">
+                <img class="plato-estrella-gale-fogon img-fluid" src="./img-fogon/plato-estrella.png" alt="plato-estrella" width="2322" height="1822">
+            </div>
+            <!-- sección de entrantes -->
+            <div class="col-12 text-gale-fogon g-0">
+                <h2>ENTRANTES</h2>
+                <div class="linea-blanca-fogon"></div>
+            </div>
+            <div class="col-12 entrante1-fogon">
+                <ul class="lista1-gale-fogon">
+                    <li>Croquetas de Jamón</li>
+                    <li>Mejillones al vino</li>
+                    <li>Huevos rotos de (Jamón, Gulas, Atún ó Chistorra)</li>
+                    <li>Pulpo a la gallega</li>
+                    <li>Tabla de embutidos</li>
+                    <li>Figastel FOGÓN</li>
+                </ul> 
+                <img  class="mejillones-fogon img-fluid" src="./img-fogon/mejillones.png" alt="mejillones" width="2322" height="1822">
+            </div>
+            
+            <div class="col-12 entrante2-fogon">
+                <img  class="escalivada-fogon img-fluid" src="./img-fogon/escalivada.png" alt="escalivada" width="2322" height="1822">
+                <ul class="lista2-gale-fogon">
+                    <li>Huevas de sepia</li>
+                    <li>Orejas a la plancha</li>
+                    <li>Escalivada de verduras</li> 
+                    <li>Patatas Bravas</li>
+                    <li>Patatas con mojo</li>
+                    <li>Revuelto de gambas</li>
+                </ul>  
+            </div>
+           
+        </div>
+    </div>
+    <!-- sección de ensaladas -->
+    <div class="container-fluid conte-ensalada-fogon">
+        <div class="row">
+            <div class="col-12 ensaladas-fogon g-0">
+                <h2>ENSALADAS</h2>
+                <div class="linea-naranjad-fogon"></div>
+            </div>
+            <div class="col-12 lis-ensalada-fogon">
+                <ul>
+                    <li>Ensalada verde</li>
+                    <li>Ensalada Fogón</li>
+                    <li>Ensalada mediterránea</li>
+                </ul>
+                <ul>
+                    <li>Ensalada Cesar</li>
+                    <li>Ensalada Trifásica</li>
+                    <li>Ensalada de Tomate</li>
+                    <li>Proventa con verduras</li>
+                </ul>
+                <div class="espinaca-img-fogon">
+                  <img src="./img-fogon/espinaca2.png" class="espinaca2-fogon img-fluid" alt="espinaca2" width="2322" height="1822">   
+                </div>
+            </div>
+                
+            <div class="col-12 ensalada-img-fogon">
+                <img src="./img-fogon/espinaca1.png" class="espinaca1-fogon img-fluid" alt="espinaca1" width="2322" height="1822">
+                <img src="./img-fogon/ensaladas.png" class="ensalada1-fogon img-fluid" alt="ensalada de gambas" width="2322" height="1822"> 
+            </div>
+        </div>
+
+       <!-- sección de carnes -->
+        <div class="row">
+            <div class="col-5 text-end p-0 carne-img-fogon">
+                <div class="espinaca-img-fogon">
+                   <img src="./img-fogon/espinaca2.png" class="espinaca2-1-fogon img-fluid" alt="espinaca2" width="2322" height="1822">  
+                </div>
+                <img src="./img-fogon/carnes4.png" class="carnes4-fogon img-fluid" alt="carne" width="2322" height="1822">
+            </div>
+            <div class="col-7 lis-carne-fogon g-0">
+                <h2 class="pe-2">CARNES</h2>
+                <div class="linea-naranjai-fogon"></div>
+                <ul class="p-3">
+                    <li>Pollo a la brasa en Guasacaca</li>
+                    <li>Villagodio</li>
+                    <li>Entrecot</li>
+                    <li>Solomillo a la pimienta</li>
+                    <li>Escalope de pollo</li>
+                    <li>Picapollo (4 piezas)</li>
+                    <li>Entraña</li>
+                    <li>Parrillada mixta</li>
+                    <li>Rabo de Vaca</li>
+                </ul>
+                <div class="col espinaca-img-fogon">
+                   <img src="./img-fogon/espinaca3.png" class="espinaca3-fogon img-fluid"  alt="espinaca3" width="2322" height="1822">  
+                </div>
+            </div> 
+        </div>
+    </div>
+    <!-- seccion de los arroces -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 arroces-fogon">
+                <h2>ARROCES</h2>
+                <div class="linea-naranjac-fogon"></div>
+            </div>
+            <div class="col-12 lis-arroces-fogon">
+                <ul>
+                    <li>Paella valenciana</li>
+                    <li>Paella mixta</li>
+                    <li>Arroz negro</li>
+                    <li>Arroz bogavante</li>
+                    <li>Arroz mar y tierra</li>
+                </ul>
+                <ul>
+                    <li>Senyoret</li>
+                    <li>Risoto de guandule</li>
+                    <li>Risoto de marisco</li>
+                    <li>Risoto de boletus</li>
+                    <li>Risoto de maní</li>
+                </ul>
+            </div>
+            <div class="col-12 p-0 text-center fondogale-fogon">
+                    <img src="./img-fogon/marea.png"  class="marea-arroces-fogon img-fluid" alt="marea" width="2322" height="1822">
+            </div>
+            <!-- los platos de mar -->
+            <div class="cont-pescado-fogon p-0">
+                <div class="col-12 pescados-fogon">
+                    <h2>PLATOS DE MAR </h2>
+                    <div class="linea-blancac-fogon"></div>
+                </div>
+                <div class="col-12 lis-pescados-fogon">
+                    <img src="./img-fogon/gambas-mar.png"  class="gambas-pesca-fogon img-fluid" alt="gambas" width="2322" height="1822">
+                    <ul>
+                        <li>Tilapia al Coco</li>
+                        <li>Dorada a la bilbaína</li>
+                        <li>Tilapia FOGÓN</li>
+                    </ul>
+                </div>
+                <div class="col-12 lis-pescados1-fogon">
+                    <ul>
+                        <li>Fritura FOGÓN</li>
+                        <li>Gambas al ajillo</li>
+                        <li>Sepia a la plancha</li>
+                    </ul>
+                     <img src="./img-fogon/chipirones-mar.png" class="chipi-pesca-fogon img-fluid"  alt="chipirones-mar" width="2322" height="1822">
+                </div>
+                <div class="col-12 lis-pescados-fogon">
+                     <img src="./img-fogon/sepia-mar.png"  class="sepia-pesca-fogon img-fluid" alt="sepia-mar" width="2322" height="1822">
+                    <ul>
+                        <li>Chipirones a la plancha</li>
+                        <li>Pulpo FOGÓN</li>
+                        <li>Ceviche</li>
+                    </ul>
+                </div>
+                <div class="col-12 transicion-pizza-fogon">
+                    <img src="./img-fogon/transicion-pizza.png" alt="transicion-pizza img-fluid" width="2322" height="1822">
+                </div>
+            </div>
+        </div>
+        <!-- la sección de pizzas -->
+        <div class="row">
+            <div class="col-12 pizza-fogon g-0">
+                <h2>PIZZA</h2>
+                <div class="linea-naranjad-fogon"></div>
+            </div>
+            <div class="col-12 lis-pizza-fogon g-0">
+                <img src="./img-fogon/pepe.png" class="pepe-pizza-fogon img-fluid" alt="pepe-pizza" width="2322" height="1822">
+                <ul>
+                    <li>Margherita</li>
+                    <li>Prosciuto e Funghi</li>
+                    <li>Prosciuto</li>
+                    <li>Diavola</li>
+                    <li>Marinara</li>
+                    <li>4 Formaggi</li>
+                    <li>4 Stagioni</li>
+                </ul>
+                <img src="./img-fogon/hoja3.png" class="hoja3-fogon img-fluid" alt="hoja3" width="2322" height="1822">
+                <img src="./img-fogon/pizza1.png" class="pizza1-fogon img-fluid" alt="pizza1" width="2322" height="1822">
+            </div>
+            <div class="lis-pizza2-fogon g-0">
+                <img src="./img-fogon/pepe.png" class="pepe-pizza2-fogon img-fluid" alt="pepe-pizza2" width="2322" height="1822">
+                <img src="./img-fogon/porta-pizza.png" class="pizza2-fogon img-fluid" alt="pizza2" width="2322" height="1822">
+                <img src="./img-fogon/hoja2.png" class="hoja2-fogon img-fluid" alt="hoja2" width="2322" height="1822">
+                <ul>
+                    <li>Napoletana</li>
+                    <li>Seciliana</li>
+                    <li>Frutti di Mare</li>
+                    <li>Ortolana</li>
+                    <li>Parmeggiana</li>
+                    <li>Zucchine</li>
+                    <li>Tono e Cipolla</li>
+                    <li>Fogón (Barbacoa)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- el fondo del rincon platos extranjeros -->
+    <div class="container-fluid">
+        <div class="row fondo-rincon-fogon">
+            <div class="col-12 titulo-rincon-fogon g-0">
+                <img src="./img-fogon/titulo-rincon.png" class="titulo-rincon-fogon img-fluid" alt="titulo-rincon" width="2322" height="1822">
+            </div>
+            <div class="row rincon-sonador-fogon g-0">
+                <div class="col-12 col-md-6 lis-rincon-fogon">
+                    <div class="conte-lis-fogon">
+                        <h2>EUROPA</h2>
+                        <ul>
+                            <li>Hamburguesa Agus</li>
+                            <li>Hamburguesa Smash</li>
+                            <li>Hamburguesa Figastel</li>
+                            <li>Hamburguesa FOGÓN</li>
+                            <li>Hamburguesa Tradicional</li>
+                            <li>Tortilla de Patatas</li>
+                            <li>T.Patatas</li>
+                            <li>Tagliatelle con boletus</li>
+                            <li>Röstti con ternera y huevo</li>
+                        </ul> 
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 lis-rincon2-fogon">
+                    <div class="conte-lis2-fogon">
+                        <h2>LATINOAMERICA</h2>
+                        <ul>
+                            <li>Bruschetta</li>
+                            <li>Fajita de pollo / ternera</li>
+                            <li>Fajita mixta</li>
+                            <li>Encebollado</li>
+                            <li>Ceviche</li>
+                            <li>Sancocho</li>
+                            <li>Camarones al Coco</li>
+                            <li>Salchipapa</li>
+                            <li>Tequeños</li> 
+                            <li>Combo Tentación</li>
+                            <li>Nachos al Pastor</li>
+                        </ul>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 titulo-restaurante-fogon g-0">
+                <h2>Nuestro Restaurante por dentro</h2>
+            </div>
+            <div class="col-12 col-sm-6 img1-restaurante-fogon">
+                <img src="./img-fogon/restaurante-convertido-de-webp.jpeg" alt="restaurante"  width="1360" height="765">
+            </div>
+            <div class="col-12 col-sm-6 img2-restaurante-fogon">
+                <img src="./img-fogon/barra-restaurate-convertido-de-webp.jpeg" alt="barra"  width="680" height="382">
+            </div>
+        </div> 
+    </div>
+
+    <!-- el pie de página -->
+     <div class="footer-fogon">
+    <div class="row conte-footer-fogon">
+        <div class="col-12 col-md-6 col-lg-4">
+            <img src="./img-fogon/logo-footer.png" class="logo-footer-fogon img-fluid" alt="logo-footer" width="2931" height="883">
+        </div>
+        <div class=" col-12 col-md-6 col-lg-2 lis-navbar-fogon">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="./views/galeria.html">Carta</a></li>
+                <li><a href="./views/presupuesto.html">Reserva</a></li>
+                <li><a href="./views/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 lis-info-fogon">
+            <ul>
+                <li><a href="https://www.google.com/maps/place/El+Fogón+de+More/@39.0850762,-0.217427,17z/data=!4m6!3m5!1s0xd61c51b023b02f9:0x99e43f12dabd81ea!8m2!3d39.0850762!4d-0.2148521!16s%2Fg%2F11mdkyxj01?entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                📍<b>Dirección:</b> Carrer de Jaume ll, 21,46760 Tavernes de la Valldigna</a> </li>
+                <li><b>🕒Horarios:</b>  8a.m - 11p.m</li>
+                <li><b>📞Teléfono:</b> 689 953 789</li>
+            </ul>
+        </div>
+        <div class=" col-12 col-md-6 col-lg-3 lis-redes-fogon">
+            <ul>
+                <li class="face-fogon"><a href="https://www.facebook.com/?locale=es_ES"><img src="./img-fogon/log-face.png" alt="facebook" width="50" height="50">Facebook</a> </li>
+                <li class="img-fluid"><a href="https://www.instagram.com"><img src="./img-fogon/log-ins.png" alt="instagram" width="50" height="50"> Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col politicas-fogon text-center">
+            <p>
+                <a href="#">Aviso legal</a> | 
+                <a href="#">Política de privacidad</a> | 
+                <a href="#">Política de cookies</a>
+            </p>
+        </div>
+    </div>
+    </div>
+
+     <script src="/js/JS.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
+</body>
+</html>
