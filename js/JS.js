@@ -865,7 +865,10 @@ if (contenedorMapa && typeof L !== "undefined") {
 // FORMULARIO DE PRESUPUESTO
 
 document.addEventListener("DOMContentLoaded" , () => {
-  const formulario =document.getElementById("formulario-presu-velar");
+  const formulario = document.getElementById("formulario-presu");
+
+  // Este script se comparte con páginas que no tienen el formulario de Velar.
+  if (!formulario) return;
   
   formulario.addEventListener("submit", (e) => {
     e.preventDefault(); // previene el envio por defecto
@@ -1109,39 +1112,41 @@ if(inputNombre){
 
 
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
 
-const frutasCesta = gsap.utils.toArray(".platano-cesta-fogon, .tomate-cesta-velar, .zanahoria-cesta-eli");
-const cesta = document.querySelector(".contene-cesta-fogon");
+    const frutasCesta = gsap.utils.toArray(".platano-cesta-fogon, .tomate-cesta-velar, .zanahoria-cesta-eli");
+    const cesta = document.querySelector(".contene-cesta-fogon");
 
-if (frutasCesta.length && cesta && typeof gsap !== "undefined") {
-    frutasCesta.forEach((fruta, i) => {
-        const estilos = getComputedStyle(fruta);
-        const xFinal = estilos.getPropertyValue("--x-final").trim() || "0px";
-        const yFinal = parseFloat(estilos.getPropertyValue("--y-final")) || 0;
-        const giroFinal = parseFloat(estilos.getPropertyValue("--giro-final")) || 0;
+    if (frutasCesta.length && cesta) {
+        frutasCesta.forEach((fruta, i) => {
+            const estilos = getComputedStyle(fruta);
+            const xFinal = estilos.getPropertyValue("--x-final").trim() || "0px";
+            const yFinal = parseFloat(estilos.getPropertyValue("--y-final")) || 0;
+            const giroFinal = parseFloat(estilos.getPropertyValue("--giro-final")) || 0;
 
-        gsap.fromTo(fruta,
-            {
-                x: xFinal,
-                y: -window.innerHeight * 3.9,
-                rotation: 0,
-                opacity: 1
-            },
-            {
-                x: xFinal,
-                y: yFinal,
-                rotation: giroFinal,
-                duration: 1.3,
-                delay: i * 0.3,
-                ease: "bounce.out",
-                scrollTrigger: {
-                    trigger: cesta,
-                    start: "top 75%",
-                    once: true
+            gsap.fromTo(fruta,
+                {
+                    x: xFinal,
+                    y: -window.innerHeight * 3.9,
+                    rotation: 0,
+                    opacity: 1
+                },
+                {
+                    x: xFinal,
+                    y: yFinal,
+                    rotation: giroFinal,
+                    duration: 1.3,
+                    delay: i * 0.3,
+                    ease: "bounce.out",
+                    scrollTrigger: {
+                        trigger: cesta,
+                        start: "top 75%",
+                        once: true
+                    }
                 }
-            }
-        );
-    });
+            );
+        });
+    }
 }
 
