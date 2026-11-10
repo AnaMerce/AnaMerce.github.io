@@ -1107,10 +1107,9 @@ if(inputNombre){
   
 
 
+
+
 // UX / UI
-
-
-
 
 if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
