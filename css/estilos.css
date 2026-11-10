@@ -47,11 +47,14 @@ html {
 }
 
 
+
+
 .seccion {
     min-height: 100vh;
     scroll-snap-align: start;
 }
-.flecha-bajar {
+/* .flecha-bajar,
+.flecha-subir {
     position: fixed;
     bottom: 30px;
     left: 50%;
@@ -61,16 +64,31 @@ html {
     padding: 10px;
     cursor: pointer;
     z-index: 20;
+} */
+
+/* .flecha-subir {
+    bottom: 90%; 
+    transform: translateX(-20%);
 }
 
-.flecha-bajar img {
+.flecha-bajar img,
+.flecha-subir img {
     display: block;
     width: 90px;
     height: auto;
 }
+.flecha-subir img{
+    transform: rotate(180deg);
+}
+
 .flecha-bajar button:hover{
     background-color: #800020;
 }
+
+.flecha-subir button:hover{
+    background-color: #093C92;
+} */
+
 
 #ux{
     min-height: 100vh;

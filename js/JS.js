@@ -222,7 +222,8 @@ const portada = document.querySelector("#portada");
 let frameActual = 0;
 let faseCrecimiento = false;
 let tamaño = 40;
-let volviendoAlMuneco = false;
+let animacionMunecoTerminada = false;
+let transicionEnCurso = false;
 
 
 
@@ -250,6 +251,7 @@ function reiniciarMuneco() {
     frameActual = 0;
     faseCrecimiento = false;
     tamaño = 40;
+    animacionMunecoTerminada = false;
 
     frames.forEach(frame => {
         frame.classList.remove("activo");
@@ -264,155 +266,153 @@ function reiniciarMuneco() {
 // SCROLL
 // ----------------------------------
 
-window.addEventListener("wheel", (event) => {
+// window.addEventListener("wheel", (event) => {
 
 
-    if (!seccionMuneco || !portada || frames.length === 0) {
-        return;
-    }
+//     if (!seccionMuneco || !portada || frames.length === 0) {
+//         return;
+//     }
 
-    const rect = seccionMuneco.getBoundingClientRect();
+//     const rect = seccionMuneco.getBoundingClientRect();
 
-    const dentroDeLaSeccion =
-        rect.top <= 0 &&
-        rect.bottom >= window.innerHeight;
+//     const dentroDeLaSeccion =
+//         rect.top <= 0 &&
+//         rect.bottom >= window.innerHeight;
 
 
-    // ----------------------------------
-    // VOLVER DESDE PORTADA AL MUÑECO
-    // ----------------------------------
+//     // ----------------------------------
+//     // VOLVER DESDE PORTADA AL MUÑECO
+//     // ----------------------------------
 
-   // ----------------------------------
-// VOLVER DESDE PORTADA AL MUÑECO
-// ----------------------------------
+//    // ----------------------------------
+// // VOLVER DESDE PORTADA AL MUÑECO
+// // ----------------------------------
 
-if (
-    !dentroDeLaSeccion &&
-    window.scrollY >= portada.offsetTop - 10 &&
-    event.deltaY < 0 &&
-    !volviendoAlMuneco
-) {
+// if (
+//     !dentroDeLaSeccion &&
+//     window.scrollY >= portada.offsetTop - 10 &&
+//     event.deltaY < 0 &&
+//     !volviendoAlMuneco
+// ) {
 
-    event.preventDefault();
+//     event.preventDefault();
 
-    volviendoAlMuneco = true;
+//     volviendoAlMuneco = true;
 
-    // Reiniciamos directamente el muñeco
-    reiniciarMuneco();
+//     // Reiniciamos directamente el muñeco
+//     reiniciarMuneco();
     
-    // Bloqueamos el siguiente evento de scroll
-    bloquearSiguienteScroll = true;
 
-    // Volvemos al principio
-    window.scrollTo({
-        top: seccionMuneco.offsetTop,
-        behavior: "auto"
-    });
+//     // Volvemos al principio
+//     window.scrollTo({
+//         top: seccionMuneco.offsetTop,
+//         behavior: "auto"
+//     });
 
-    volviendoAlMuneco = false;
+//     volviendoAlMuneco = false;
 
-    return;
-}
+//     return;
+// }
 
 
-    // ----------------------------------
-    // SI NO ESTAMOS EN EL MUÑECO
-    // ----------------------------------
+//     // ----------------------------------
+//     // SI NO ESTAMOS EN EL MUÑECO
+//     // ----------------------------------
 
-    if (!dentroDeLaSeccion) {
-        return;
-    }
-
-
-    // ----------------------------------
-    // FASE DE CRECIMIENTO
-    // ----------------------------------
-
-    if (faseCrecimiento) {
-
-        event.preventDefault();
-
-        if (event.deltaY > 0) {
-
-            tamaño += event.deltaY * 0.15;
-
-            if (tamaño >= 180) {
-
-                tamaño = 180;
-
-                // Pantalla negra
-                transicionNegra.classList.add("activa");
+//     if (!dentroDeLaSeccion) {
+//         return;
+//     }
 
 
-                // Esperamos a que se vuelva negra
-                setTimeout(() => {
+//     // ----------------------------------
+// // FASE DE CRECIMIENTO
+// // ----------------------------------
 
-                    // Vamos a portada
-                    portada.scrollIntoView({
-                        behavior: "auto"
-                    });
+// if (faseCrecimiento) {
+
+//     event.preventDefault();
+
+//     if (transicionEnCurso) return;
+
+//     if (event.deltaY > 0) {
+
+//         tamaño += event.deltaY * 0.15;
+
+//         if (tamaño >= 180) {
+
+//             tamaño = 180;
+//             animacionMunecoTerminada = true;
+//             transicionEnCurso = true;
+
+//             frames[frameActual].style.width = "180%";
+
+//             transicionNegra.classList.add("activa");
+
+//             setTimeout(() => {
+
+//                 portada.scrollIntoView({
+//                     behavior: "auto"
+//                 });
+
+//                 setTimeout(() => {
+
+//                     transicionNegra.classList.remove("activa");
+//                     transicionEnCurso = false;
+
+//                 }, 300);
+
+//             }, 150);
+
+//             return;
+//         }
+
+//         frames[frameActual].style.width = tamaño + "%";
+//     }
+
+//     return;
+// }
+
+//     // ----------------------------------
+//     // BLOQUEAR SCROLL
+//     // ----------------------------------
+
+//     event.preventDefault();
 
 
-                    // Quitamos el negro
-                    setTimeout(() => {
+//     // ----------------------------------
+//     // SCROLL HACIA ABAJO
+//     // ----------------------------------
 
-                        transicionNegra.classList.remove("activa");
+//     if (event.deltaY > 0) {
 
-                    }, 100);
+//         if (frameActual < frames.length - 1) {
 
-                }, 150);
-            }
+//             mostrarFrame(frameActual + 1);
 
+//         } else {
 
-            frames[frameActual].style.width =
-                tamaño + "%";
-        }
+//             // Ya estamos en boca5
+//             // Ahora empieza a crecer
 
-        return;
-    }
-
-
-    // ----------------------------------
-    // BLOQUEAR SCROLL
-    // ----------------------------------
-
-    event.preventDefault();
+//             faseCrecimiento = true;
+//         }
+//     }
 
 
-    // ----------------------------------
-    // SCROLL HACIA ABAJO
-    // ----------------------------------
+//     // ----------------------------------
+//     // SCROLL HACIA ARRIBA
+//     // ----------------------------------
 
-    if (event.deltaY > 0) {
+//     if (event.deltaY < 0) {
 
-        if (frameActual < frames.length - 1) {
+//         if (frameActual > 0) {
 
-            mostrarFrame(frameActual + 1);
+//             mostrarFrame(frameActual - 1);
 
-        } else {
+//         }
+//     }
 
-            // Ya estamos en boca5
-            // Ahora empieza a crecer
-
-            faseCrecimiento = true;
-        }
-    }
-
-
-    // ----------------------------------
-    // SCROLL HACIA ARRIBA
-    // ----------------------------------
-
-    if (event.deltaY < 0) {
-
-        if (frameActual > 0) {
-
-            mostrarFrame(frameActual - 1);
-
-        }
-    }
-
-}, { passive: false });
+// }, { passive: false });
 
 
 
@@ -562,7 +562,9 @@ if (tomate) {
 // }
 
 const flechaAbajo = document.querySelector("#flechaAbajo");
-const secciones = document.querySelectorAll(".seccion");
+const secciones = document.querySelectorAll(
+    "#portada, #cv, #web, #ux, #contacto"
+);
 const contacto = document.querySelector("#contacto");
 const cv =document.querySelector("#cv");
 const web=document.querySelector("#web");
@@ -570,69 +572,314 @@ const ux=document.querySelector("#ux");
 
 
 
+let navegandoSecciones = false;
+let desbloqueoSecciones;
 
-let seccionActual = 0;
+// ----------------------------------
+// CONTROL GENERAL DEL SCROLL
+// ----------------------------------
 
-if (flechaAbajo) {
-    flechaAbajo.addEventListener("click", () => {
 
-        seccionActual++;
+window.addEventListener("wheel", (event) => {
 
-        if (seccionActual >= secciones.length) {
-            seccionActual = 0;
-        }
-
-        secciones[seccionActual].scrollIntoView({
-            behavior: "smooth"
-        });
-
-    });
-}
-
-function controlarFlecha() {
-
-    if (!portada || !flechaAbajo) {
+    if (!seccionMuneco || !portada || frames.length === 0) {
         return;
     }
 
-    if (window.scrollY < portada.offsetTop) {
-        flechaAbajo.style.display = "none";
-    } else {
-        flechaAbajo.style.display = "block";
+    const rect = seccionMuneco.getBoundingClientRect();
+
+    const dentroDeLaSeccion =
+        rect.top <= 0 &&
+        rect.bottom >= window.innerHeight;
+
+    const posicionPortada =
+        portada.getBoundingClientRect().top + window.scrollY;
+
+    const posicionPrimeraSeccion = secciones.length
+        ? secciones[0].getBoundingClientRect().top + window.scrollY
+        : Infinity;
+
+
+    // ----------------------------------
+    // 1. NAVEGACIÓN ENTRE SECCIONES
+    // SOLO DESPUÉS DE TERMINAR LA ANIMACIÓN
+    // ----------------------------------
+
+    if (
+        animacionMunecoTerminada &&
+        !transicionEnCurso &&
+        secciones.length > 0
+    ) {
+
+        const enZonaPortfolio =
+            window.scrollY >= posicionPortada - 50;
+
+        if (enZonaPortfolio) {
+
+            event.preventDefault();
+
+            if (navegandoSecciones || event.deltaY === 0) {
+                return;
+            }
+
+           // Detectar la sección más cercana a la parte superior
+            let indiceActual = -1;
+            let distanciaMinima = Infinity;
+
+            secciones.forEach((seccion, indice) => {
+
+                const distancia = Math.abs(
+                    seccion.getBoundingClientRect().top
+                );
+
+                if (distancia < distanciaMinima) {
+                    distanciaMinima = distancia;
+                    indiceActual = indice;
+                }
+
+            });
+
+            let destino;
+
+            // BAJAR
+            if (event.deltaY > 0) {
+
+                if (indiceActual === secciones.length - 1) {
+
+                    // Desde la última sección volvemos al muñeco
+                    destino = seccionMuneco;
+                    reiniciarMuneco();
+
+                } else {
+
+                    // Pasamos a la siguiente sección
+                    destino = secciones[indiceActual + 1];
+                }
+            }
+
+            
+            // SUBIR
+           // SUBIR
+            else if (event.deltaY < 0) {
+
+                if (indiceActual === 0) {
+
+                    // Desde portada volvemos al muñeco
+                    destino = seccionMuneco;
+                    reiniciarMuneco();
+
+                } else {
+
+                    // Volvemos a la sección anterior
+                    destino = secciones[indiceActual - 1];
+
+                }
+            }
+
+            if (!destino) return;
+
+            navegandoSecciones = true;
+
+            const posicionDestino =
+                destino.getBoundingClientRect().top + window.scrollY;
+
+            window.scrollTo({
+                top: posicionDestino,
+                behavior: "smooth"
+            });
+
+            clearTimeout(desbloqueoSecciones);
+
+            desbloqueoSecciones = setTimeout(() => {
+                navegandoSecciones = false;
+            }, 1200);
+
+            return;
+        }
     }
 
-}
 
-controlarFlecha();
+    // ----------------------------------
+    // 2. SI NO ESTAMOS EN EL MUÑECO
+    // ----------------------------------
 
-window.addEventListener("scroll", controlarFlecha);
-
-if(flechaAbajo){
-   flechaAbajo.addEventListener("click", () => {
-
-    if (window.scrollY >= contacto.offsetTop - 50) {
-
-        reiniciarMuneco();
-
+    if (!dentroDeLaSeccion) {
+        return;
     }
-     if (window.scrollY >= cv.offsetTop - 50) {
 
-        reiniciarMuneco();
 
+    // ----------------------------------
+    // 3. FASE DE CRECIMIENTO
+    // ----------------------------------
+
+    if (faseCrecimiento) {
+
+        event.preventDefault();
+
+        if (transicionEnCurso) return;
+
+        if (event.deltaY > 0) {
+
+            tamaño += event.deltaY * 0.15;
+
+            if (tamaño >= 180) {
+
+                tamaño = 180;
+                transicionEnCurso = true;
+
+                frames[frameActual].style.width = "180%";
+
+                // Pantalla negra
+                transicionNegra.classList.add("activa");
+
+                setTimeout(() => {
+
+                    // Vamos a portada
+                    portada.scrollIntoView({
+                        behavior: "auto"
+                    });
+
+                    setTimeout(() => {
+
+                        transicionNegra.classList.remove("activa");
+
+                        transicionEnCurso = false;
+                        animacionMunecoTerminada = true;
+
+                    }, 300);
+
+                }, 150);
+
+                return;
+            }
+
+            frames[frameActual].style.width = tamaño + "%";
+        }
+
+        return;
     }
-     if (window.scrollY >= web.offsetTop - 50) {
 
-        reiniciarMuneco();
 
+    // ----------------------------------
+    // 4. BLOQUEAR SCROLL NATURAL DEL MUÑECO
+    // ----------------------------------
+
+    event.preventDefault();
+
+
+    // ----------------------------------
+    // 5. SCROLL HACIA ABAJO: CAMBIAR FRAME
+    // ----------------------------------
+
+    if (event.deltaY > 0) {
+
+        if (frameActual < frames.length - 1) {
+
+            mostrarFrame(frameActual + 1);
+
+        } else {
+
+            // Ya estamos en el último frame
+            // Ahora empieza el crecimiento
+            faseCrecimiento = true;
+        }
     }
-     if (window.scrollY >= ux.offsetTop - 50) {
 
-        reiniciarMuneco();
 
+    // ----------------------------------
+    // 6. SCROLL HACIA ARRIBA: FRAME ANTERIOR
+    // ----------------------------------
+
+    if (event.deltaY < 0) {
+
+        if (frameActual > 0) {
+
+            mostrarFrame(frameActual - 1);
+
+        }
     }
+
+}, { passive: false });
+
+
+
+// ----------------------------------
+// DESBLOQUEAR AL TERMINAR EL SCROLL
+// ----------------------------------
+
+window.addEventListener("scrollend", () => {
+
+    clearTimeout(desbloqueoSecciones);
+    navegandoSecciones = false;
+
 });
+
+
+
+// let seccionActual = 0;
+
+// if (flechaAbajo) {
+//     flechaAbajo.addEventListener("click", () => {
+
+//         seccionActual++;
+
+//         if (seccionActual >= secciones.length) {
+//             seccionActual = 0;
+//         }
+
+//         secciones[seccionActual].scrollIntoView({
+//             behavior: "smooth"
+//         });
+
+//     });
+// }
+
+// function controlarFlecha() {
+
+//     if (!portada || !flechaAbajo) {
+//         return;
+//     }
+
+//     if (window.scrollY < portada.offsetTop) {
+//         flechaAbajo.style.display = "none";
+//     } else {
+//         flechaAbajo.style.display = "block";
+//     }
+
+// }
+
+// controlarFlecha();
+
+// window.addEventListener("scroll", controlarFlecha);
+
+// if(flechaAbajo){
+//    flechaAbajo.addEventListener("click", () => {
+
+//     if (window.scrollY >= contacto.offsetTop - 50) {
+
+//         reiniciarMuneco();
+
+//     }
+//      if (window.scrollY >= cv.offsetTop - 50) {
+
+//         reiniciarMuneco();
+
+//     }
+//      if (window.scrollY >= web.offsetTop - 50) {
+
+//         reiniciarMuneco();
+
+//     }
+//      if (window.scrollY >= ux.offsetTop - 50) {
+
+//         reiniciarMuneco();
+
+//     }
+// });
  
-}
+// }
+
+
 
 
 
